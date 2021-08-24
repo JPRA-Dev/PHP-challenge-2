@@ -1,3 +1,3 @@
 <main>
-    <h1>Root Page</h1>
+    <h1>Home Page</h1>
 </main>
