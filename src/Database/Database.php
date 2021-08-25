@@ -108,6 +108,7 @@ class Database
     /**
      * Select * from $table where $where and jointure
      * @param $table
+     * @param $jointure
      * @param $where
      * @return $this|false
      */
