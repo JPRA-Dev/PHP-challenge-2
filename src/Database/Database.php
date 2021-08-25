@@ -22,7 +22,7 @@ class Database
         $host = ConfigHelper::get('mysql/host');
         $dbName = ConfigHelper::get('mysql/dbName');
         $username = ConfigHelper::get('mysql/username');
-        $password = ConfigHelper::get('mysql/password');
+        $password = ConfigHelper::get('mysql/pwd');
 
         try {
             $this->_pdo = new PDO('mysql:host=' . $host . ';dbname=' . $dbName, $username, $password);

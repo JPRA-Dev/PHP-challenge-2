@@ -2,13 +2,12 @@
 
 class User{
     private $_db,
-            $_data,
-            $_sessionName,
-            $_cookieName,
-            $isloggedIn;
+        $_data,
+        $_sessionName,
+        $_cookieName,
+        $isloggedIn;
 
-
-    public function __construct($user=null){
+    public function __construct($user=null) {
         $this->_db=Dbh::getInstance();
 
         $this->_sessionName = Config::get('session/session_name');
@@ -29,7 +28,7 @@ class User{
     }
 
     public function update($fields = array(),$id=null){
-       
+
         if(!$id && $this->isloggedIn()){
             $id=$this->data()->id;
         }
@@ -62,13 +61,11 @@ class User{
     }
 
     public function login($username=null,$password=null,$remember=false){
-        
+        if(!$username && !$password &&$this->exists()){
+            Session::put($this->_sessionName,$this->data()->id);
 
-    if(!$username && !$password &&$this->exists()){
-        Session::put($this->_sessionName,$this->data()->id);
-
-    }else{
-        $user=$this->find($username);
+        }else{
+            $user=$this->find($username);
 
             if($user){
                 if(password_verify($password, $this->data()->password)){
@@ -89,7 +86,7 @@ class User{
                         Cookie::put($this->_cookieName,$hash,Config::get('remember/cookie_expiry'));
 
                     }
-                    
+
                     return true;
                 }
 
@@ -124,6 +121,7 @@ class User{
     public function data(){
         return $this->_data;
     }
+
     public function isloggedIn(){
         return $this->isloggedIn;
     }

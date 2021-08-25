@@ -11,15 +11,15 @@ if(Input::exists()){
 
         $validate = new Validate();
         $validation = $validate->check($_POST, array(
-            'password_current'= array(
+            'password_current'=> array(
                 'required'=>true,
                 'min'=>6
             ),
-            'password_new'= array(
+            'password_new'=> array(
                 'required'=>true,
                 'min'=>6
             ),
-            'password_new_again'= array(
+            'password_new_again'=> array(
                 'required'=>true,
                 'min'=>6,
                 'matches'=>'password_new'

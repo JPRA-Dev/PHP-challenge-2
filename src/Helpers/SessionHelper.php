@@ -49,8 +49,13 @@ class SessionHelper
         }
     }
 
-
-    public static function flash($name, $string='')
+    /**
+     * Flash session for alert message
+     * @param $name
+     * @param string $string
+     * @return mixed
+     */
+    public static function flash($name, string $string='')
     {
         if(self::exists($name)){
             $session=self::get($name);

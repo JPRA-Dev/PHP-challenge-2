@@ -23,4 +23,13 @@ class AdminController extends Controller
     {
         $this->render("admin/addcompany");
     }
+
+    public function addcompanyPost()
+    {
+        if (isset($_POST["email"])) {
+
+        }
+
+        $this->render("admin/addcompany");
+    }
 }

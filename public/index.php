@@ -9,6 +9,10 @@ use App\Controllers\ErrorController;
 use App\Controllers\InvoiceController;
 use App\Controllers\RootController;
 use App\Controllers\TestController;
+use App\Database\Database;
+use App\Helpers\ConfigHelper;
+use App\Helpers\CookieHelper;
+use App\Helpers\SessionHelper;
 
 require '../vendor/autoload.php';
 
@@ -16,7 +20,7 @@ $GLOBALS['config']= array(
     'mysql' => array(
         'host'=>'127.0.0.1',
         'username'=>'root',
-        'password'=>'',
+        'pwd'=>'',
         'dbName'=>'exo3_oop'
     ),
     'remember'=> array(
@@ -29,6 +33,9 @@ $GLOBALS['config']= array(
     )
 );
 
+/**
+ * Router & Controllers instance
+ */
 $router = new App\Framework\Router\Router($_SERVER['REQUEST_URI']);
 $testController = new TestController();
 $rootController = new RootController();
@@ -39,6 +46,9 @@ $invoiceController = new InvoiceController();
 $companyController = new CompanyController();
 $adminController = new AdminController();
 
+/**
+ * Routes
+ */
 $router->get('/', fn() => $rootController->index(), "root.index");
 $router->get('/error-404', fn() => $errorController->error404(), "error.404");
 $router->get('/error-500', fn() => $errorController->error500(), "error.500");
@@ -55,6 +65,17 @@ $router->get('/admin', fn() => $adminController->index(), 'admin.index');
 $router->get('/admin/addcontact', fn() => $adminController->addcontact(), 'admin.addcontact');
 $router->get('/admin/addinvoice', fn() => $adminController->addinvoice(), 'admin.addinvoice');
 $router->get('/admin/addcompany', fn() => $adminController->addcompany(), 'admin.addcompany');
+
+
+if(CookieHelper::exists(ConfigHelper::get('remember/cookie_name')) && !SessionHelper::exists(ConfigHelper::get('session/session_name'))){
+    $hash=CookieHelper::get(ConfigHelper::get('remember/cookie_name'));
+    $hashCheck = Database::getInstance()->get('users_session', array('hash', '=', $hash));
+
+    if ($hashCheck->count()){
+        $user= new User($hashCheck->first()->user_id);
+        $user->login();
+    }
+}
 
 try {
     include '../src/Views/templates/header.php';

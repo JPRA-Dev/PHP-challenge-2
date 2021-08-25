@@ -6,6 +6,11 @@ namespace App\Helpers;
 
 class RedirectHelper
 {
+    public static function noPermission()
+    {
+        self::to();
+    }
+
     public static function to($location=null){
         if($location){
             if(is_numeric($location)){
