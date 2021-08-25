@@ -1,5 +1,7 @@
 <?php
 ?>
 <main>
-    <h1>Liste des contact</h1>
+ 
+    <h1>Contact Directory</h1>
+
 </main>
