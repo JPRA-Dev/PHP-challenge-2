@@ -27,7 +27,6 @@ function Autoload($className){
     $fullpath= $path . $className . $extension;
 
     if(!file_exists($fullpath)){
-
         return false;
     }
 

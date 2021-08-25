@@ -13,4 +13,9 @@ class ErrorController extends Controller
     {
         $this->render("500");
     }
+
+    public function errorPermission()
+    {
+        $this->render("noPermission");
+    }
 }

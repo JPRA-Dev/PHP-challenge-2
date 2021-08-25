@@ -21,7 +21,7 @@ $GLOBALS['config']= array(
         'host'=>'127.0.0.1',
         'username'=>'root',
         'pwd'=>'',
-        'dbName'=>'exo3_oop'
+        'dbName'=>'cogip'
     ),
     'remember'=> array(
         'cookie_name'=>'hash',
@@ -50,6 +50,7 @@ $adminController = new AdminController();
  * Routes
  */
 $router->get('/', fn() => $rootController->index(), "root.index");
+$router->get('/error-permission', fn() => $errorController->errorPermission(), "error.permission");
 $router->get('/error-404', fn() => $errorController->error404(), "error.404");
 $router->get('/error-500', fn() => $errorController->error500(), "error.500");
 $router->get('/test', fn() => $testController->index(), "test.index");
