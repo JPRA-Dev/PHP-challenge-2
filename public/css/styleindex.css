@@ -1,0 +1,110 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../images/backgroundpapier.jpg);
+    background-position: center;
+    background-size: cover;
+   
+}
+.addbutton{
+display: flex;
+flex-direction: column;
+margin-top: 150px;
+
+
+
+}
+
+.title1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+ 
+ 
+    
+
+}
+.add{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    
+}
+.button{
+   
+    height: 80PX;
+        
+}
+.submit{
+    
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    background-image: url(../images/backgroundbutton.jpg);
+    background-size: cover;
+    color: #111;
+    font-size: 20px;
+    margin: 0 auto;
+    transition: transform .2s; /* Animation */
+}
+.submit:hover{
+    transform: scale(1.1);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    width: 1000px;
+    
+   
+    
+   
+}
+
+.container1 {
+display: flex;
+flex-direction: column;
+width: 500px;
+height: 200px;
+margin-left: 25px;
+margin-right: 20px;
+margin-bottom: 20px;
+
+}
+.container2{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 200px;
+    
+ 
+
+}
+.container3{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 180px;
+   
+    
+}
+
+.column{
+    font-size: 14px;
+    background-color:gray;
+    color: #fff;
+   
+}
+.row1{
+    font-size: 12px;
+
+}
+.row2{
+    font-size: 12px;
+    background-color: gainsboro;
+}

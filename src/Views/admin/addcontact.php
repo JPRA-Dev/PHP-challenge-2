@@ -2,20 +2,20 @@
 
 ?>
 <main>
-    <h1>Add contact form</h1>
-  <div class="container">
+   <div class="container">
+  <h1>Add a new contact</h1>
 	  <div class="container1">
 	<form action="" method="post">
 		<div class="lastname">
 			<label for="name">Last Name :</label>
 			<br>
-			<input class="input" type="text" name="name" value="" placeholder="Name..." autocomplete="off" required>
+			<input class="input" type="text" name="name" value="" placeholder="Name..." autocomplete="off" required autofocus>
 		</div>	
 
 		<div class="firstname">
 			<label for="firstname">First Name :</label>
 			<br>
-			<input class="input" type="text" name="firstname" value="" placeholder="Firstname..." autocomplete="off" required>
+			<input class="input" type="text" name="firstname" value="" placeholder="Firstname..." autocomplete="off" required >
 		</div>
 
 		<div class="phone">
