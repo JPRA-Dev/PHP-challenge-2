@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 use App\Controllers\AdminController;
 use App\Controllers\AuthController;
@@ -11,6 +12,23 @@ use App\Controllers\TestController;
 
 require '../vendor/autoload.php';
 
+$GLOBALS['config']= array(
+    'mysql' => array(
+        'host'=>'127.0.0.1',
+        'username'=>'root',
+        'password'=>'',
+        'dbName'=>'exo3_oop'
+    ),
+    'remember'=> array(
+        'cookie_name'=>'hash',
+        'cookie_expiry'=> 604800
+    ),
+    'session'=> array(
+        'session_name'=> 'user',
+        'token_name'=>'token'
+    )
+);
+
 $router = new App\Framework\Router\Router($_SERVER['REQUEST_URI']);
 $testController = new TestController();
 $rootController = new RootController();
@@ -22,6 +40,8 @@ $companyController = new CompanyController();
 $adminController = new AdminController();
 
 $router->get('/', fn() => $rootController->index(), "root.index");
+$router->get('/error-404', fn() => $errorController->error404(), "error.404");
+$router->get('/error-500', fn() => $errorController->error500(), "error.500");
 $router->get('/test', fn() => $testController->index(), "test.index");
 $router->get('/test/:id', fn($id) => $testController->show($id), 'test.show');
 $router->get('/login', fn() => $authController->login(), 'auth.login');
