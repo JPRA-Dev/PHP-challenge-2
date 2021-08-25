@@ -1,0 +1,79 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fefce0;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    color: #E0394C;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 400px;
+    margin-top: 20px;
+    border: 2px solid #79AACB;
+    border-radius: 10px;
+    background: linear-gradient(#E0394C,#79AACB);
+    
+}
+.container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0px;
+    color: #fefce0;
+}
+.lastname{
+height: 50px;
+font-weight: bold;
+}
+.firstname{
+    height: 50px;
+    font-weight: bold;
+}
+.phone{
+    height: 50px;
+    font-weight: bold;
+}
+.email{
+    height: 50px;
+    font-weight: bold;
+}
+.company{
+    height: 50px;
+    font-weight: bold;
+}
+.button{
+    height: 50PX;
+    display: flex;
+    justify-content: center;
+    
+}
+.input{
+    width: 350px;
+    height: 20px;
+    border-radius: 5px;
+}
+.submit{
+    
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: #E0394C;
+    color: #fff;
+    margin: 0 auto;
+    transition: transform .2s; /* Animation */
+}
+.submit:hover{
+    transform: scale(1.1);
+}
