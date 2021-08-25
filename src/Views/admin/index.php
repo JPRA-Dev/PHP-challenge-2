@@ -181,5 +181,5 @@ What do you want to do today?</h1>
 
 </table>
 </div>
-</mains>
+</main>
 

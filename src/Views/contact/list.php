@@ -22,6 +22,9 @@
         <td>Jouets Jean-Michel</td>
    </tr>
    <tr>
+       <td>Bertram Gilfoyle</td>
+   </tr>
+   <tr>
        <td>Dwight Schrute</td>
        <td>555-9859</td>
        <td>peter_gregory@raviga.com<</td>
@@ -188,7 +191,5 @@
 
 </table>
 </div>
-</mains>
-
-
 </main>
+
