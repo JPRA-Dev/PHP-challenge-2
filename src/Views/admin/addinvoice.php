@@ -1,7 +1,7 @@
 <?php
 ?>
-<main>
-    
+<div class="transbox">
+   <main >
         <div class="container">
         <h1>Add invoice </h1>
 	      <div class="container1">
@@ -35,7 +35,7 @@
 		            <button class="submit" type="submit" name="submit">Submit</button>
 		         </div>
 	         </form>
-</main>
         </div>
        </div>
-</main>
+   </main>
+</div>
