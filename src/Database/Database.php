@@ -71,7 +71,7 @@ class Database
         return $this;
     }
 
-    private function action ($action, $table,$where = array())
+    private function action ($action, $table,$where = array(), string $jointure = null)
     {
         if (count($where) === 3) {
             $operators= array('=','>','<','>=','<=');
@@ -81,7 +81,9 @@ class Database
             $value       = $where[2];
 
             if (in_array($operator,$operators)) {
-                $sql="{$action}  FROM {$table} WHERE {$field} {$operator} ?";
+                $sql= isset($jointure) ?
+                    "{$action}  FROM {$table} WHERE {$field} {$operator} ?" :
+                    "{$action}  FROM {$table} {$jointure} WHERE {$field} {$operator} ?";
 
                 if (!$this->query($sql, array($value))->error()) {
                     return $this;
@@ -101,6 +103,17 @@ class Database
     public function get($table, $where)
     {
         return $this->action("SELECT *",$table,$where);
+    }
+
+    /**
+     * Select * from $table where $where and jointure
+     * @param $table
+     * @param $where
+     * @return $this|false
+     */
+    public function getWithJointure($table, $jointure,$where)
+    {
+        return $this->action("SELECT *",$table,$where,$jointure);
     }
 
     /**
@@ -148,7 +161,7 @@ class Database
      * @param $id
      * @param $fields
      */
-    public function update($table,$id,$fields)
+    public function update($table,$id,$fields): bool
     {
         $set='';
         $x=1;
@@ -162,6 +175,11 @@ class Database
         }
 
         $sql = "UPDATE {$table} SET {$set} WHERE id={$id} ";
+        if ($this->query($sql,$fields)->error()) {
+            return true;
+        }
+
+        return false;
     }
 
     /**
