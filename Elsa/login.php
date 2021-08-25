@@ -12,7 +12,7 @@ if(Input::exists()){
 		));
 		if($validation->_passed){
 			$user=new User();
-			$remenber=(Input::get('remember')==='on') ?true:false;
+			$remember=(Input::get('remember')==='on') ?true:false;
 			$login=$user->login(Input::get('username'),Input::get('pwd',$remember));
 
 			if($login){

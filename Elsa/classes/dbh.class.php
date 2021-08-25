@@ -10,7 +10,7 @@ class Dbh{
     //connection to database
     private function __construct(){
         try{
-            $this->_pdo = new PDO('mysql:host=' . Config:: get('mysql/host') . ';dbname=' . Config::get('mysql/dbName'), Config::get('mysql/username'), Config::get('mysql/password'));
+            $this->_pdo = new PDO('mysql:host=' . Config:: get('mysql/host') . ';dbname=' . Config::get('mysql/dbName'), Config::get('mysql/username'), Config::get('mysql/pwd'));
         }catch(PDOException $e){
             die($e->getMessage());
         }
