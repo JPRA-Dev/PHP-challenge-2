@@ -31,13 +31,13 @@ class Dbh{
             $x=1;
             if(count($params)){
                 foreach($params as $param){
-                    $this->query->bindValue($x, $param);
+                    $this->_query->bindValue($x, $param);
                     $x++;
                 }
             }
             if($this->_query->execute()){
                 $this->_results = $this->_query->fetchAll(PDO::FETCH_OBJ);
-                $this->_count = $tis->_query->rowcount();
+                $this->_count = $this->_query->rowcount();
             }else{
                 $this->_error = true;
             }
@@ -53,8 +53,8 @@ class Dbh{
             $operator    = $where[1];
             $value       = $where[2];
 
-            if(in_array($operator,$opertors)){
-                $sql="{$action} * FROM {$table} WHERE {$field} {$operator} ?";
+            if(in_array($operator,$operators)){
+                $sql="{$action}  FROM {$table} WHERE {$field} {$operator} ?";
                 if(!$this->query($sql, array($value))->error()){
                     return $this;
                 }
@@ -72,26 +72,26 @@ class Dbh{
         return $this->action('DELETE ', $table, $where);
     }
 
-    public function insert($table, $field = array()){
+    public function insert($table, $fields = array()){
         if(count($fields)){
             $keys = array_keys($fields);
             $values = null;
             $x = 1;
-            foreach ($fielsd as $field) {
+            foreach ($fields as $field) {
                 $values .= "?";
-                if($x< count($fields)){
+                if($x < count($field)){
                     $values .= ',';
 
                 }
                 $x++;
             }
 
-            $sql = "INSERT INTO users (`" . implode('`,`', $keys) . "`) VALUES ({$values})"
-            if(this->query($sql,$fields)->error()){
+            $sql = "INSERT INTO {$table} (`" . implode('`,`', $keys) . "`) VALUES ({$values})";
+            if($this->query($sql,$fields)->error()){
                 return true;
             }
         }
-        return false
+        return false;
     }
 
     public function update($table,$id,$fields){
@@ -106,7 +106,7 @@ class Dbh{
             $x++;
         }
 
-        $sql = "UPDATE {$table} SET {$set} WHERE id={$id} " 
+        $sql = "UPDATE {$table} SET {$set} WHERE id={$id} "; 
 
     }
 
