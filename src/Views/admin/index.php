@@ -28,7 +28,7 @@
 
 <table class="container1">
 
-   <theader class="theader">
+   <theader>
        <tr>
            <th class="titletab1" colspan="4">Last Invoices</th>
        </tr>
@@ -39,7 +39,7 @@
            <th></th>
       </tr>
    </theader>
-   <tbody class="tbody">
+   <tbody>
       <tr class="row1">
           <td>F20190404-004</td>
           <td>04/04/2019</td>
@@ -76,7 +76,7 @@
 
     <table class="container2">
       
-        <theader class="theader">
+        <theader>
              <tr>
                  <th class="titletab2" colspan="5">Last Companies</th>
              </tr>
@@ -88,7 +88,7 @@
                  <th></th>
              </tr>
         </theader>
-        <tbody class="tbody">
+        <tbody>
              <tr class="row1">
                  <td>Raviga</td>
                  <td>US456 654 342</td>
@@ -131,11 +131,11 @@
 
     <table class="container3">
        
-          <theader class="theader">
+          <theader>
                 <tr>
                      <th class="titletab3" colspan="5">Last Contacts</th>
                 </tr>
-                 <tr class="column">
+                 <tr>
                      <th>Names</th>
                      <th>phone</th>
                      <th>E-mail</th>
@@ -143,7 +143,7 @@
                      <th></th>
                  </tr>
            </theader>
-           <tbody class="tbody">
+           <tbody>
                  <tr class="row1">
                      <td>Peter Gregory</td>
                      <td>555-4567</td>

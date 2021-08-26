@@ -14,7 +14,7 @@
 		         <div class="tva">
 			        <label for="tavnumber">TVA Number :</label>
 			        <br>
-			        <input class="input" type="number" name="tvanumber" value="" placeholder="BEXXXXXXXX..." autocomplete="off" required>
+			        <input class="input" type="text" name="tvanumber" value="" placeholder="BEXXXXXXXX..." autocomplete="off" required>
 		         </div>
 
 		         <div class="phone">

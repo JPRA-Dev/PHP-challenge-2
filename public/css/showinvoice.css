@@ -16,16 +16,20 @@ h1{
     color: #111;
     font-weight: bold;
     font-size:40px;
-    margin-top: 150px;
-    border: 2px solid rgb(225, 188, 243);
+    margin-top: 200px;
+    border: 2px solid aqua;
     border-radius: 10px;
-    background-color: rgb(225, 188, 243);
+    background-color: aqua;
     box-shadow: #111 5px 5px 5px;
     
 }
 .container{
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #111;
     margin-top: 50px;
+  
 }
 table{
     border-collapse: collapse;
@@ -35,25 +39,8 @@ table{
     background-color: honeydew;
     box-shadow: 5px 5px 5px;
 }
-
 th{
     background-color: grey;
     color: white;
     border-bottom: 1px solid #111;
-    font-size: 25px;
-}
-td{
-    font-size:20px;
-}
-.container1 {
-    table-layout: auto;
-    border: 1px solid #111;
-  }
-  .row1{
-    font-size: 12px;
-
-}
-.row2{
-    font-size: 12px;
-    background-color: gainsboro;
 }

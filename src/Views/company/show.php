@@ -1,17 +1,7 @@
 <?php
 ?>
 <main>
-    <h1>Company : <?= $id ?></h1>
-
-    <div>
-        N° TVA : <?= $id ?>
-    </div>
-
-    <div>
-        type : <?= $type_client ?>
-    </div>
-
-    <div class="container">
+  <div class="container">
     <caption>pepole contact</caption>
    <table class="Contact_campany">
   
