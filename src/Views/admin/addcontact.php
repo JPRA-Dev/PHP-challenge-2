@@ -2,11 +2,11 @@
 
 ?>
 <main>
+<h1>New Contact</h1>
    <div class="container">
-  <h1>Add a new contact</h1>
-	  <div class="container1">
-	<form action="" method="post">
-		<div class="lastname">
+    <div class="container1">
+	  <form action="" method="post">
+  		<div class="lastname">
 			<label for="name">Last Name :</label>
 			<br>
 			<input class="input" type="text" name="name" value="" placeholder="Name..." autocomplete="off" required autofocus>

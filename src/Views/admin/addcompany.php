@@ -1,9 +1,9 @@
 <?php
 ?>
    <main >
+   <h1>New Company </h1>
         <div class="container">
-        <h1>Add a new Company </h1>
-	      <div class="container1">
+          <div class="container1">
 	         <form action="" method="post">
 		         <div class="companyname">
 			        <label for="companyname">Company Name :</label>
@@ -26,7 +26,7 @@
 		         <div class="companytype">
 		            <label for="companytype">Company Type :</label>
 		            <br>
-		            <select name="companytype" required>
+		            <select class="input" name="companytype" required>
                         <div class="input">
                         <option value="">--Please choose a type of Company--</option>
                         <option value="provider">Provider</option>

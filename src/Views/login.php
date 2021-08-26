@@ -4,8 +4,7 @@
 
 <main >
    <h1>Welcome to the COGIP</h1>
-        <div class="container">
-       
+       <div class="container">
 	      <div class="container1">
 	         <form action="" method="post">
 		         <div class="username">
@@ -26,5 +25,5 @@
 		         </div>
 	         </form>
         </div>
-       </div>
+	 </div>	
    </main>

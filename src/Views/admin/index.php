@@ -8,17 +8,17 @@
           <div class="add">
                 <div class="button">
                 <input  type="hidden" name="token" value="<">
-                <button class="submit" type="submit" name="addinvoice">Add New Invoice</button>
+                <button class="submit1" type="submit" name="addinvoice">Add New Invoice</button>
                 </div>
 
                 <div class="button">
                 <input  type="hidden" name="token" value="<">
-                <button class="submit" type="submit" name="addcompany">Add New Compagny</button>
+                <button class="submit2" type="submit" name="addcompany">Add New Compagny</button>
                 </div>
 
                 <div class="button">
                 <input  type="hidden" name="token" value="<">
-                <button class="submit" type="submit" name="addcontact">Add New Contact</button>
+                <button class="submit3" type="submit" name="addcontact">Add New Contact</button>
                 </div>
           </div>
           </div>
@@ -30,9 +30,9 @@
 
    <theader class="theader">
        <tr>
-           <th class="title" colspan="4">Last Invoices</th>
+           <th class="titletab1" colspan="4">Last Invoices</th>
        </tr>
-       <tr class="column">
+       <tr>
            <th>Invoice Number</th>
            <th>Dates</th>
            <th>compagny</th>
@@ -78,9 +78,9 @@
       
         <theader class="theader">
              <tr>
-                 <th class="title" colspan="5">Last Companies</th>
+                 <th class="titletab2" colspan="5">Last Companies</th>
              </tr>
-             <tr class="column">
+             <tr>
                  <th>Names</th>
                  <th>TVA</th>
                  <th>country</th>
@@ -133,7 +133,7 @@
        
           <theader class="theader">
                 <tr>
-                     <th class="title" colspan="5">Last Companies</th>
+                     <th class="titletab3" colspan="5">Last Contacts</th>
                 </tr>
                  <tr class="column">
                      <th>Names</th>
