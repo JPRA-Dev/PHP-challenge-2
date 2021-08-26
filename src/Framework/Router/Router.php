@@ -46,7 +46,7 @@ class Router
      * @param mixed $callable callable of the route
      * @param string|null $name name of the route
      */
-    private function post(string $path, $callable, string $name = null)
+    public function post(string $path, $callable, string $name = null)
     {
         $this->add('POST', $path, $callable, $name);
     }

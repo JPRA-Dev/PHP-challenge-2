@@ -1,8 +1,12 @@
 <?php
 ?>
+<<<<<<< HEAD
 
 
 <main>
+=======
+    <main>
+>>>>>>> 95e3390bcef20dc41b2cfbc88edf853c1faf09f8
     <h1>COGIP : list invoices</h1>
 
  <div class="container">
@@ -55,4 +59,11 @@
 
 </table>
 
+<<<<<<< HEAD
 </main>
+=======
+
+
+
+</main>
+>>>>>>> 95e3390bcef20dc41b2cfbc88edf853c1faf09f8

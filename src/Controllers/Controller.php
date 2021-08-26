@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 
-class Controller
+abstract class Controller
 {
     public function render(string $view, array $params = [])
     {

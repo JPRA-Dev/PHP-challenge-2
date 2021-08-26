@@ -1,0 +1,140 @@
+<?php
+
+
+namespace App\Models;
+
+
+use App\Helpers\ConfigHelper;
+use App\Helpers\CookieHelper;
+use App\Helpers\HashHelper;
+use App\Helpers\SessionHelper;
+use Exception;
+
+class UserModel extends Model
+{
+    private
+        $_data,
+        $_sessionName,
+        $_cookieName,
+        $isloggedIn;
+
+    public function __construct($user=null) {
+        $this->_sessionName = ConfigHelper::get('session/session_name');
+        $this->_cookieName = ConfigHelper::get('remember/cookie_name');
+
+        if(!$user){
+            if(SessionHelper::exists($this->_sessionName)){
+                $user= SessionHelper::get($this->_sessionName);
+                if($this->find($user)){
+                    $this->isloggedIn = true;
+                }
+            }
+        }else{
+            $this->find($user);
+        }
+    }
+
+    public function update($fields = array(),$id=null){
+
+        if(!$id && $this->isloggedIn()){
+            $id=$this->data()->id;
+        }
+
+        if(!$this->getDB()->update('users',$id,$fields)){
+            throw new Exception('There was a problem updating.');
+        }
+    }
+
+    public function create($fields=array()){
+        if(!$this->getDB()->insert('users',$fields)){
+            throw new Exception('There was a problem creating an account');
+        }
+
+    }
+
+    public function find($user = null): bool
+    {
+
+        if($user){
+            $field= (is_numeric($user)) ? 'id' : 'username';
+            $data = $this->getDB()->get('users', array($field, '=', $user));
+
+            if($data->count()){
+                $this->_data = $data->first();
+                return true;
+
+            }
+        }
+        return false;
+    }
+
+    public function login($username=null,$password=null,$remember=false): bool
+    {
+        if(!$username && !$password &&$this->exists()){
+            SessionHelper::put($this->_sessionName,$this->data()->id);
+
+        }else{
+            $user=$this->find($username);
+
+            if($user){
+                if(password_verify($password, $this->data()->password)){
+                    SessionHelper::put($this->_sessionName,$this->data()->id);
+                    if($remember){
+                        $hash=HashHelper::unique();
+                        $hashCheck = $this->getDB()->get('users_session',array('user_id', '=',$this->data()->id));
+
+                        if(!$hashCheck->count()){
+                            $this->getDB()->insert ('users_session',array(
+                                'user_id'=>$this->data()->id,
+                                'hash'=>$hash
+                            ));
+                        }else{
+                            $hash = $hashCheck->first()->hash;
+                        }
+
+                        CookieHelper::put($this->_cookieName,$hash,ConfigHelper::get('remember/cookie_expiry'));
+
+                    }
+
+                    return true;
+                }
+
+            }
+            return false;
+        }
+    }
+
+    public function hasPermission($key): bool
+    {
+        $group = $this->getDB()->get('groups', array('id','=', $this->data()->group));
+        if($group->count()){
+            $permissions=json_decode($group->first()->permissions, true);
+
+            if($permissions[$key]== true){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public function exists(): bool
+    {
+        return !empty($this->data);
+    }
+
+    public function logout(){
+
+        $this->getDB()->delete('user_session',array('user_id', '=',$this->data()->id));
+        SessionHelper::delete($this->_sessionName);
+        CookieHelper::delete($this->_cookieName);
+    }
+
+    public function data(){
+        return $this->_data;
+    }
+
+    public function isLoggedIn(): bool
+    {
+        return $this->isloggedIn;
+    }
+}
