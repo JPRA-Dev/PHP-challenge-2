@@ -12,7 +12,7 @@
     </div>
 
     <div class="container">
-    <caption>pepole contact</caption>
+    <caption>pepole_contact</caption>
    <table class="Contact_campany">
   
         <div class="colum">
@@ -25,17 +25,17 @@
 
 <div class="table_body">
   <tr>
-      <td>Peter Gregory</td>
+      <td><a href="/contact/show/1">Peter Gregory</a></td>
       <td>555-4567</td>
       <td>peter_gregory@raviga.com</td>
   </tr>
   <tr>
-      <td>Peter Gregory</td>
+      <td><a href="/contact/show/1">Peter Gregory</a></td>
       <td>555-4567</td>
       <td>peter_gregory@raviga.com</td>
   </tr>
   <tr>
-      <td>Peter Gregory</td>
+      <td><a href="/contact/show/1">Peter Gregory</a></td>
       <td>555-4567</td>
       <td>peter_gregory@raviga.com</td>
   </tr>
@@ -46,7 +46,7 @@
 <br>
 
 <div class="container">
-    <caption>pepole contact</caption>
+    <caption>invoices</caption>
    <table class="company_invoices">
   
         <div class="colum">
@@ -59,18 +59,18 @@
 
 <div class="table_body">
   <tr>
-      <td>Peter Gregory</td>
-      <td>555-4567</td>
+      <td><a href="/contact/show/1">F85632149-555</a></td>
+      <td>04/04/2021</td>
       <td>peter_gregory@raviga.com</td>
   </tr>
   <tr>
-      <td>Peter Gregory</td>
-      <td>555-4567</td>
+      <td><a href="/contact/show/1">F85632149-555</a></td>
+      <td>04/04/2021</td>
       <td>peter_gregory@raviga.com</td>
   </tr>
   <tr>
-      <td>Peter Gregory</td>
-      <td>555-4567</td>
+      <td><a href="/contact/show/1">F85632149-555</a></td>
+      <td>04/04/2021</td>
       <td>peter_gregory@raviga.com</td>
   </tr>
  

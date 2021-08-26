@@ -18,8 +18,8 @@
 <div class="table_body">
   <tr>
       <td>Peter Gregory</td>
-      <td>555-4567</td>
-      <td>peter_gregory@raviga.com</td>
+      <td><a href="/invoice/show/1">555 895</a></td>
+      <td>supplier</td>
   </tr>
 
 </div>
