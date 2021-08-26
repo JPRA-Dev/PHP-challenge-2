@@ -13,5 +13,7 @@
             "Models\\": "models"
         }
     },
-    "require": {}
+    "require": {
+      "ext-pdo": "*"
+    }
 }

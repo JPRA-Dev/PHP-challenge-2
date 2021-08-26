@@ -1,7 +1,5 @@
 <?php
 ?>
-
-
     <main>
     <h1>COGIP : list invoices</h1>
 
@@ -83,9 +81,6 @@
 </table>
 
 
-
-
-</main>
 
 
 </main>

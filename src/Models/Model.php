@@ -1,8 +1,13 @@
 <?php
 
-namespace Models;
+namespace App\Models;
 
-class Model
+use App\Database\Database;
+
+abstract class Model
 {
-
+    public function getDB(): Database
+    {
+        return Database::getInstance();
+    }
 }

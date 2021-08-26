@@ -3,54 +3,71 @@ body{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 900px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #fefce0;
+    /*background-image: url(../images/backgroundpc.jpg);*/
+    background-image: url(../images/backgroundpapier.jpg);
+    background-position: center;
+    background-size: cover;
 }
 h1{
     display: flex;
     justify-content: center;
-    color: #E0394C;
+    color: #111;
+    font-weight: bold;
+    font-size:40px;
+    margin-top: 150px;
+    border: 2px solid rgb(225, 188, 243);
+    border-radius: 10px;
+    background-color: rgb(225, 188, 243);
+    box-shadow: #111 5px 5px 5px;
     
 }
 
 .container{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    width: 600px;
-    height: 400px;
-    margin-top: 20px;
-    border: 2px solid #79AACB;
+    width: 550px;
+    height: 450px;
+    margin-top: 50px;
     border-radius: 10px;
-    background: linear-gradient(#E0394C,#79AACB);
+    background-repeat: no-repeat;
+    background-position: bottom;  
+    box-shadow: 10px 5px 25px #111;
     
 }
 .container1{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 0px;
-    color: #fefce0;
+    color: #111;
 }
 .lastname{
 height: 50px;
 font-weight: bold;
+margin-bottom: 15px;
 }
 .firstname{
     height: 50px;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 .phone{
     height: 50px;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 .email{
     height: 50px;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 .company{
     height: 50px;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 .button{
     height: 50PX;
@@ -64,15 +81,18 @@ font-weight: bold;
     border-radius: 5px;
 }
 .submit{
-    
     width: 100px;
     height: 50px;
     border-radius: 10px;
     font-weight: bold;
-    background-color: #E0394C;
-    color: #fff;
+    background-image: url(../images/backgroundbutton.jpg);
+    background-size: cover;
+    color: #111;
+    font-size: 20px;
     margin: 0 auto;
     transition: transform .2s; /* Animation */
+    cursor: pointer;
+    box-shadow: 3px 3px 3px;
 }
 .submit:hover{
     transform: scale(1.1);
