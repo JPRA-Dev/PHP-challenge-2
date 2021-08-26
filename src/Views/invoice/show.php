@@ -1,5 +1,5 @@
 <?php
 ?>
 <main>
-    <h1>Invoice : <?= $id ?></h1>
+    <h1>Invoice : <?= $invoice->nbrinvoice ?></h1>
 </main>

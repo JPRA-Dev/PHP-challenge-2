@@ -13,40 +13,32 @@ class ContactModel extends Model
 
     public function find($params=null)
     {
+        if (isset($params)){
+            $field= (is_numeric($params)) ? 'contact_person_id' : 'lastname';
+            $data = $this->getDB()->getWithJointure('contact_person', "LEFT JOIN company ON company.id=contact_person.company_id",array($field, '=', $params));
+
+            $this->_data = $data;
+        } else {
+            $data = $this->getDB()->getWithJointure('contact_person', "LEFT JOIN company ON company.id=contact_person.company_id");
+
+            $this->_data = $data;
+        }
+    }
+
+    public function findOne($params=null): bool
+    {
         if($params){
-            $field= (is_numeric($params)) ? 'id' : 'lastname';
-            $data = $this->getDB()->get('contact_person', array($field, '=', $params));
+            $field= (is_numeric($params)) ? 'contact_person_id' : 'name';
+            $data = $this->getDB()->getWithJointure('contact_person', "LEFT JOIN company ON company.id=contact_person.company_id", array($field, '=', $params));
 
-            if($data->count()){
-                $this->_data = $data;
-                return true;
-
-            }
+            $this->_data = $data->first();
+            return true;
         }
         return false;
     }
 
-    public function findOne($params=null)
+    public function update($fields = array(),$id=array())
     {
-        if($params){
-            $field= (is_numeric($params)) ? 'id' : 'lastname';
-            $data = $this->getDB()->get('contact_person', array($field, '=', $params));
-
-            if($data->count()){
-                $this->_data = $data->first();
-                return true;
-
-            }
-        }
-        return false;
-    }
-
-    public function update($fields = array(),$id=null)
-    {
-        if(!$id){
-            $id=$this->data()->id;
-        }
-
         if(!$this->getDB()->update('contact_person',$id,$fields)){
             throw new Exception('There was a problem updating.');
         }
@@ -61,7 +53,7 @@ class ContactModel extends Model
 
     public function delete($id)
     {
-        $this->getDB()->delete('contact_person', ['id', '=',$id]);
+        $this->getDB()->delete('contact_person', ['contact_person_id', '=',$id]);
     }
     
     public function data(){

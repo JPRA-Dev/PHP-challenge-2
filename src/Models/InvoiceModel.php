@@ -10,43 +10,34 @@ class InvoiceModel extends Model
 {
     public $_data;
 
-
     public function find($params=null)
     {
-        if($params){
-            $field= (is_numeric($params)) ? 'id' : 'nbrinvoice';
-            $data = $this->getDB()->get('invoices', array($field, '=', $params));
+        if (isset($params)){
+            $field= (is_numeric($params)) ? 'invoice_id' : 'nbrinvoice';
+            $data = $this->getDB()->getWithJointure('invoices', "LEFT JOIN contact_person ON contact_person.contact_person_id=invoices.contact_person_id LEFT JOIN company ON company.id=invoices.company_id LEFT JOIN company_type ON company.company_type_id=company_type.company_type_id",array($field, '=', $params));
 
-            if($data->count()){
-                $this->_data = $data;
-                return true;
+            $this->_data = $data;
+        } else {
+            $data = $this->getDB()->getWithJointure('invoices', "LEFT JOIN contact_person ON contact_person.contact_person_id=invoices.contact_person_id LEFT JOIN company ON company.id=invoices.company_id LEFT JOIN company_type ON company.company_type_id=company_type.company_type_id");
 
-            }
+            $this->_data = $data;
         }
-        return false;
     }
 
     public function findOne($params=null)
     {
         if($params){
-            $field= (is_numeric($params)) ? 'id' : 'nbrinvoice';
-            $data = $this->getDB()->get('invoices', array($field, '=', $params));
+            $field= (is_numeric($params)) ? 'invoice_id' : 'nbrinvoice';
+            $data = $this->getDB()->getWithJointure('invoices', "LEFT JOIN contact_person ON contact_person.contact_person_id=invoices.contact_person_id LEFT JOIN company ON company.id=invoices.company_id LEFT JOIN company_type ON company.company_type_id=company_type.company_type_id", array($field, '=', $params));
 
-            if($data->count()){
-                $this->_data = $data->first();
-                return true;
-
-            }
+            $this->_data = $data->first();
+            return true;
         }
         return false;
     }
 
-    public function update($fields = array(),$id=null)
+    public function update($fields = array(),$id=array())
     {
-        if(!$id){
-            $id=$this->data()->id;
-        }
-
         if(!$this->getDB()->update('invoices',$id,$fields)){
             throw new Exception('There was a problem updating.');
         }
@@ -61,7 +52,7 @@ class InvoiceModel extends Model
 
     public function delete($id)
     {
-        $this->getDB()->delete('invoices', ['id', '=',$id]);
+        $this->getDB()->delete('invoices', ['invoice_id', '=',$id]);
     }
     
     public function data(){
