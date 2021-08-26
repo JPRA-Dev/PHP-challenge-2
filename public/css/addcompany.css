@@ -5,7 +5,8 @@ body{
     width: 100%;
     height: 900px;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(../images/backgroundpc.jpg);
+    /*background-image: url(../images/backgroundpc.jpg);*/
+    background-image: url(../images/backgroundpapier.jpg);
     background-position: center;
     background-size: cover;
    
@@ -17,9 +18,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 600px;
+    justify-content: center;
+    width: 550px;
     height: 450px;
-    margin-top: 200px;
+    margin-top: 50px;
     border-radius: 10px;
     background-repeat: no-repeat;
     background-position: bottom;  
@@ -29,18 +31,23 @@ body{
 }
 
 h1{
+  
     display: flex;
+    justify-content: center;
     color: #111;
     font-weight: bold;
     font-size:40px;
-    border-bottom: 4px solid #111;
+    margin-top: 150px;
+    border: 2px solid rgb(233, 204, 210);
+    border-radius: 10px;
+    background-color: rgb(233, 204, 210);
+    box-shadow: #111 5px 5px 5px;
     
 }
 .container1{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 0px;
     color: #111;
    
    
@@ -48,15 +55,18 @@ h1{
 .companyname{
 height: 50px;
 font-weight: bold;
+margin-bottom: 15px;
 
 }
 .tva{
     height: 50px;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 .phone{
     height: 50px;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 .companytype{
     height: 30px;
@@ -67,13 +77,14 @@ font-weight: bold;
     height: 50PX;
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 50px;
     
 }
 .input{
     width: 350px;
     height: 20px;
     border-radius: 5px;
+    box-shadow: #111 3px 3px 3px;
     
 }
 .submit{
@@ -88,6 +99,8 @@ font-weight: bold;
     font-size: 20px;
     margin: 0 auto;
     transition: transform .2s; /* Animation */
+    cursor: pointer;
+    box-shadow: 3px 3px 3px;
 }
 .submit:hover{
     transform: scale(1.1);
