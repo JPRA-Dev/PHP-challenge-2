@@ -19,54 +19,54 @@
 
 <div class="table_body">
   <tr>
-      <td>Peter Gregory</td>
+  <td><a href="./contact/1">Peter Gregory</a></td>
       <td>555-4567</td>
-      <td>peter_gregory@raviga.com</td>
+      <td>france</td>
   </tr>
  
   <tr>
-      <td>Dwight Schrute</td>
+      <td><a href="./contact/1">Peter Gregory</a></td>
       <td>555-9859</td>
-      <td>peter_gregory@raviga.com</td>
+      <td>france</td>
 
   </tr>
   <tr>
-      <td>Cameron Howe</td>
+      <td><a href="./contact/1">Peter Gregory</a></td>
       <td>555-7896</td>
-      <td>Pierre Cailloux</td>
+      <td>belguim</td>
 
   </tr>
   <tr>
-      <td>Gavin Belson</td>
+      <td><a href="./contact/1">Peter Gregory</a></td>
       <td>555-4213</td>
-      <td>Pied Pipper</td>
+      <td>france</td>
 
   </tr>
   <tr>
-      <td>Jian Yang</td>
+      <td><a href="./contact/1">Peter Gregory</a></td>
       <td>03/04/2019</td>
       <td>Raviga</td>
 
   </tr>
   <tr>
-      <td>Bertram Gilfoyle</td>
+      <td><a href="./contact/1">Peter Gregory</a></td>
       <td>03/04/2019</td>
-      <td>Raviga</td>
+      <td>belguim</td>
 
   </tr>
   <tr>
-      <td>Peter Gregory</td>
+      <td><a href="./contact/1">Peter Gregory</a></td>
       <td>03/04/2019</td>
-      <td>Raviga</td>
+      <td>france</td>
 
   </tr>
   <tr>
-      <td>Cameron Howe</td>
+      <td><a href="./contact/1">Peter Gregory</a></td>
       <td>03/04/2019</td>
-      <td>Raviga</td>
+      <td>france</td>
   </tr>
   <tr>
-      <td>Jian Yang</td>
+      <td><a href="./contact/1">Peter Gregory</a></td>
       <td>03/04/2019</td>
       <td>Raviga</td>
     </tr>
@@ -90,56 +90,56 @@
 
 <div class="table_body">
   <tr>
-      <td>Peter Gregory</td>
+  <td><a href="./contact/1">Peter Gregory</a></td>
       <td>555-4567</td>
-      <td>peter_gregory@raviga.com</td>
+      <td>belguim</td>
   </tr>
  
   <tr>
-      <td>Dwight Schrute</td>
+      <td><a href="./contact/1">Peter Gregory</a></td>
       <td>555-9859</td>
-      <td>peter_gregory@raviga.com</td>
+      <td>belguim</td>
 
   </tr>
   <tr>
-      <td>Cameron Howe</td>
+      <td><a href="./contact/1">Peter Gregory</a></td>
       <td>555-7896</td>
-      <td>Pierre Cailloux</td>
+      <td>belguim</td>
 
   </tr>
   <tr>
-      <td>Gavin Belson</td>
+      <td><a href="./contact/1">Peter Gregory</a></td>
       <td>555-4213</td>
-      <td>Pied Pipper</td>
+      <td>france</td>
 
   </tr>
   <tr>
-      <td>Jian Yang</td>
+      <td><a href="./contact/1">Peter Gregory</a></td>
       <td>03/04/2019</td>
-      <td>Raviga</td>
+      <td>belguim</td>
 
   </tr>
   <tr>
-      <td>Bertram Gilfoyle</td>
-      <td>03/04/2019</td>
-      <td>Raviga</td>
-
-  </tr>
-  <tr>
-      <td>Peter Gregory</td>
+      <td><a href="./contact/1">Peter Gregory</a></td>
       <td>03/04/2019</td>
       <td>Raviga</td>
 
   </tr>
   <tr>
-      <td>Cameron Howe</td>
+      <td><a href="./contact/1">Peter Gregory</a></td>
       <td>03/04/2019</td>
-      <td>Raviga</td>
+      <td>france</td>
+
   </tr>
   <tr>
-      <td>Jian Yang</td>
+      <td><a href="./contact/1">Peter Gregory</a></td>
       <td>03/04/2019</td>
-      <td>Raviga</td>
+      <td>france</td>
+  </tr>
+  <tr>
+      <td><a href="./contact/1">Peter Gregory</a></td>
+      <td>03/04/2019</td>
+      <td>france</td>
     </tr>
 </div>
 
