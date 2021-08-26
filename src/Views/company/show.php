@@ -25,17 +25,17 @@
 
 <div class="table_body">
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
+      <td><a href="/contact/show/1">Peter Gregory</a></td>
       <td>555-4567</td>
       <td>peter_gregory@raviga.com</td>
   </tr>
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
+      <td><a href="/contact/show/1">Peter Gregory</a></td>
       <td>555-4567</td>
       <td>peter_gregory@raviga.com</td>
   </tr>
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
+      <td><a href="/contact/show/1">Peter Gregory</a></td>
       <td>555-4567</td>
       <td>peter_gregory@raviga.com</td>
   </tr>
@@ -59,17 +59,17 @@
 
 <div class="table_body">
   <tr>
-      <td>555 389</td>
+      <td><a href="/contact/show/1">F85632149-555</a></td>
       <td>04/04/2021</td>
       <td>peter_gregory@raviga.com</td>
   </tr>
   <tr>
-      <td>555 388</td>
+      <td><a href="/contact/show/1">F85632149-555</a></td>
       <td>04/04/2021</td>
       <td>peter_gregory@raviga.com</td>
   </tr>
   <tr>
-      <td>555 354</td>
+      <td><a href="/contact/show/1">F85632149-555</a></td>
       <td>04/04/2021</td>
       <td>peter_gregory@raviga.com</td>
   </tr>

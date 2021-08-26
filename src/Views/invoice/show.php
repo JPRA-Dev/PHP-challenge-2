@@ -18,8 +18,8 @@
 <div class="table_body">
   <tr>
       <td>Peter Gregory</td>
-      <td><a href="./contact/1">555 895</a></td>
-      <td>fournisseur</td>
+      <td><a href="/invoice/show/1">555 895</a></td>
+      <td>supplier</td>
   </tr>
 
 </div>

@@ -14,30 +14,32 @@
         <tr>
            <th>N° invoice</th>
            <th>date</th>
-           <th>Country</th>
 </div>
 
 <div class="table_body">
   <tr>
-      <td><a href="./contact/1">555-4567</a></td>
-      <td>belguim</td>
+      <td><a href="/invoice/show/1">F55553483-567</a></td>
+      <td>20/04/2021</td>
+      
   </tr>
  
   <tr>
-      <td><a href="./contact/1">555-4567</a></td>
-      <td>belguim</td>
+      <td><a href="/invoice/show/1">F55553483-567</a></td>
+      <td>20/04/2021</td>
+      
   </tr>
   <tr>
-      <td><a href="./contact/1">555-4567</a></td>
-      <td>belguim</td>
+      <td><a href="/invoice/show/1">F55553483-567</a></td>
+      <td>20/04/2021</td>
+      
   </tr>
   <tr>
-      <td><a href="./contact/1">555-4567</a></td>
-      <td>belguim</td>
+      <td><a href="/invoice/show/1">F55553483-567</a></td>
+      <td>20/04/2021</td>
   </tr>
   <tr>
-      <td><a href="./contact/1">555-4567</a></td>
-      <td>belguim</td>
+      <td><a href="/invoice/show/1">F55553483-567</a></td>
+      <td>20/04/2021</td>
   </tr>
 
 </div>

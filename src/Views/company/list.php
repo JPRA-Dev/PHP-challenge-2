@@ -3,7 +3,7 @@
 <main>
     
 
-    <h1>COGIP : Contact Directory</h1>
+    <h1>COGIP : companies Directory</h1>
 
 <div class="container">
     <caption>clients</caption>
@@ -19,55 +19,55 @@
 
 <div class="table_body">
   <tr>
-  <td><a href="./contact/1">Peter Gregory</a></td>
+  <td><a href="/company/show/1">Peter Gregory</a></td>
       <td>555-4567</td>
       <td>france</td>
   </tr>
  
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
+      <td><a href="/company/show/1">Peter Gregory</a></td>
       <td>555-9859</td>
       <td>france</td>
 
   </tr>
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
+      <td><a href="/company/show/1">Peter Gregory</a></td>
       <td>555-7896</td>
-      <td>belguim</td>
+      <td>belgium</td>
 
   </tr>
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
+      <td><a href="/company/show/1">Peter Gregory</a></td>
       <td>555-4213</td>
       <td>france</td>
 
   </tr>
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
-      <td>03/04/2019</td>
+      <td><a href="/company/show/1">Peter Gregory</a></td>
+      <td>555-4213</td>
       <td>Raviga</td>
 
   </tr>
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
-      <td>03/04/2019</td>
-      <td>belguim</td>
+      <td><a href="/company/show/1">Peter Gregory</a></td>
+      <td>555-4213</td>
+      <td>belgium</td>
 
   </tr>
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
-      <td>03/04/2019</td>
+      <td><a href="/company/show/1">Peter Gregory</a></td>
+      <td>555-4213</td>
       <td>france</td>
 
   </tr>
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
-      <td>03/04/2019</td>
+      <td><a href="/company/show/1">Peter Gregory</a></td>
+      <td>0555-4213</td>
       <td>france</td>
   </tr>
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
-      <td>03/04/2019</td>
+      <td><a href="/company/show/1">Peter Gregory</a></td>
+      <td>555-4213</td>
       <td>Raviga</td>
     </tr>
 </div>
@@ -77,7 +77,7 @@
 <br>
 
 <div class="container">
-    <caption>fournisseurs</caption>
+    <caption>suppliers</caption>
    <table class="Contact_directory">
   
         <div class="colum">
@@ -90,54 +90,54 @@
 
 <div class="table_body">
   <tr>
-  <td><a href="./contact/1">Peter Gregory</a></td>
+  <td><a href="/company/show/1">Peter Gregory</a></td>
       <td>555-4567</td>
-      <td>belguim</td>
+      <td>belgium</td>
   </tr>
  
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
+      <td><a href="/company/show/1">Peter Gregory</a></td>
       <td>555-9859</td>
-      <td>belguim</td>
+      <td>belgium</td>
 
   </tr>
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
+      <td><a href="/company/show/1">Peter Gregory</a></td>
       <td>555-7896</td>
-      <td>belguim</td>
+      <td>belgium</td>
 
   </tr>
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
+      <td><a href="/company/show/1">Peter Gregory</a></td>
       <td>555-4213</td>
       <td>france</td>
 
   </tr>
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
+      <td><a href="/company/show/1">Peter Gregory</a></td>
       <td>03/04/2019</td>
-      <td>belguim</td>
+      <td>belgium</td>
 
   </tr>
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
+      <td><a href="/company/show/1">Peter Gregory</a></td>
       <td>03/04/2019</td>
       <td>Raviga</td>
 
   </tr>
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
+      <td><a href="/company/show/1">Peter Gregory</a></td>
       <td>03/04/2019</td>
       <td>france</td>
 
   </tr>
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
+      <td><a href="/company/show/1">Peter Gregory</a></td>
       <td>03/04/2019</td>
       <td>france</td>
   </tr>
   <tr>
-      <td><a href="./contact/1">Peter Gregory</a></td>
+      <td><a href="/company/show/1">Peter Gregory</a></td>
       <td>03/04/2019</td>
       <td>france</td>
     </tr>

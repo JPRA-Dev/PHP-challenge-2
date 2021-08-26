@@ -21,43 +21,43 @@
 
 <div class="table_body">
    <tr>
-   <td><a href="./contact/1">Peter Gregory</a></td>
+   <td><a href="/contact/show/1">Peter Gregory</a></td>
        <td>555-4567</td>
        <td>peter_gregory@raviga.com</td>
        <td>Jouets Jean-Michel</td>
    </tr>
    <tr>
-   <td><a href="./contact/1">Peter Gregory</a></td>
+   <td><a href="/contact/show/1">Peter Gregory</a></td>
        <td>555-4567</td>
        <td>peter_gregory@raviga.com</td>
        <td>Jouets Jean-Michel</td>
    </tr>
    <tr>
-   <td><a href="./contact/1">Peter Gregory</a></td>
+   <td><a href="/contact/show/1">Peter Gregory</a></td>
        <td>555-4567</td>
        <td>peter_gregory@raviga.com</td>
        <td>Jouets Jean-Michel</td>
    </tr>
    <tr>
-   <td><a href="./contact/1">Peter Gregory</a></td>
+   <td><a href="/contact/show/1">Peter Gregory</a></td>
        <td>555-4567</td>
        <td>peter_gregory@raviga.com</td>
        <td>Jouets Jean-Michel</td>
    </tr>
    <tr>
-   <td><a href="./contact/1">Peter Gregory</a></td>
+   <td><a href="/contact/show/1">Peter Gregory</a></td>
        <td>555-4567</td>
        <td>peter_gregory@raviga.com</td>
        <td>Jouets Jean-Michel</td>
    </tr>
    <tr>
-   <td><a href="./contact/1">Peter Gregory</a></td>
+   <td><a href="/contact/show/1">Peter Gregory</a></td>
        <td>555-4567</td>
        <td>peter_gregory@raviga.com</td>
        <td>Jouets Jean-Michel</td>
    </tr>
    <tr>
-   <td><a href="./contact/1">Peter Gregory</a></td>
+   <td><a href="/contact/show/1">Peter Gregory</a></td>
        <td>555-4567</td>
        <td>peter_gregory@raviga.com</td>
        <td>Jouets Jean-Michel</td>
