@@ -12,7 +12,7 @@ class CompanyTypeModel extends Model
     public function find($params=null)
     {
         if($params){
-            $field= (is_numeric($params)) ? 'id' : 'type';
+            $field= (is_numeric($params)) ? 'company_type_id' : 'type';
             $data = $this->getDB()->get('company_type', array($field, '=', $params));
 
             if($data->count()){
@@ -27,7 +27,7 @@ class CompanyTypeModel extends Model
     public function findOne($params=null)
     {
         if($params){
-            $field= (is_numeric($params)) ? 'id' : 'type';
+            $field= (is_numeric($params)) ? 'company_type_id' : 'type';
             $data = $this->getDB()->get('company_type', array($field, '=', $params));
 
             if($data->count()){

@@ -68,12 +68,13 @@ class Database
                 $this->_error = true;
             }
         }
+
         return $this;
     }
 
-    private function action ($action, $table,$where = array(), string $jointure = null)
+    private function action($action, $table,$where = array(), string $jointure = null)
     {
-        if (count($where) === 3) {
+        if (isset($where) && count($where) === 3) {
             $operators= array('=','>','<','>=','<=');
 
             $field       = $where[0];
@@ -82,15 +83,22 @@ class Database
 
             if (in_array($operator,$operators)) {
                 $sql= isset($jointure) ?
-                    "{$action}  FROM {$table} WHERE {$field} {$operator} ?" :
-                    "{$action}  FROM {$table} {$jointure} WHERE {$field} {$operator} ?";
+                    ( "{$action} FROM {$table} {$jointure} WHERE {$field} {$operator} ?"
+                    ) : ( "{$action} FROM {$table} WHERE {$field} {$operator} ?" );
 
                 if (!$this->query($sql, array($value))->error()) {
                     return $this;
                 }
+            }
+        } else {
+            $sql= isset($jointure) ?
+                ( "{$action} FROM {$table} {$jointure}" ) : ( "{$action} FROM {$table}" );
 
+            if (!$this->query($sql)->error()) {
+                return $this->results();
             }
         }
+
         return false;
     }
 
@@ -100,7 +108,7 @@ class Database
      * @param $where
      * @return $this|false
      */
-    public function get($table, $where)
+    public function get($table, $where = null)
     {
         return $this->action("SELECT *",$table,$where);
     }
@@ -112,7 +120,7 @@ class Database
      * @param $where
      * @return $this|false
      */
-    public function getWithJointure($table, $jointure,$where)
+    public function getWithJointure($table, $jointure,$where = null)
     {
         return $this->action("SELECT *",$table,$where,$jointure);
     }
@@ -139,17 +147,16 @@ class Database
         if (count($fields)) {
             $keys = array_keys($fields);
             $values = null;
-            $x = 1;
-            foreach ($fields as $field) {
+
+            for ($x = 0; $x < count($fields);$x++) {
                 $values .= "?";
-                if ($x < count($field)) {
+                if ($x < count($fields)-1) {
                     $values .= ',';
                 }
-                $x++;
             }
 
-            $sql = "INSERT INTO {$table} (`" . implode('`,`', $keys) . "`) VALUES ({$values})";
-            if ($this->query($sql,$fields)->error()) {
+            $sql = "INSERT INTO {$table} (`" . join('`,`', $keys) . "`) VALUES ({$values})";
+            if (!$this->query($sql,$fields)->error()) {
                 return true;
             }
         }
@@ -159,10 +166,10 @@ class Database
     /**
      * Update a row
      * @param $table
-     * @param $id
+     * @param array $where
      * @param $fields
      */
-    public function update($table,$id,$fields): bool
+    public function update($table, array $where = array(), $fields): bool
     {
         $set='';
         $x=1;
@@ -175,9 +182,18 @@ class Database
             $x++;
         }
 
-        $sql = "UPDATE {$table} SET {$set} WHERE id={$id} ";
-        if ($this->query($sql,$fields)->error()) {
-            return true;
+        $operators= array('=','>','<','>=','<=');
+
+        $field       = $where[0];
+        $operator    = $where[1];
+        $value       = $where[2];
+
+        if (in_array($operator,$operators)) {
+            $sql = "UPDATE {$table} SET {$set} WHERE {$field} {$operator} ?";
+            $fields[$field] = $value;
+            if (!$this->query($sql,$fields)->error()) {
+                return true;
+            }
         }
 
         return false;
@@ -198,7 +214,7 @@ class Database
      */
     public function first()
     {
-        return $this->results()[0];
+        return $this->results()[0] ?? null;
     }
 
     /**

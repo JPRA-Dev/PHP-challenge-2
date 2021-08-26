@@ -2,6 +2,10 @@
 ?>
 <main>
     <h1>COGIP : Contact Directory</h1>
+    <pre>
+        <?php var_dump($contacts); ?>
+    </pre>
+
 
  <div class="container">
 <table class="contact_directory">

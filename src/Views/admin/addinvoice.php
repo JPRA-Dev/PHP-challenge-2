@@ -1,9 +1,9 @@
 <?php
 ?>
-<div class="transbox">
+
    <main >
         <div class="container">
-        <h1>Add invoice </h1>
+        <h1>Add a new invoice </h1>
 	      <div class="container1">
 	         <form action="" method="post">
 		         <div class="invoicenumber">
@@ -38,4 +38,4 @@
         </div>
        </div>
    </main>
-</div>
+

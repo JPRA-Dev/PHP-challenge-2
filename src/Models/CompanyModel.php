@@ -10,48 +10,38 @@ class CompanyModel extends Model
 {
     public $_data;
 
-
     public function find($params=null)
     {
-        if($params){
+        if (isset($params)){
             $field= (is_numeric($params)) ? 'id' : 'name';
-            $data = $this->getDB()->get('company', array($field, '=', $params));
+            $data = $this->getDB()->getWithJointure('company', "LEFT JOIN company_type ON company_type.company_type_id=company.company_type_id",array($field, '=', $params));
 
-            if($data->count()){
-                $this->_data = $data;
-                return true;
+            $this->_data = $data;
+        } else {
+            $data = $this->getDB()->getWithJointure('company', "LEFT JOIN company_type ON company_type.company_type_id=company.company_type_id");
 
-            }
+            $this->_data = $data;
         }
-        return false;
     }
 
     public function findOne($params=null)
     {
         if($params){
             $field= (is_numeric($params)) ? 'id' : 'name';
-            $data = $this->getDB()->get('company', array($field, '=', $params));
+            $data = $this->getDB()->getWithJointure('company', "LEFT JOIN company_type ON company_type.company_type_id=company.company_type_id", array($field, '=', $params));
 
-            if($data->count()){
-                $this->_data = $data->first();
-                return true;
-
-            }
+            $this->_data = $data->first();
+            return true;
         }
         return false;
     }
 
-    public function update($fields = array(),$id=null)
+    public function update($fields = array(),$id=array())
     {
-        if(!$id){
-            $id=$this->data()->id;
-        }
-
         if(!$this->getDB()->update('company',$id,$fields)){
             throw new Exception('There was a problem updating.');
         }
     }
-
     public function create($fields = array())
     {
         if(!$this->getDB()->insert('company',$fields)){
