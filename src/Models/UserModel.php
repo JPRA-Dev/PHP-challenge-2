@@ -1,25 +1,32 @@
 <?php
 
-class User{
-    private $_db,
+
+namespace App\Models;
+
+
+use App\Helpers\ConfigHelper;
+use App\Helpers\CookieHelper;
+use App\Helpers\HashHelper;
+use App\Helpers\SessionHelper;
+use Exception;
+
+class UserModel extends Model
+{
+    private
         $_data,
         $_sessionName,
         $_cookieName,
         $isloggedIn;
 
     public function __construct($user=null) {
-        $this->_db=Dbh::getInstance();
-
-        $this->_sessionName = Config::get('session/session_name');
-        $this->_cookieName = Config::get('remember/cookie_name');
+        $this->_sessionName = ConfigHelper::get('session/session_name');
+        $this->_cookieName = ConfigHelper::get('remember/cookie_name');
 
         if(!$user){
-            if(Session::exists($this->_sessionName)){
-                $user= Session::get($this->_sessionName);
+            if(SessionHelper::exists($this->_sessionName)){
+                $user= SessionHelper::get($this->_sessionName);
                 if($this->find($user)){
                     $this->isloggedIn = true;
-                }else{
-                    //process logout
                 }
             }
         }else{
@@ -33,23 +40,24 @@ class User{
             $id=$this->data()->id;
         }
 
-        if(!$this->_db->update('users',$id,$fields)){
+        if(!$this->getDB()->update('users',$id,$fields)){
             throw new Exception('There was a problem updating.');
         }
     }
 
     public function create($fields=array()){
-        if(!$this->_db->insert('users',$fields)){
+        if(!$this->getDB()->insert('users',$fields)){
             throw new Exception('There was a problem creating an account');
         }
 
     }
 
-    public function find($user = null){
+    public function find($user = null): bool
+    {
 
         if($user){
             $field= (is_numeric($user)) ? 'id' : 'username';
-            $data = $this->_db->get('users', array($field, '=', $user));
+            $data = $this->getDB()->get('users', array($field, '=', $user));
 
             if($data->count()){
                 $this->_data = $data->first();
@@ -60,22 +68,23 @@ class User{
         return false;
     }
 
-    public function login($username=null,$password=null,$remember=false){
+    public function login($username=null,$password=null,$remember=false): bool
+    {
         if(!$username && !$password &&$this->exists()){
-            Session::put($this->_sessionName,$this->data()->id);
+            SessionHelper::put($this->_sessionName,$this->data()->id);
 
         }else{
             $user=$this->find($username);
 
             if($user){
                 if(password_verify($password, $this->data()->password)){
-                    Session::put($this->_sessionName,$this->data()->id);
+                    SessionHelper::put($this->_sessionName,$this->data()->id);
                     if($remember){
-                        $hash=Hash::unique();
-                        $hashCheck = $this->_db->get('users_session',array('user_id', '=',$this->data()->id));
+                        $hash=HashHelper::unique();
+                        $hashCheck = $this->getDB()->get('users_session',array('user_id', '=',$this->data()->id));
 
                         if(!$hashCheck->count()){
-                            $this->_db->insert ('users_session',array(
+                            $this->getDB()->insert ('users_session',array(
                                 'user_id'=>$this->data()->id,
                                 'hash'=>$hash
                             ));
@@ -83,7 +92,7 @@ class User{
                             $hash = $hashCheck->first()->hash;
                         }
 
-                        Cookie::put($this->_cookieName,$hash,Config::get('remember/cookie_expiry'));
+                        CookieHelper::put($this->_cookieName,$hash,ConfigHelper::get('remember/cookie_expiry'));
 
                     }
 
@@ -95,8 +104,9 @@ class User{
         }
     }
 
-    public function hasPermission($key){
-        $group = $this->_db->get('groups', array('id','=', $this->data()->group));
+    public function hasPermission($key): bool
+    {
+        $group = $this->getDB()->get('groups', array('id','=', $this->data()->group));
         if($group->count()){
             $permissions=json_decode($group->first()->permissions, true);
 
@@ -107,22 +117,24 @@ class User{
         return false;
     }
 
-    public function exists(){
-        return(!empty($this->data)) ? true : false;
+    public function exists(): bool
+    {
+        return !empty($this->data);
     }
 
     public function logout(){
 
-        $this->_db->delete('user_session',array('user_id', '=',$this->data()->id));
-        Session::delete($this->_sessionName);
-        Cookie::delete($this->_cookieName);
+        $this->getDB()->delete('user_session',array('user_id', '=',$this->data()->id));
+        SessionHelper::delete($this->_sessionName);
+        CookieHelper::delete($this->_cookieName);
     }
 
     public function data(){
         return $this->_data;
     }
 
-    public function isloggedIn(){
+    public function isLoggedIn(): bool
+    {
         return $this->isloggedIn;
     }
 }

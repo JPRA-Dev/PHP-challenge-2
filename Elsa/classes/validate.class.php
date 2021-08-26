@@ -1,7 +1,7 @@
 <?php
 
     class Validate{
-        private $_passed= false,
+        public $_passed= false,
                 $_errors= array(),
                 $_db = null;
 
