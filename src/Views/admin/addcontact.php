@@ -30,10 +30,17 @@
 		<input class="input" id="email" type="email" name="email" placeholder="Email@..." required><br>
 		</div>
 
+		
 		<div class="company">
-		<label for="company">Company :</label>
-		<br>
-		<input class="input" id="company" type="text" name="company" placeholder="Company..." required><br>
+                        <label for="company">Company :</label>
+                        <br>
+                        <select name="company" id="company">
+                            <option value="">Please select a company</option>
+                            <?php foreach ($companies as $company) { ?>
+                                   <option value="<?= $company->id; ?>"><?= $company->name; ?></option>
+                            <?php } ?>
+                        </select>
+                    </div><br>
 		</div>
 		<br>
 		<div class="button">
