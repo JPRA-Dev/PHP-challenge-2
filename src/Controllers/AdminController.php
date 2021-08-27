@@ -47,10 +47,6 @@ class AdminController extends Controller
 
     public function addcompanyPost()
     {
-        if (isset($_POST["email"])) {
-
-        }
-
         $this->render("admin/addcompany");
     }
 }
