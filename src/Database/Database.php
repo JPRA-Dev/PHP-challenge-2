@@ -72,7 +72,7 @@ class Database
         return $this;
     }
 
-    private function action($action, $table,$where = array(), string $jointure = null)
+    private function action($action, $table,$where = array(), string $jointure = null, int $limit = null, string $orderBy = null)
     {
         if (isset($where) && count($where) === 3) {
             $operators= array('=','>','<','>=','<=');
@@ -83,8 +83,8 @@ class Database
 
             if (in_array($operator,$operators)) {
                 $sql= isset($jointure) ?
-                    ( "{$action} FROM {$table} {$jointure} WHERE {$field} {$operator} ?"
-                    ) : ( "{$action} FROM {$table} WHERE {$field} {$operator} ?" );
+                    ( "{$action} FROM {$table} {$jointure} WHERE {$field} {$operator} ?". (isset($orderBy) ? " {$orderBy}" : "") . (isset($limit) ? " LIMIT {$limit}" : "")
+                    ) : ( "{$action} FROM {$table} WHERE {$field} {$operator} ?". (isset($orderBy) ? " {$orderBy}" : "") . (isset($limit) ? " LIMIT {$limit}" : "") );
 
                 if (!$this->query($sql, array($value))->error()) {
                     return $this;
@@ -92,8 +92,9 @@ class Database
             }
         } else {
             $sql= isset($jointure) ?
-                ( "{$action} FROM {$table} {$jointure}" ) : ( "{$action} FROM {$table}" );
+                ( "{$action} FROM {$table} {$jointure}" ) : ( "{$action} FROM {$table}". (isset($orderBy) ? " {$orderBy}" : "") . (isset($limit) ? " LIMIT {$limit}" : ""));
 
+            var_dump($this->_pdo->errorInfo());
             if (!$this->query($sql)->error()) {
                 return $this->results();
             }
@@ -111,6 +112,18 @@ class Database
     public function get($table, $where = null)
     {
         return $this->action("SELECT *",$table,$where);
+    }
+
+    /**
+     * Select * from $table where $where with limit
+     * @param $table
+     * @param int $limit
+     * @param null $where
+     * @return $this|false
+     */
+    public function getWithLimit($table, int $limit, string $orderBy = null,$where = null)
+    {
+        return $this->action("SELECT *",$table,$where, null, $limit, $orderBy);
     }
 
     /**

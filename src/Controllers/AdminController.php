@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Helpers\InputHelper;
+
 class AdminController extends Controller
 {
     public function index()
@@ -26,10 +28,6 @@ class AdminController extends Controller
 
     public function addcompanyPost()
     {
-        if (isset($_POST["email"])) {
-
-        }
-
         $this->render("admin/addcompany");
     }
 }
