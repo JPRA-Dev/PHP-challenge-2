@@ -26,42 +26,38 @@ h1{
 table{
     border-collapse: collapse;
     width: 500px;
+    height: auto;
     margin-bottom: 20px;
     background-color: honeydew;
     box-shadow: 5px 5px 5px;
 }
-
+.title1 {
+    background-color: aqua;
+   color: #111;
+  
+}
+.title2 {
+    background-color: rgb(233, 204, 210);
+    color: #111;
+}
+.title3 {
+    background-color: rgb(225, 188, 243);
+    color:#111;
+}
 th{
     background-color: grey;
     color: white;
     border-bottom: 1px solid #111;
 }
-.titletab1{
-    background-color: aqua;
-    color: #111;
-  
-}
-.titletab2{
-    background-color: rgb(233, 204, 210);
-    color: #111;
-}
-.titletab3{
-    background-color: rgb(225, 188, 243);
-    color:#111;
-}
 
 .container1 {
 table-layout: auto;
 border: 1px solid #111;
-
-
 }
 .container2{
    table-layout: auto;
    border: 1px solid #111;
   
- 
-
 }
 .container3{
   table-layout: auto;
