@@ -20,8 +20,8 @@ $GLOBALS['config']= array(
     'mysql' => array(
         'host'=>'127.0.0.1',
         'username'=>'root',
-        'pwd'=>'root',
-        'dbName'=>'cogi'
+        'pwd'=>'',
+        'dbName'=>'cogip'
     ),
     'remember'=> array(
         'cookie_name'=>'hash',

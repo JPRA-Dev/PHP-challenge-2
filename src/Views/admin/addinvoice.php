@@ -2,9 +2,9 @@
 ?>
 
    <main >
+   <h1>New Invoice </h1>
         <div class="container">
-        <h1>Add a new invoice </h1>
-	      <div class="container1">
+          <div class="container1">
 	         <form action="" method="post">
 		         <div class="invoicenumber">
 			        <label for="invoicenumber">Invoice Number :</label>
