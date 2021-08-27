@@ -27,7 +27,7 @@ class Database
         try {
             $this->_pdo = new PDO('mysql:host=' . $host . ';dbname=' . $dbName, $username, $password);
         } catch(PDOException $e) {
-            die($e->getMessage());
+            throw $e;
         }
     }
 
@@ -116,6 +116,7 @@ class Database
     /**
      * Select * from $table where $where and jointure
      * @param $table
+     * @param $jointure
      * @param $where
      * @return $this|false
      */

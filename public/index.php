@@ -30,7 +30,8 @@ $GLOBALS['config']= array(
     'session'=> array(
         'session_name'=> 'user',
         'token_name'=>'token'
-    )
+    ),
+    'env' => 'dev' // dev or prod
 );
 
 /**
@@ -83,5 +84,9 @@ try {
     $router->run();
     include '../src/Views/templates/footer.php';
 } catch (Exception $e) {
-    call_user_func_array(fn() => $errorController->error500(), []);
+    if ($GLOBALS["config"]["env"] === "dev") {
+        die($e);
+    } else {
+        call_user_func_array(fn() => $errorController->error500(), []);
+    }
 }
