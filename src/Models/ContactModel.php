@@ -25,6 +25,11 @@ class ContactModel extends Model
         }
     }
 
+    public function findLimit(int $limit)
+    {
+        $this->_data = $this->getDB()->getWithLimit('contact_person', $limit,"ORDER BY contact_person_id DESC");
+    }
+
     public function findOne($params=null): bool
     {
         if($params){
