@@ -13,6 +13,7 @@ use App\Database\Database;
 use App\Helpers\ConfigHelper;
 use App\Helpers\CookieHelper;
 use App\Helpers\SessionHelper;
+use App\Models\UserModel;
 
 require '../vendor/autoload.php';
 
@@ -57,6 +58,7 @@ $router->get('/error-500', fn() => $errorController->error500(), "error.500");
 $router->get('/test', fn() => $testController->index(), "test.index");
 $router->get('/test/:id', fn($id) => $testController->show($id), 'test.show');
 $router->get('/login', fn() => $authController->login(), 'auth.login');
+$router->get('/logout', fn() => $authController->logout(), 'auth.logout');
 $router->get('/contact', fn() => $contactController->list(), 'contact.list');
 $router->get('/contact/show/:id', fn($id) => $contactController->show($id), 'contact.show');
 $router->get('/invoice', fn() => $invoiceController->list(), 'invoice.list');
@@ -74,7 +76,7 @@ if(CookieHelper::exists(ConfigHelper::get('remember/cookie_name')) && !SessionHe
     $hashCheck = Database::getInstance()->get('users_session', array('hash', '=', $hash));
 
     if ($hashCheck->count()){
-        $user= new User($hashCheck->first()->user_id);
+        $user= new UserModel($hashCheck->first()->user_id);
         $user->login();
     }
 }
