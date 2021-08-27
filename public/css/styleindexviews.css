@@ -13,43 +13,59 @@ body{
 h1{
     display: flex;
     justify-content: center;
-    color: #111;
-    font-weight: bold;
-    font-size:40px;
-    margin-top: 150px;
-    border: 2px solid aqua;
-    border-radius: 10px;
-    background-color: aqua;
+    text-align: center;
+    border: 2px solid #111;
+    border-radius: 10px ;
+    background-color: #79AACB;
+    color: #fff;
     box-shadow: #111 5px 5px 5px;
+    margin-top: 150px;
+    margin-bottom: 50px;
    
-    
-}
-.container{
-
-    margin-top: 50px;
 }
 table{
     border-collapse: collapse;
-    width: 900px;
+    width: 500px;
     height: auto;
     margin-bottom: 20px;
     background-color: honeydew;
     box-shadow: 5px 5px 5px;
 }
+.title1 {
+    background-color: aqua;
+   color: #111;
+  
+}
+.title2 {
+    background-color: rgb(233, 204, 210);
+    color: #111;
+}
+.title3 {
+    background-color: rgb(225, 188, 243);
+    color:#111;
+}
 th{
     background-color: grey;
     color: white;
     border-bottom: 1px solid #111;
-    font-size: 25px;
 }
-td{
-    font-size:20px;
-}
+
 .container1 {
-    table-layout: auto;
-    border: 1px solid #111;
-  }
-  .row1{
+table-layout: auto;
+border: 1px solid #111;
+}
+.container2{
+   table-layout: auto;
+   border: 1px solid #111;
+  
+}
+.container3{
+  table-layout: auto;
+  border: 1px solid #111;
+    
+}
+
+.row1{
     font-size: 12px;
 
 }
