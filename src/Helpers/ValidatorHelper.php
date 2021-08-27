@@ -3,6 +3,7 @@
 
 namespace App\Helpers;
 
+use App\Database\Database;
 
 class ValidatorHelper
 {
@@ -11,7 +12,7 @@ class ValidatorHelper
     public bool $_passed= false;
 
     public function __construct(){
-        $this->db=null;
+        $this->db=Database::getInstance();
     }
 
     public function check($source, $items = array()): ValidatorHelper

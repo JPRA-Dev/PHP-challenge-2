@@ -24,6 +24,11 @@ class CompanyModel extends Model
         }
     }
 
+    public function findLimit(int $limit)
+    {
+        $this->_data = $this->getDB()->getWithLimit('company', $limit,"ORDER BY id DESC");
+    }
+
     public function findOne($params=null)
     {
         if($params){
