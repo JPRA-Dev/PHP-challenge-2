@@ -27,7 +27,7 @@ class Database
         try {
             $this->_pdo = new PDO('mysql:host=' . $host . ';dbname=' . $dbName, $username, $password);
         } catch(PDOException $e) {
-            die($e->getMessage());
+            throw $e;
         }
     }
 
