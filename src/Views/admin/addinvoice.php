@@ -1,7 +1,6 @@
 <?php
 
 ?>
-
 <main >
 	<h1>New Invoice </h1>
 		<div class="container">
@@ -10,13 +9,13 @@
 					<div class="invoicenumber">
 						<label for="invoicenumber">Invoice Number :</label>
 						<br>
-						<input class="input" type="text" name="invoicenumber" value="" placeholder="Invoice Number..." autocomplete="off" required>
+						<input class="input" type="text" id="invoicenumber" name="invoicenumber" value="" placeholder="Invoice Number..." autocomplete="off" required>
 					</div>	
 
 					<div class="date">
 						<label for="date">Date of Invoice :</label>
 						<br>
-						<input class="input" type="date" name="date" value="" placeholder="Date of Invoice..." autocomplete="off" required>
+						<input class="input" type="date" id="date" name="date" value="" placeholder="Date of Invoice..." autocomplete="off" required>
 					</div>
 
 					<div class="company">

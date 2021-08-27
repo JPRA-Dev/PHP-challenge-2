@@ -1,48 +1,43 @@
 <?php
 ?>
 <main>
-    <h1>Contact : <?= $id ?></h1>
-    <div>company : <?= $id ?></div>
-    <div>email : <?= $id ?></div>
-    <div>phone : <?= $id ?></div>
+    <h1>Contact :</h1>
+
+    <div class="contact">
+        <p>Contact</p>
+        <p>company :</p>
+        <p>email :</p>
+        <p>phone :</p>
+    </div>
 
     <div class="container">
-    <caption>contact for invoice</caption>
-   <table class="Contact_show">
-  
-        <div class="colum">
-        <tr>
-           <th>N° invoice</th>
-           <th>date</th>
-</div>
+       <h3>Contact  person for these invoices: </h3>
 
-<div class="table_body">
-  <tr>
-      <td><a href="/invoice/show/1">F55553483-567</a></td>
-      <td>20/04/2021</td>
-      
-  </tr>
- 
-  <tr>
-      <td><a href="/invoice/show/1">F55553483-567</a></td>
-      <td>20/04/2021</td>
-      
-  </tr>
-  <tr>
-      <td><a href="/invoice/show/1">F55553483-567</a></td>
-      <td>20/04/2021</td>
-      
-  </tr>
-  <tr>
-      <td><a href="/invoice/show/1">F55553483-567</a></td>
-      <td>20/04/2021</td>
-  </tr>
-  <tr>
-      <td><a href="/invoice/show/1">F55553483-567</a></td>
-      <td>20/04/2021</td>
-  </tr>
-
-</div>
-
-</table>
+          <table class="container1">
+              <tr>
+                 <th>Invoice Number</th>
+                 <th>Date</th>
+              </tr>
+              <tr class="row1">
+                 <td>F55553483-567</td>
+                 <td>20/04/2021</td>
+              </tr>
+              <tr class="row2">
+                 <td>F55553483-567</td>
+                 <td>20/04/2021</td>
+              </tr>
+              <tr class="row1">
+                 <td>F55553483-567</td>
+                 <td>20/04/2021</td>
+              </tr>
+              <tr class="row2">
+                 <td>F55553483-567</td>
+                 <td>20/04/2021</td>
+              </tr>
+              <tr class="row1">
+                 <td>F55553483-567</td>
+                 <td>20/04/2021</td>
+              </tr>
+          </table>
+    </div>
 </main>

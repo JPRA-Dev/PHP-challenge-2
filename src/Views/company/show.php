@@ -2,14 +2,16 @@
 ?>
 <main>
 
-<h1>Company:</h1>
-   <div class="tva">
+<h1>Company:</h1> 
+
+   <div class="tvatype">
       <p>TVA:</p>
-</div>
-    <p>Type:</p>
+      <p>Type:</p>
+   </div>
+
   <div class="container">
     <h3>Contact Persons</h3>
-        <table class="Ccontainer1">
+        <table class="container1">
            <tr>
               <th>Name</th>
               <th>Phone</th>
@@ -31,10 +33,9 @@
               <td>creed.bratton@ddmfl.com</td>
             </tr>
         </table>
-  </div>
-  <div class="container">
+
     <h3>Invoices</h3>
-       <table class="container">
+       <table class="container1">
            <tr>
                <th>Invoice Number</th>
                <th>Date</th>

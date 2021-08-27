@@ -8,25 +8,25 @@
 		         <div class="companyname">
 			        <label for="companyname">Company Name :</label>
 			        <br>
-			        <input class="input" type="text" name="companyname" value="" placeholder="Company name..." autocomplete="off" required autofocus>
+			        <input class="input" id="companyname" type="text" name="companyname" value="" placeholder="Company name..." autocomplete="off" required autofocus>
 		         </div>	
 
 		         <div class="tva">
 			        <label for="tavnumber">TVA Number :</label>
 			        <br>
-			        <input class="input" type="text" name="tvanumber" value="" placeholder="BEXXXXXXXX..." autocomplete="off" required>
+			        <input class="input" id="tavnumber" type="text" name="tvanumber" value="" placeholder="BEXXXXXXXX..." autocomplete="off" required>
 		         </div>
 
 		         <div class="phone">
 			        <label for="phonenumber">Phone Number :</label>
 			        <br>
-			        <input class="input" type="tel" name="phonenumber" placeholder="+32 xx xx xx..." required>
+			        <input class="input" id="phonenumber" type="tel" name="phonenumber" placeholder="+32 xx xx xx..." required>
 		         </div>
 
 		         <div class="companytype">
 		            <label for="companytype">Company Type :</label>
 		            <br>
-		            <select class="input" name="companytype" required>
+		            <select class="input"  id="companytype" name="companytype" required>
                         <div class="input">
                         <option value="">--Please choose a type of Company--</option>
                         <option value="provider">Provider</option>
