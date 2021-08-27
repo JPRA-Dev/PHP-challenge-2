@@ -17,19 +17,19 @@ h1{
     font-weight: bold;
     font-size:40px;
     margin-top: 200px;
-    border: 2px solid aqua;
+    border: 2px solid rgb(233, 204, 210);
     border-radius: 10px;
-    background-color: aqua;
+    background-color: rgb(233, 204, 210);
     box-shadow: #111 5px 5px 5px;
     
 }
+h3{
+    font-size: 25px;
+    font-weight: bold;
+}
 .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #111;
+
     margin-top: 50px;
-  
 }
 table{
     border-collapse: collapse;
@@ -43,5 +43,20 @@ th{
     background-color: grey;
     color: white;
     border-bottom: 1px solid #111;
+    font-size: 25px;
 }
+td{
+    font-size:20px;
+}
+.container1 {
+    table-layout: auto;
+    border: 1px solid #111;
+  }
+  .row1{
+    font-size: 12px;
 
+}
+  .row2{
+    font-size: 12px;
+    background-color: gainsboro;
+}
