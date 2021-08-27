@@ -94,7 +94,7 @@ class Database
             $sql= isset($jointure) ?
                 ( "{$action} FROM {$table} {$jointure}" ) : ( "{$action} FROM {$table}". (isset($orderBy) ? " {$orderBy}" : "") . (isset($limit) ? " LIMIT {$limit}" : ""));
 
-            var_dump($this->_pdo->errorInfo());
+           
             if (!$this->query($sql)->error()) {
                 return $this->results();
             }
