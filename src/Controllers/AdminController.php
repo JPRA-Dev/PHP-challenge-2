@@ -77,8 +77,41 @@ class AdminController extends Controller
 
     public function addcompany()
     {
+        if (isset($_POST["submit"])) {
+            if (isset($_POST["companyname"]) && isset($_POST["tavnumber"]) && isset($_POST["phonenumber"]) && isset($_POST["companytype"])) {
+
+                if (empty($_POST["companyname"])) {                                                          
+                    echo "Please provide a valid companyname!";
+                    unset($_POST["companyname"]);
+                }
+                else if ((empty($_POST["tavnumber"])) OR (!is_string($_POST["tavnumber"]))) {                                                                           
+                    echo "Please provide a valid tva number";
+                    unset($_POST["tavnumber"]);
+                }
+                else if ((empty($_POST["phonenumber"])) OR (!preg_match('/^[0-9]{10}+$/', $_POST["phonenumber"]))) {                                                                            
+                    echo "Please provide a valid phone number!";
+                    unset($_POST["phonenumber"]);
+                }
+                else if (empty($_POST["companytype"]) OR (!filter_var($_POST["companytype"]))) {
+                    echo "Please provide a valid company type!";
+                    unset($_POST["companytype"]);
+                }
+                
+                $companyname = $_POST["companyname"];
+                $tavnumber = $_POST["tavnumber"];
+                $phonenumber = $_POST["phonenumber"];
+                $companytype = $_POST["companytype"];
+                
+
+            } else {
+                echo "error : MESSAGE";
+            }
+        }
+               
+
         $this->render("admin/addcompany");
     }
+   
 
     public function addcompanyPost()
     {
