@@ -23,9 +23,15 @@ h1{
     box-shadow: #111 5px 5px 5px;
     
 }
+.tvatype{
+
+    font-size: 30px;
+    font-weight: bold;
+}
 h3{
     font-size: 25px;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 .container{
 
@@ -47,10 +53,13 @@ th{
 }
 td{
     font-size:20px;
+    text-align: center;
+   
 }
 .container1 {
     table-layout: auto;
     border: 1px solid #111;
+    margin-top: 20px;
   }
   .row1{
     font-size: 12px;
