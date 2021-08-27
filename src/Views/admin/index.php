@@ -8,17 +8,17 @@
           <div class="add">
                 <div class="button">
                 <input  type="hidden" name="token" value="<">
-                <button class="submit" type="submit" name="addinvoice">Add New Invoice</button>
+                <button class="submit1" type="submit" name="addinvoice">Add New Invoice</button>
                 </div>
 
                 <div class="button">
                 <input  type="hidden" name="token" value="<">
-                <button class="submit" type="submit" name="addcompany">Add New Compagny</button>
+                <button class="submit2" type="submit" name="addcompany">Add New Compagny</button>
                 </div>
 
                 <div class="button">
                 <input  type="hidden" name="token" value="<">
-                <button class="submit" type="submit" name="addcontact">Add New Contact</button>
+                <button class="submit3" type="submit" name="addcontact">Add New Contact</button>
                 </div>
           </div>
           </div>
@@ -28,18 +28,18 @@
 
 <table class="container1">
 
-   <theader class="theader">
+   <theader>
        <tr>
-           <th class="title" colspan="4">Last Invoices</th>
+           <th class="titletab1" colspan="4">Last Invoices</th>
        </tr>
-       <tr class="column">
+       <tr>
            <th>Invoice Number</th>
            <th>Dates</th>
            <th>compagny</th>
            <th></th>
       </tr>
    </theader>
-   <tbody class="tbody">
+   <tbody>
       <tr class="row1">
           <td>F20190404-004</td>
           <td>04/04/2019</td>
@@ -76,11 +76,11 @@
 
     <table class="container2">
       
-        <theader class="theader">
+        <theader>
              <tr>
-                 <th class="title" colspan="5">Last Companies</th>
+                 <th class="titletab2" colspan="5">Last Companies</th>
              </tr>
-             <tr class="column">
+             <tr>
                  <th>Names</th>
                  <th>TVA</th>
                  <th>country</th>
@@ -88,7 +88,7 @@
                  <th></th>
              </tr>
         </theader>
-        <tbody class="tbody">
+        <tbody>
              <tr class="row1">
                  <td>Raviga</td>
                  <td>US456 654 342</td>
@@ -131,11 +131,11 @@
 
     <table class="container3">
        
-          <theader class="theader">
+          <theader>
                 <tr>
-                     <th class="title" colspan="5">Last Companies</th>
+                     <th class="titletab3" colspan="5">Last Contacts</th>
                 </tr>
-                 <tr class="column">
+                 <tr>
                      <th>Names</th>
                      <th>phone</th>
                      <th>E-mail</th>
@@ -143,7 +143,7 @@
                      <th></th>
                  </tr>
            </theader>
-           <tbody class="tbody">
+           <tbody>
                  <tr class="row1">
                      <td>Peter Gregory</td>
                      <td>555-4567</td>
