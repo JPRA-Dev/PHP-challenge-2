@@ -20,3 +20,16 @@ class CompanyController extends Controller
         $this->render("company/show", ["company" => $companyModel->data()]);
     }
 }
+
+if (isset($_POST["submit"])) {
+    if (isset($_POST["companyname"]) && isset($_POST["tvanumber"]) && isset($_POST["phonenumber"]) && isset($_POST["companytype"])) {
+        $companyname = $_POST["companyname"];
+        $tvanumber = $_POST["tvanumber"];
+        $phonenumber = $_POST["phonenumber"];
+        $companytype = $_POST["companytype"];
+
+
+    } else {
+        echo "error : MESSAGE";
+    }
+}
