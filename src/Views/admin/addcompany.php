@@ -1,9 +1,9 @@
 <?php
 ?>
    <main >
+   <h1>New Company </h1>
         <div class="container">
-        <h1>Add a new Company </h1>
-	      <div class="container1">
+          <div class="container1">
 	         <form action="" method="post">
 		         <div class="companyname">
 			        <label for="companyname">Company Name :</label>
@@ -14,7 +14,7 @@
 		         <div class="tva">
 			        <label for="tavnumber">TVA Number :</label>
 			        <br>
-			        <input class="input" type="number" name="tvanumber" value="" placeholder="BEXXXXXXXX..." autocomplete="off" required>
+			        <input class="input" type="text" name="tvanumber" value="" placeholder="BEXXXXXXXX..." autocomplete="off" required>
 		         </div>
 
 		         <div class="phone">
@@ -26,7 +26,7 @@
 		         <div class="companytype">
 		            <label for="companytype">Company Type :</label>
 		            <br>
-		            <select name="companytype" required>
+		            <select class="input" name="companytype" required>
                         <div class="input">
                         <option value="">--Please choose a type of Company--</option>
                         <option value="provider">Provider</option>
