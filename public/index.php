@@ -21,7 +21,7 @@ $GLOBALS['config']= array(
         'host'=>'127.0.0.1',
         'username'=>'root',
         'pwd'=>'root',
-        'dbName'=>'cogi'
+        'dbName'=>'cogip'
     ),
     'remember'=> array(
         'cookie_name'=>'hash',
