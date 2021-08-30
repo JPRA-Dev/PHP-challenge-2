@@ -17,13 +17,13 @@
     <header>
             <nav class ="navbar">
                 <div class="containerLogo">
-                    <a href="#">
+                    <a href="/index.php">
                         <img class="logoHeader" src="assets/images/COGIP_LOGO.png">
                     </a>
                 </div>
                 <ul class="navList" id="navListId">
                     <li class="listItem">
-                        <a href="/" class="hvr-grow">Home</a>
+                        <a href="/index.php" class="hvr-grow">Home</a>
                     </li>
                     <li class="listItem" >
                         <a href="/invoice" class="hvr-grow">Invoices</a>
