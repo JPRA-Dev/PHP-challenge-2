@@ -29,8 +29,9 @@
 		            <select class="input"  id="companytype" name="companytype" required>
                         <div class="input">
                         <option value="">--Please choose a type of Company--</option>
-                        <option value="provider">Provider</option>
-                        <option value="client">Client</option>
+                        	<?php foreach ($companytypes as $companytype) { ?>
+            				<option value="<?= $companytype->company_type_id; ?>"><?= $companytype->type; ?></option>
+        					<?php } ?>
                         </div>
                     </select>
 		         </div>

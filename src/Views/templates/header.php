@@ -6,9 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<<<<<<< HEAD
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
     <link rel=stylesheet href="assets/css/style.css">
     <link rel=stylesheet href="assets/css/reset.css">
+=======
+    <link rel="stylesheet" href="/../css/styleindex.css">
+>>>>>>> 2240bb82c16fb02250a45f7de7438478d5e93226
     <title>COGIP</title>
 </head>
 <body>
