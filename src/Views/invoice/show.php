@@ -9,12 +9,12 @@
                 <tr>
                    <th>Name</th>
                    <th>TVA</th>
-                   <th>Type compagny</th>
+                   <th>Type company</th>
                 </tr>
                 <tr>
-                   <td>Jouets Jean-Michel</td>
-                   <td>FR 677 544 000</td>
-                   <td>Supplier</td>
+                   <td><?php echo $invoice->name; ?></td>
+                   <td><?php echo $invoice->vatnumber; ?></td>
+                   <td><?php echo $invoice->type; ?></td>
                 </tr>
              </table>
          <h3>Contact person</h3>
