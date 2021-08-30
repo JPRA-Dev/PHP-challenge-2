@@ -44,6 +44,7 @@ table{
     margin-bottom: 20px;
     background-color: honeydew;
     box-shadow: 5px 5px 5px;
+  
 }
 th{
     background-color: grey;
@@ -68,4 +69,10 @@ td{
   .row2{
     font-size: 12px;
     background-color: gainsboro;
+}
+
+@media screen and (max-width:900px){
+    main, .container1, h1 {
+       width: 100%;
+    }
 }
