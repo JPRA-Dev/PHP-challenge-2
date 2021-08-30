@@ -9,7 +9,7 @@
                 <th>Name</th>
                 <th>Telephone</th>
                 <th>Email</th>
-                <th>compagny</th>
+                <th>company</th>
             </tr>
             <?php $i = 0; foreach ($contacts as $contact) { ?>
             <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
