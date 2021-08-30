@@ -9,25 +9,25 @@
   		<div class="lastname">
 			<label for="name">Last Name :</label>
 			<br>
-			<input class="input" type="text" name="name" value="" placeholder="Name..." autocomplete="off" required autofocus>
+			<input class="input" id="name" type="text" name="name" value="" placeholder="Name..." autocomplete="off" required autofocus>
 		</div>	
 
 		<div class="firstname">
 			<label for="firstname">First Name :</label>
 			<br>
-			<input class="input" type="text" name="firstname" value="" placeholder="Firstname..." autocomplete="off" required >
+			<input class="input" id="firstname" type="text" name="firstname" value="" placeholder="Firstname..." autocomplete="off" required >
 		</div>
 
 		<div class="phone">
 			<label for="phone">Phone :</label>
 			<br>
-			<input class="input" type="tel" name="phone" placeholder="Phone..." required>
+			<input class="input" id="phone" type="tel" name="phone" placeholder="Phone..." required>
 		</div>
 
 		<div class="email">
-		<label for="pwd">Email:</label>
+		<label for="email">Email:</label>
 		<br>
-		<input class="input" type="email" name="email" placeholder="Email@..." required><br>
+		<input class="input" id="email" type="email" name="email" placeholder="Email@..." required><br>
 		</div>
 
 		

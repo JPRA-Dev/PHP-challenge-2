@@ -24,6 +24,11 @@ class InvoiceModel extends Model
         }
     }
 
+    public function findLimit(int $limit)
+    {
+        $this->_data = $this->getDB()->getWithLimit('invoices', $limit,"ORDER BY invoice_id DESC");
+    }
+
     public function findOne($params=null)
     {
         if($params){
