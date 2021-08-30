@@ -1,5 +1,46 @@
 <?php
+// require_once 'PHP-challenge-2/Elsa/login.php';
+
+$login = false;
+
+// function adminMenu () {
+//     $userType = $row['user_type'];
+
+//         if ($userType == 'admin') {
+//             echo    "<li class='listItem dropbtn' id='admin'>
+//                         <div class='dropdown'>
+//                             <div class='hvr-grow'>
+//                             <a href='#' >Admin</a> 
+//                                 <i class='fa fa-caret-down'></i> </div>                   
+//                             <div class='dropdown-content' ID='submenuID'>
+//                                 <a href='/admin' class='hvr-shrink'>Dashboard</a>
+//                                 <a href='/admin/addcontact' class='hvr-shrink'>New Contact</a>
+//                                 <a href='/admin/addinvoice' class='hvr-shrink'>New Invoice</a>
+//                                 <a href='/admin/addcompany' class='hvr-shrink'>New Company</a>
+//                             </div>
+//                         </div>
+//                     </li>";
+
+//         } else if ($userType == 'moderator') {
+//             echo    "<li class='listItem dropbtn' id='admin'>
+//                         <div class='dropdown'>
+//                             <div class='hvr-grow'>
+//                             <a href='#' >Moderator</a> 
+//                                 <i class='fa fa-caret-down'></i> </div>                   
+//                             <div class='dropdown-content' ID='submenuID'>
+//                                 <a href='/admin' class='hvr-shrink'>Dashboard</a>
+//                                 <a href='/admin/addcontact' class='hvr-shrink'>New Contact</a>
+//                                 <a href='/admin/addinvoice' class='hvr-shrink'>New Invoice</a>
+//                                 <a href='/admin/addcompany' class='hvr-shrink'>New Company</a>
+//                             </div>
+//                         </div>
+//                     </li>";
+//         } 
+
+// }
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,13 +58,13 @@
     <header>
             <nav class ="navbar">
                 <div class="containerLogo">
-                    <a href="/index.php">
+                    <a href="/">
                         <img class="logoHeader" src="assets/images/COGIP_LOGO.png">
                     </a>
                 </div>
                 <ul class="navList" id="navListId">
                     <li class="listItem">
-                        <a href="/index.php" class="hvr-grow">Home</a>
+                        <a href="/" class="hvr-grow">Home</a>
                     </li>
                     <li class="listItem" >
                         <a href="/invoice" class="hvr-grow">Invoices</a>
@@ -47,9 +88,11 @@
                             </div>
                         </div>
                     </li>
+                    <?php if (!$login){ ?>
                     <li class="listItem" id="connection">
-                        <a href="#">Connection</a>
+                        <a href="/login">Connection</a>
                     </li>
+                    <?php } ?>
                 </ul>
                 <div class="menu" id="toggleButton">
                     <div class="menuLine"></div>
@@ -68,6 +111,7 @@
     toggleButton.addEventListener('click', () => {
         navList.classList.toggle('active');
     });
+    
 
     admin.addEventListener('click', () => {
         subMenuID.style.display = "inline"; 
