@@ -11,7 +11,7 @@ body{
     background-size: cover;
 }
 
-h1{
+.contacttitle{
     display: flex;
     justify-content: center;
     color: #111;
@@ -25,7 +25,7 @@ h1{
     
 }
 
-.container{
+.containercontact{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,7 +39,7 @@ h1{
     box-shadow: 10px 5px 25px #111;
     
 }
-.container1{
+.container1contact{
     display: flex;
     flex-direction: column;
     justify-content: center;

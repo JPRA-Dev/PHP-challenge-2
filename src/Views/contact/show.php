@@ -1,7 +1,7 @@
 <?php
 ?>
 <main>
-    <h1>Contact :</h1>
+    <h1 class="contactshowtitle">Contact :</h1>
 
     <div class="contact">
         <p>Contact</p>
@@ -10,10 +10,10 @@
         <p>phone :</p>
     </div>
 
-    <div class="container">
+    <div class="containercontactshow">
        <h3>Contact  person for these invoices: </h3>
 
-          <table class="container1">
+          <table class="container1contactshow">
               <tr>
                  <th>Invoice Number</th>
                  <th>Date</th>
