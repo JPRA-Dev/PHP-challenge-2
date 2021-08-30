@@ -1,9 +1,9 @@
 <?php
 ?>
    <main >
-   <h1>New Company </h1>
-        <div class="container">
-          <div class="container1">
+   <h1 class="companytitle">New Company </h1>
+        <div class="containercompany">
+          <div class="container1company">
 	         <form action="" method="post">
 		         <div class="companyname">
 			        <label for="companyname">Company Name :</label>

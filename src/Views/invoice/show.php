@@ -1,11 +1,11 @@
 <?php
 ?>
 <main>
-   <h1>Invoice:</h1>
+   <h1 class="invoiceshowtitle">Invoice:</h1>
 
-      <div class="container">
+      <div class="containerinvoiceshow">
          <h3>Company linked to the invoice</h3>
-             <table class="container1">
+             <table class="container1invoiceshow">
                 <tr>
                    <th>Name</th>
                    <th>TVA</th>
@@ -18,7 +18,7 @@
                 </tr>
              </table>
          <h3>Contact person</h3>
-            <table class="container1">
+            <table class="container1invoiceshow">
                 <tr>
                    <th>Name</th>
                    <th>Email</th>

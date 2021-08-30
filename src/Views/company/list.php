@@ -1,10 +1,10 @@
 <?php
 ?>
 <main>
-   <h1>COGIP: Companies Directory</h1>
-        <div class="container">
+   <h1 class="companylist">COGIP: Companies Directory</h1>
+        <div class="containercompanylist">
              <h3>Clients</h3>
-                  <table class="container1">
+                  <table class="container1companylist">
                     <tr>
                        <th>Name</th>
                        <th>TVA</th>
@@ -58,9 +58,9 @@
                     </tr>
                </table>
         </div>
-       <div class="container">
+       <div class="containercompanylist">
             <h3>Suppliers</h3>
-               <table class="container1">
+               <table class="container1companylist">
                     <tr>
                         <th>Name</th>
                         <th>TVA</th>

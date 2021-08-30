@@ -2,21 +2,21 @@
 ?>
  <main>
         <div class="addbutton">
-         <div class="title1">
-           <h1>Hello, Jean-Christian!<br> What do you want to do today?</h1>
-         </div>  
+        
+           <h1 class="indextitle">Hello, Jean-Christian!<br> What do you want to do today?</h1>
+         
           <div class="add">
-                <div class="button">
+                <div class="buttonindex">
                 <input  type="hidden" name="token" value="<">
                 <button class="submit1" type="submit" name="addinvoice">Add New Invoice</button>
                 </div>
 
-                <div class="button">
+                <div class="buttonindex">
                 <input  type="hidden" name="token" value="<">
                 <button class="submit2" type="submit" name="addcompany">Add New Compagny</button>
                 </div>
 
-                <div class="button">
+                <div class="buttonindex">
                 <input  type="hidden" name="token" value="<">
                 <button class="submit3" type="submit" name="addcontact">Add New Contact</button>
                 </div>
@@ -24,9 +24,9 @@
           </div>
      
 
-<div class="container">
+<div class="containerindex">
 
-<table class="container1">
+<table class="container1index">
 
    <theader>
        <tr>
@@ -75,7 +75,7 @@
  </table>
 
 
-    <table class="container2">
+    <table class="container2index">
       
         <theader>
              <tr>
@@ -130,7 +130,7 @@
 
 
 
-    <table class="container3">
+    <table class="container3index">
        
           <theader>
                 <tr>

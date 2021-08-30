@@ -2,13 +2,13 @@
 ?>
 
 <main>
-    <h1>Welcome to COGIP</h1>
+    <h1 class="indexviewstitle">Welcome to COGIP</h1>
 
-        <div class="container">
+        <div class="containerindexviews">
 
-            <table class="container1">
+            <table class="container1indexviews">
                   <tr>
-                      <th class="title1" colspan="4">Last Invoices</th>
+                      <th class="title1indexviews" colspan="4">Last Invoices</th>
                   </tr>
                   <tr>
                        <th>Invoice Number</th>
@@ -27,10 +27,10 @@
             </table>
 
 
-            <table class="container2">
+            <table class="container2indexviews">
       
                   <tr>
-                     <th class="title2" colspan="5">Last Companies</th>
+                     <th class="title2indexviews" colspan="5">Last Companies</th>
                   </tr>
                   <tr>
                      <th>Names</th>
@@ -76,9 +76,9 @@
                   </tr>
           </table>
 
-          <table class="container3">
+          <table class="container3indexviews">
                     <tr>
-                         <th class="title3" colspan="5" >Last Contacts</th>
+                         <th class="title3indexviews" colspan="5" >Last Contacts</th>
                     </tr>
                      <tr>
                          <th>Names</th>
