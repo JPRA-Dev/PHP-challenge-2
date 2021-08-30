@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\CompanyModel;
+use App\Models\CompanyTypeModel;
 use App\Models\ContactModel;
 
 class AdminController extends Controller
@@ -92,10 +93,7 @@ class AdminController extends Controller
                     echo "Please provide a valid phone number!";
                     unset($_POST["phonenumber"]);
                 }
-                else if (empty($_POST["companytype"]) OR (!filter_var($_POST["companytype"]))) {
-                    echo "Please provide a valid company type!";
-                    unset($_POST["companytype"]);
-                }
+                
                 
                 $companyname = $_POST["companyname"];
                 $tavnumber = $_POST["tavnumber"];
@@ -107,14 +105,11 @@ class AdminController extends Controller
                 echo "error : MESSAGE";
             }
         }
-               
+        $companyTypeModel=new CompanyTypeModel();
+        $companyTypeModel->find();
+       
 
-        $this->render("admin/addcompany");
+        $this->render("admin/addcompany",["companytypes"=>$companyTypeModel->data()]);
     }
-   
-
-    public function addcompanyPost()
-    {
-        $this->render("admin/addcompany");
-    }
+  
 }
