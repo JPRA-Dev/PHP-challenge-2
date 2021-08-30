@@ -72,7 +72,7 @@ class Database
         return $this;
     }
 
-    private function action($action, $table,$where = array(), string $jointure = null, int $limit = null, string $orderBy = null)
+    public function action($action, $table,$where = array(), string $jointure = null, int $limit = null, string $orderBy = null)
     {
         if (isset($where) && count($where) === 3) {
             $operators= array('=','>','<','>=','<=');
@@ -94,7 +94,6 @@ class Database
             $sql= isset($jointure) ?
                 ( "{$action} FROM {$table} {$jointure}" ) : ( "{$action} FROM {$table}". (isset($orderBy) ? " {$orderBy}" : "") . (isset($limit) ? " LIMIT {$limit}" : ""));
 
-            var_dump($this->_pdo->errorInfo());
             if (!$this->query($sql)->error()) {
                 return $this->results();
             }

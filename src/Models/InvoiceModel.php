@@ -26,7 +26,14 @@ class InvoiceModel extends Model
 
     public function findLimit(int $limit)
     {
-        $this->_data = $this->getDB()->getWithLimit('invoices', $limit,"ORDER BY invoice_id DESC");
+        $this->_data = $this->getDB()->action(
+            'SELECT *',
+            'invoices',
+            null,
+            "LEFT JOIN contact_person ON contact_person.contact_person_id=invoices.contact_person_id LEFT JOIN company ON company.id=invoices.company_id LEFT JOIN company_type ON company.company_type_id=company_type.company_type_id",
+            $limit,
+            "ORDER BY invoice_id DESC"
+        );
     }
 
     public function findOne($params=null)

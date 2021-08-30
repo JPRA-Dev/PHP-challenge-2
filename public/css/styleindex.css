@@ -19,6 +19,9 @@ font-size: 10px;
 font-weight: bold;
 
 }
+a:link{
+    text-decoration: none;
+}
 
 .title1{
     display: flex;
@@ -154,4 +157,10 @@ border: 1px solid #111;
 .row2{
     font-size: 12px;
     background-color: gainsboro;
+}
+
+@media screen and (max-width:320px){
+    main {
+        width: 100%;
+    }
 }

@@ -8,8 +8,9 @@ body{
     background-image: url(../images/backgroundpapier.jpg);
     background-position: center;
     background-size: cover;
-   
 }
+
+
 h1{
     display: flex;
     justify-content: center;
@@ -59,4 +60,9 @@ td{
 .row2{
     font-size: 12px;
     background-color: gainsboro;
+}
+@media screen and (max-width:900px){
+    main, h1 {
+       width: 100%;
+    }
 }

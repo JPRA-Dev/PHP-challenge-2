@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\CompanyModel;
+use App\Models\CompanyTypeModel;
 use App\Models\ContactModel;
 
 class AdminController extends Controller
@@ -77,11 +78,38 @@ class AdminController extends Controller
 
     public function addcompany()
     {
-        $this->render("admin/addcompany");
-    }
+        if (isset($_POST["submit"])) {
+            if (isset($_POST["companyname"]) && isset($_POST["tavnumber"]) && isset($_POST["phonenumber"]) && isset($_POST["companytype"])) {
 
-    public function addcompanyPost()
-    {
-        $this->render("admin/addcompany");
+                if (empty($_POST["companyname"])) {                                                          
+                    echo "Please provide a valid companyname!";
+                    unset($_POST["companyname"]);
+                }
+                else if ((empty($_POST["tavnumber"])) OR (!is_string($_POST["tavnumber"]))) {                                                                           
+                    echo "Please provide a valid tva number";
+                    unset($_POST["tavnumber"]);
+                }
+                else if ((empty($_POST["phonenumber"])) OR (!preg_match('/^[0-9]{10}+$/', $_POST["phonenumber"]))) {                                                                            
+                    echo "Please provide a valid phone number!";
+                    unset($_POST["phonenumber"]);
+                }
+                
+                
+                $companyname = $_POST["companyname"];
+                $tavnumber = $_POST["tavnumber"];
+                $phonenumber = $_POST["phonenumber"];
+                $companytype = $_POST["companytype"];
+                
+
+            } else {
+                echo "error : MESSAGE";
+            }
+        }
+        $companyTypeModel=new CompanyTypeModel();
+        $companyTypeModel->find();
+       
+
+        $this->render("admin/addcompany",["companytypes"=>$companyTypeModel->data()]);
     }
+  
 }
