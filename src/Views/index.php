@@ -16,36 +16,14 @@
                        <th>compagny</th>
                        <th></th>
                   </tr>
-                  <tr class="row1">
-                       <td>F20190404-004</td>
-                       <td>04/04/2019</td>
-                       <td>Jouets Jean-Michel</td>
-                       <td><a href="">🗑️</td>
-                  </tr>
-                  <tr class="row2">
-                       <td>F20190404-004</td>
-                       <td>04/04/2019</td>
-                       <td>Dundler Mifflin</td>
-                       <td><a href="">🗑️</td>
-                  </tr>
-                  <tr class="row1">
-                       <td>F20190404-003</td>
-                       <td>04/04/2019</td>
-                       <td>Pierre Cailloux</td>
-                       <td><a href="">🗑️</td>
-                  </tr>
-                  <tr class="row2">
-                       <td>F20190404-001</td>
-                       <td>04/04/2019</td>
-                       <td>Pied Pipper</td>
-                       <td><a href="">🗑️</td>
-                  </tr>
-                  <tr class="row1">
-                       <td>F20190403-654</td>
-                       <td>03/04/2019</td>
-                       <td>Raviga</td>
-                       <td><a href="">🗑️</td>
-                  </tr>
+                <?php $i = 0; foreach ($invoices as $invoice) { ?>
+                    <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
+                        <td><?= $invoice->nbrinvoice?></td>
+                        <td><?= $invoice->dateinvoice ?></td>
+                        <td><?= $invoice->name ?></td>
+                        <td><a href="/admin/invoice/delete<?php echo $invoice->invoice_id; ?>">:wastebasket:</td>
+                    </tr>
+                    <?php $i++; } ?>
             </table>
 
 
