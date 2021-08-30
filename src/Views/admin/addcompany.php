@@ -12,9 +12,9 @@
 		         </div>	
 
 		         <div class="tva">
-			        <label for="tavnumber">TVA Number :</label>
+			        <label for="tvanumber">TVA Number :</label>
 			        <br>
-			        <input class="input" id="tavnumber" type="text" name="tvanumber" value="" placeholder="BEXXXXXXXX..." autocomplete="off" required>
+			        <input class="input" id="tvanumber" type="text" name="tvanumber" value="" placeholder="BEXXXXXXXX..." autocomplete="off" required>
 		         </div>
 
 		         <div class="phone">

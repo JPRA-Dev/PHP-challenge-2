@@ -13,7 +13,7 @@
             </tr>
             <?php $i = 0; foreach ($contacts as $contact) { ?>
             <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
-                <td><?= $contact->firstname . ' ' . $contact->lastname ?></td>
+                <td><a href="/contact/show/1"><?= $contact->firstname . ' ' . $contact->lastname ?></a></td>
                 <td><?= $contact->telephone ?></td>
                 <td><?= $contact->email ?></td>
                 <td><?= $contact->name ?></td>

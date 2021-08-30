@@ -9,7 +9,7 @@
                 <tr>
                    <th>Name</th>
                    <th>TVA</th>
-                   <th>Type compagny</th>
+                   <th>Type company</th>
                 </tr>
                 <tr>
                    <td><?php echo $invoice->name; ?></td>

@@ -2,116 +2,44 @@
 ?>
 <main>
    <h1>COGIP: Companies Directory</h1>
-        <div class="container">
-             <h3>Clients</h3>
-                  <table class="container1">
-                    <tr>
-                       <th>Name</th>
-                       <th>TVA</th>
-                       <th>Country</th>
-                    </tr>
-                    <tr class="row1">
-                       <td><a href="/company/show/1">Raviga</a></td>
-                       <td>US456 654 342</td>
-                       <td>United States</td>
-                    </tr>
-                    <tr class="row2">
-                       <td><a href="/company/show/1">Dunder Mifflin</a></td>
-                       <td>US678 765 765</td>
-                       <td>France</td>
+    <div class="container">
+        <h3>Clients</h3>
+            <table class="container1">
+                <tr>
+                    <th>Name</th>
+                    <th>TVA</th>
+                    <th>Country</th>
+                </tr>
 
+                <?php $i = 0; foreach ($companies as $company) { ?>
+                    <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
+                        <td><a href="/company/show/1"><?= $company->name?></a></td>
+                        <td><?= $company->vatnumber ?></td>
+                        <td><?= $company->country ?></td>
+                        <!--<td><?= $company->type ?></td> voir avec Adrien comment on fait pour selectioner seulement les types clients!-->
                     </tr>
-                    <tr class="row1">
-                        <td><a href="/company/show/1">Jouets Jean-Michel</a></td>
-                        <td>FR 677 544 000</td>
-                        <td>France</td>
-
-                    </tr>
-                    <tr class="row2">
-                        <td><a href="/company/show/1">Bob Vance Refrig.</a></td>
-                        <td>US456 654 687</td>
-                        <td>United States</td>
-
-                    </tr>
-                    <tr class="row1">
-                        <td><a href="/company/show/1">Raviga</a></td>
-                        <td>US456 654 342</td>
-                        <td>United States</td>
-
-                    </tr>
-                    <tr class="row2">
-                        <td><a href="/company/show/1">Dunder Mifflin</a></td>
-                        <td>US678 765 765</td>
-                        <td>France</td>
-
-                    </tr>
-                    <tr class="row1">
-                        <td><a href="/company/show/1">Jouets Jean-Michel</a></td>
-                        <td>FR 677 544 000</td>
-                        <td>France</td>
-
-                    </tr>
-                    <tr class="row2">
-                        <td><a href="/company/show/1">Bob Vance Refrig.</a></td>
-                        <td>US456 654 687</td>
-                        <td>United States</td>
-                    </tr>
-               </table>
+                <?php $i++; } ?>
+                
+            </table>
         </div>
-       <div class="container">
+        <div class="container">
             <h3>Suppliers</h3>
-               <table class="container1">
+                <table class="container1">
                     <tr>
                         <th>Name</th>
                         <th>TVA</th>
                         <th>Country</th>
                     </tr>
-                    <tr class="row1">
-                        <td><a href="/company/show/1">Belgalol</a></td>
-                        <td>BE0876 654 665</td>
-                        <td>Belgium</td>
-                    </tr>
-                    <tr class="row2">
-                        <td><a href="/company/show/1">Pierre Cailloux</a></td>
-                        <td>FR 0678 908 654</td>
-                        <td>France</td>
 
-                    </tr>
-                    <tr class="row1">
-                        <td><a href="/company/show/1">Proximdr</a></td>
-                        <td>BE0876 985 665</td>
-                        <td>Belgium</td>
-
-                    </tr>
-                    <tr class="row2">
-                        <td><a href="/company/show/1">ElectricPower</a></td>
-                        <td>IT 256 852 542</td>
-                        <td>Italie</td>
-
-                    </tr>
-                    <tr class="row1">
-                        <td><a href="/company/show/1">Belgalol</a></td>
-                        <td>BE0876 654 665</td>
-                        <td>Belgium</td>
-
-                    </tr>
-                    <tr class="row2">
-                        <td><a href="/company/show/1">Pierre Cailloux</a></td>
-                        <td>FR 678 908 654</td>
-                        <td>France</td>
-
-                    </tr>
-                    <tr class="row1">
-                        <td><a href="/company/show/1">Proximdr</a></td>
-                        <td>BE0876 985 665</td>
-                        <td>Belgium</td>
-
-                    </tr>
-                    <tr class="row2">
-                        <td><a href="/company/show/1">ElectricPower</a></td>
-                        <td>IT 256 852 542</td>
-                        <td>Italie</td>
-                    </tr>
+                    <?php $i = 0; foreach ($companies as $company) { ?>
+                        <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
+                            <td><a href="/company/show/1"><?= $company->name?></a></td>
+                            <td><?= $company->vatnumber ?></td>
+                            <td><?= $company->country ?></td>
+                            <!--<td><?= $company->type ?></td> voir avec Adrien comment on fait pour selectioner seulement les types suppliers!-->
+                        </tr>
+                    <?php $i++; } ?>    
+                    
               </table>
         </div>  
 </main>
