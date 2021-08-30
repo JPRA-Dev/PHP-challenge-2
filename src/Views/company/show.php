@@ -2,16 +2,16 @@
 ?>
 <main>
 
-<h1>Company:</h1> 
+<h1 class="companyshowtitle">Company:</h1> 
 
    <div class="tvatype">
       <p>TVA:</p>
       <p>Type:</p>
    </div>
 
-  <div class="container">
+  <div class="containercompanyshow">
     <h3>Contact Persons</h3>
-        <table class="container1">
+        <table class="container1companyshow">
            <tr>
               <th>Name</th>
               <th>Phone</th>
@@ -35,27 +35,18 @@
         </table>
 
     <h3>Invoices</h3>
-       <table class="container1">
+       <table class="container1companyshow">
            <tr>
                <th>Invoice Number</th>
                <th>Date</th>
                <th>Contact Person</th>
-           </tr>
-           <tr class="row1">
-               <td><a href="/contact/show/1">F85632149-555</a></td>
-               <td>04/04/2021</td>
-               <td>peter_gregory@raviga.com</td>
-           </tr>
-           <tr class="row2">
-               <td><a href="/contact/show/1">F85632149-555</a></td>
-               <td>04/04/2021</td>
-               <td>peter_gregory@raviga.com</td>
-           </tr>
-           <tr class="row1">
-               <td><a href="/contact/show/1">F85632149-555</a></td>
-               <td>04/04/2021</td>
-               <td>peter_gregory@raviga.com</td>
-           </tr>
-      </table>
-  </div>
+            </tr>
+
+            <tr class="row1"> 
+                <td><a href="/contact/show/1"><?php echo $invoice->nbrinvoice; ?></a></td>
+                <td><?php echo $invoice->dateinvoice; ?></td>
+                <td><?php echo $invoice->firstname . ' ' . $invoice->lastname; ?></td>
+            </tr>
+        </table>
+    </div>
 </main>

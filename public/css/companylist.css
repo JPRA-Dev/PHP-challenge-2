@@ -11,13 +11,16 @@ body{
 }
 
 
-h1{
+.companylist{
     display: flex;
     justify-content: center;
-    color: #111;
+    color: #fff;
     font-weight: bold;
     font-size:40px;
-    margin-top: 150px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border: 2px solid rgb(233, 204, 210);
     border-radius: 10px;
     background-color: rgb(233, 204, 210);
@@ -28,7 +31,7 @@ h3{
     font-size: 25px;
     font-weight: bold;
 }
-.container{
+.containercompanylist{
 
     margin-top: 50px;
 }
@@ -49,7 +52,7 @@ th{
 td{
     font-size:20px;
 }
-.container1 {
+.container1companylist {
     table-layout: auto;
     border: 1px solid #111;
   }

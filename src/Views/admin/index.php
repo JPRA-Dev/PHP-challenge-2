@@ -2,80 +2,57 @@
 ?>
  <main>
         <div class="addbutton">
-         <div class="title1">
-           <h1>Hello, Jean-Christian!<br> What do you want to do today?</h1>
-         </div>  
+        
+           <h1 class="indextitle">Hello, Jean-Christian!<br> What do you want to do today?</h1>
+         
           <div class="add">
-                <div class="button">
+                <div class="buttonindex">
                 <input  type="hidden" name="token" value="<">
                 <button class="submit1" type="submit" name="addinvoice">Add New Invoice</button>
-                </div>
+            </div>
 
-                <div class="button">
+                <div class="buttonindex">
                 <input  type="hidden" name="token" value="<">
-                <button class="submit2" type="submit" name="addcompany">Add New Compagny</button>
-                </div>
+                <button class="submit2" type="submit" name="addcompany">Add New Company</button>
+            </div>
 
-                <div class="button">
+                <div class="buttonindex">
                 <input  type="hidden" name="token" value="<">
                 <button class="submit3" type="submit" name="addcontact">Add New Contact</button>
-                </div>
-          </div>
-          </div>
+            </div>
+        </div>
+    </div>
      
+<div class="containerindex">
 
-<div class="container">
+<table class="container1index">
 
-<table class="container1">
+            <theader>
+                <tr>
+                    <th class="titletab1" colspan="4">Last Invoices</th>
+                </tr>
 
-   <theader>
-       <tr>
-           <th class="titletab1" colspan="4">Last Invoices</th>
-       </tr>
-       <tr>
-           <th>Invoice Number</th>
-           <th>Dates</th>
-           <th>compagny</th>
-           <th></th>
-      </tr>
-   </theader>
-   <tbody>
-      <tr class="row1">
-          <td>F20190404-004</td>
-          <td>04/04/2019</td>
-          <td>Jouets Jean-Michel</td>
-          <td><a href="">🗑️</td>
-         
-      </tr>
-      <tr class="row2">
-          <td>F20190404-004</td>
-          <td>04/04/2019</td>
-          <td>Dundler Mifflin</td>
-          <td><a href="">🗑️</td>
-      </tr>
-      <tr class="row1">
-          <td>F20190404-003</td>
-          <td>04/04/2019</td>
-          <td>Pierre Cailloux</td>
-          <td><a href="">🗑️</td>
-      </tr>
-      <tr class="row2">
-          <td>F20190404-001</td>
-          <td>04/04/2019</td>
-          <td>Pied Pipper</td>
-          <td><a href="">🗑️</td>
-      </tr>
-      <tr class="row1">
-          <td>F20190403-654</td>
-          <td>03/04/2019</td>
-          <td>Raviga</td>
-          <td><a href="">🗑️</td>
-      </tr>
-  </tbody>
- </table>
+                <tr>
+                    <th>Invoice Number</th>
+                    <th>Dates</th>
+                    <th>company</th>
+                    <th></th>
+                </tr>
+             </theader>
+        <tbody>
+            <?php $i = 0; foreach ($invoices as $invoice) { ?>
+                <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
+                    <td><?= $invoice->nbrinvoice?></td>
+                    <td><?= $invoice->dateinvoice ?></td>
+                    <td><?= $invoice->name ?></td>
+                    <td><?= $invoice->type ?></td>
+                </tr>
+            <?php $i++; } ?>
+        </tbody>
+        </table>
 
 
-    <table class="container2">
+    <table class="container2index">
       
         <theader>
              <tr>
@@ -130,7 +107,7 @@
 
 
 
-    <table class="container3">
+    <table class="container3index">
        
           <theader>
                 <tr>

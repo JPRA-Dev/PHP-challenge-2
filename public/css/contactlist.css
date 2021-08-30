@@ -10,20 +10,23 @@ body{
     background-size: cover;
    
 }
-h1{
+.contactlisttitle{
     display: flex;
     justify-content: center;
-    color: #111;
+    color: #fff;
     font-weight: bold;
     font-size:40px;
-    margin-top: 150px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border: 2px solid rgb(225, 188, 243);
     border-radius: 10px;
     background-color: rgb(225, 188, 243);
     box-shadow: #111 5px 5px 5px;
     
 }
-.container{
+.containercontactlist{
 
     margin-top: 50px;
 }
@@ -47,7 +50,7 @@ td{
     font-size:20px;
    
 }
-.container1 {
+.container1contactlist {
     table-layout: auto;
     border: 1px solid #111;
   }

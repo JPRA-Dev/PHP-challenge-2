@@ -10,7 +10,7 @@ body{
     background-size: cover;
    
 }
-h1{
+.invoiceshowtitle{
     display: flex;
     justify-content: center;
     color: #111;
@@ -23,7 +23,7 @@ h1{
     box-shadow: #111 5px 5px 5px;
     
 }
-.container{
+.containerinvoiceshow{
     display: flex;
     flex-direction: column;
     justify-content: center;
