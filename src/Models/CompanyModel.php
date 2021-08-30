@@ -26,7 +26,14 @@ class CompanyModel extends Model
 
     public function findLimit(int $limit)
     {
-        $this->_data = $this->getDB()->getWithLimit('company', $limit,"ORDER BY id DESC");
+        $this->_data = $this->getDB()->action(
+            'SELECT *',
+            'company',
+            null,
+            "LEFT JOIN company_type ON company_type.company_type_id=company.company_type_id",
+            $limit,
+            "ORDER BY id DESC"
+        );
     }
 
     public function findOne($params=null)

@@ -27,7 +27,14 @@ class ContactModel extends Model
 
     public function findLimit(int $limit)
     {
-        $this->_data = $this->getDB()->getWithLimit('contact_person', $limit,"ORDER BY contact_person_id DESC");
+        $this->_data = $this->getDB()->action(
+            'SELECT *',
+            'contact_person',
+            null,
+            "LEFT JOIN company ON company.id=contact_person.company_id",
+            $limit,
+            "ORDER BY contact_person_id DESC"
+        );
     }
 
     public function findOne($params=null): bool
