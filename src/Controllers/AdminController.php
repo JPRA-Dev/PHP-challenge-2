@@ -96,7 +96,7 @@ class AdminController extends Controller
                 
                 
                 $companyname = $_POST["companyname"];
-                $tavnumber = $_POST["tavnumber"];
+                $tavnumber = $_POST["tvanumber"];
                 $phonenumber = $_POST["phonenumber"];
                 $companytype = $_POST["companytype"];
                 

@@ -40,22 +40,13 @@
                <th>Invoice Number</th>
                <th>Date</th>
                <th>Contact Person</th>
-           </tr>
-           <tr class="row1">
-               <td><a href="/contact/show/1">F85632149-555</a></td>
-               <td>04/04/2021</td>
-               <td>peter_gregory@raviga.com</td>
-           </tr>
-           <tr class="row2">
-               <td><a href="/contact/show/1">F85632149-555</a></td>
-               <td>04/04/2021</td>
-               <td>peter_gregory@raviga.com</td>
-           </tr>
-           <tr class="row1">
-               <td><a href="/contact/show/1">F85632149-555</a></td>
-               <td>04/04/2021</td>
-               <td>peter_gregory@raviga.com</td>
-           </tr>
-      </table>
-  </div>
+            </tr>
+
+            <tr class="row1"> 
+                <td><a href="/contact/show/1"><?php echo $invoice->nbrinvoice; ?></a></td>
+                <td><?php echo $invoice->dateinvoice; ?></td>
+                <td><?php echo $invoice->firstname . ' ' . $invoice->lastname; ?></td>
+            </tr>
+        </table>
+    </div>
 </main>
