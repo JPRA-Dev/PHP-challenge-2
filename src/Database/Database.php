@@ -72,7 +72,7 @@ class Database
         return $this;
     }
 
-    private function action($action, $table,$where = array(), string $jointure = null, int $limit = null, string $orderBy = null)
+    public function action($action, $table,$where = array(), string $jointure = null, int $limit = null, string $orderBy = null)
     {
         if (isset($where) && count($where) === 3) {
             $operators= array('=','>','<','>=','<=');
