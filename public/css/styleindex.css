@@ -14,7 +14,6 @@ body{
 .addbutton{
 display: flex;
 flex-direction: column;
-margin-top: 100px;
 font-size: 10px;
 font-weight: bold;
 
@@ -23,30 +22,36 @@ a:link{
     text-decoration: none;
 }
 
-.title1{
+.indextitle{
     display: flex;
     justify-content: center;
     text-align: center;
-    border: 2px solid #111;
+    border: 2px solid #79AACB;
     border-radius: 10px ;
+    font-size: 40px;
+    font-weight: bold;
     background-color: #79AACB;
     color: #fff;
     box-shadow: #111 5px 5px 5px;
     margin-top: 20px;
-    margin-bottom: 10px;
-   
- 
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    
+
 }
 .add{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 50px;
+    margin-top: 20px;
     
 }
-.button{
+.buttonindex{
    
     height: 80PX;
+    margin-bottom: 20px;
         
 }
 .submit1{
@@ -129,21 +134,23 @@ th{
     background-color: rgb(225, 188, 243);
     color:#111
 }
-
-.container1 {
+.containerindex{
+    height: 600px;
+}
+.container1index {
 table-layout: auto;
 border: 1px solid #111;
 
 
 }
-.container2{
+.container2index{
    table-layout: auto;
    border: 1px solid #111;
   
  
 
 }
-.container3{
+.container3index{
   table-layout: auto;
   border: 1px solid #111;
   

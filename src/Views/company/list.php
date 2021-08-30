@@ -1,15 +1,15 @@
 <?php
 ?>
 <main>
-   <h1>COGIP: Companies Directory</h1>
-    <div class="container">
-        <h3>Clients</h3>
-            <table class="container1">
-                <tr>
-                    <th>Name</th>
-                    <th>TVA</th>
-                    <th>Country</th>
-                </tr>
+   <h1 class="companylist">COGIP: Companies Directory</h1>
+        <div class="containercompanylist">
+             <h3>Clients</h3>
+                  <table class="container1companylist">
+                    <tr>
+                       <th>Name</th>
+                       <th>TVA</th>
+                       <th>Country</th>
+                    </tr>
 
                 <?php $i = 0; foreach ($companies as $company) { ?>
                     <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
@@ -19,12 +19,12 @@
                         <!--<td><?= $company->type ?></td> voir avec Adrien comment on fait pour selectioner seulement les types clients!-->
                     </tr>
                 <?php $i++; } ?>
-                
-            </table>
+                    
+               </table>
         </div>
-        <div class="container">
+       <div class="containercompanylist">
             <h3>Suppliers</h3>
-                <table class="container1">
+               <table class="container1companylist">
                     <tr>
                         <th>Name</th>
                         <th>TVA</th>

@@ -2,16 +2,16 @@
 ?>
 <main>
 
-<h1>Company:</h1> 
+<h1 class="companyshowtitle">Company:</h1> 
 
    <div class="tvatype">
       <p>TVA:</p>
       <p>Type:</p>
    </div>
 
-  <div class="container">
+  <div class="containercompanyshow">
     <h3>Contact Persons</h3>
-        <table class="container1">
+        <table class="container1companyshow">
            <tr>
               <th>Name</th>
               <th>Phone</th>
@@ -35,8 +35,8 @@
         </table>
 
     <h3>Invoices</h3>
-        <table class="container1">
-            <tr>
+       <table class="container1companyshow">
+           <tr>
                <th>Invoice Number</th>
                <th>Date</th>
                <th>Contact Person</th>

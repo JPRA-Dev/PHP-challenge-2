@@ -2,9 +2,9 @@
 
 ?>
 <main>
-<h1>New Contact</h1>
-   <div class="container">
-    <div class="container1">
+<h1 class="contacttitle">New Contact</h1>
+   <div class="containercontact">
+    <div class="container1contact">
 	  <form action="" method="post">
   		<div class="lastname">
 			<label for="name">Last Name :</label>

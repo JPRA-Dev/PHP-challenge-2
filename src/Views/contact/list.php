@@ -1,10 +1,10 @@
 <?php
 ?>
 <main>
-    <h1>COGIP : Contact Directory</h1>
+    <h1 class="contactlisttitle">COGIP : Contact Directory</h1>
 
-    <div class="container">
-        <table class="container1">
+    <div class="containercontactlist">
+        <table class="container1contactlist">
             <tr>
                 <th>Name</th>
                 <th>Telephone</th>
