@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link rel=stylesheet href="assets/css/style.css">
-    <link rel=stylesheet href="assets/css/reset.css">
+    <link rel=stylesheet href="../public/assets/css/style.css">
+    <link rel=stylesheet href="../public/assets/css/reset.css">
     <title>COGIP</title>
 </head>
 <body>
@@ -21,16 +21,16 @@
                 </div>
                 <ul class="navList" id="navListId">
                     <li class="listItem">
-                        <a href="#" class="hvr-grow">Home</a>
+                        <a href="../index.php" class="hvr-grow">Home</a>
                     </li>
                     <li class="listItem" >
-                        <a href="#" class="hvr-grow">Invoices</a>
+                        <a href="../invoice" class="hvr-grow">Invoices</a>
                     </li>
                     <li class="listItem">
-                        <a href="#" class="hvr-grow">Companies</a>
+                        <a href="../company" class="hvr-grow">Companies</a>
                     </li>
                     <li class="listItem">
-                        <a href="#" class="hvr-grow">Contacts</a>
+                        <a href="../contact" class="hvr-grow">Contacts</a>
                     </li>
                     <li class="listItem dropbtn" id="admin">
                         <div class="dropdown">
@@ -38,10 +38,10 @@
                             <a href="#" >Admin</a> 
                                 <i class="fa fa-caret-down"></i> </div>                   
                             <div class="dropdown-content" ID="submenuID">
-                                <a href="#" class="hvr-shrink">Dashboard</a>
-                                <a href="#" class="hvr-shrink">New Contact</a>
-                                <a href="#" class="hvr-shrink">New Invoice</a>
-                                <a href="#" class="hvr-shrink">New Company</a>
+                                <a href="../admin" class="hvr-shrink">Dashboard</a>
+                                <a href="../admin/addcontact" class="hvr-shrink">New Contact</a>
+                                <a href="../admin/addinvoice" class="hvr-shrink">New Invoice</a>
+                                <a href="../admin/addcompany" class="hvr-shrink">New Company</a>
                             </div>
                         </div>
                     </li>
