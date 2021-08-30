@@ -1,0 +1,23 @@
+footer {
+  margin-top: 100px;
+}
+
+.fixed-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #79AABC;
+    color: white;
+  }
+  
+.footer {
+      text-align: left;
+      font-size: 15px;
+      margin-left: 60px;
+      font-family: Helvetica, Sans-Serif;
+      font-style: italic;
+}
+  
