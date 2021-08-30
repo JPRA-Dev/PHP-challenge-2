@@ -10,8 +10,6 @@ body{
     background-position: center;
     background-size: cover;
    
-   
-   
 }
 
 .container{
@@ -106,4 +104,9 @@ margin-bottom: 15px;
 }
 .submit:hover{
     transform: scale(1.1);
+}
+@media screen and (max-width: 320px){
+    main, h1{
+        width: 100%;
+    }
 }

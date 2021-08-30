@@ -69,3 +69,8 @@ td{
     font-size: 12px;
     background-color: gainsboro;
 }
+@media screen and (max-width:900px){
+    main, h1 {
+       width: 100%;
+    }
+}

@@ -26,8 +26,6 @@ body{
     background-repeat: no-repeat;
     background-position: bottom;  
     box-shadow: 10px 5px 25px #111;
- 
-  
 }
 
 h1{
@@ -104,4 +102,9 @@ margin-bottom: 15px;
 }
 .submit:hover{
     transform: scale(1.1);
+}
+@media screen and (max-width: 320px){
+    main, h1{
+        width: 100%;
+    }
 }
