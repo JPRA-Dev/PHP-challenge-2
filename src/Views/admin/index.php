@@ -8,17 +8,17 @@
           <div class="add">
                 <div class="buttonindex">
                 <input  type="hidden" name="token" value="<">
-                <button class="submit1" type="submit" name="addinvoice">Add New Invoice</button>
+                <button class="submit1" type="submit" name="addinvoice"><a href="../admin/addinvoice">Add New Invoice</a></button>
             </div>
 
                 <div class="buttonindex">
                 <input  type="hidden" name="token" value="<">
-                <button class="submit2" type="submit" name="addcompany">Add New Company</button>
+                <button class="submit2" type="submit" name="addcompany"><a href="../admin/addcompany">Add New Company</a></button>
             </div>
 
                 <div class="buttonindex">
                 <input  type="hidden" name="token" value="<">
-                <button class="submit3" type="submit" name="addcontact">Add New Contact</button>
+                <button class="submit3" type="submit" name="addcontact"><a href="../admin/addcontact">Add New Contact</a></button>
             </div>
         </div>
     </div>
