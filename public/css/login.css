@@ -1,3 +1,7 @@
+main{
+    margin:0;
+    min-height: 100vh;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -46,7 +50,7 @@ body{
     color: #fff;
     font-weight: bold;
     font-size:40px;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -58,6 +62,10 @@ body{
 height: 50px;
 font-weight: bold;
 
+}
+.usernamelabel{
+    margin-bottom: 30px;
+    
 }
 .pwd{
     height: 50px;
