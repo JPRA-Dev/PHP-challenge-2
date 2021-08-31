@@ -86,6 +86,11 @@ $login = false;
                     <li class="listItem">
                         <a href="/contact" class="hvr-grow">Contacts</a>
                     </li>
+                    <?php if (!$login){ ?>
+                    <li class="listItem" id="connection">
+                        <a class="connect" href="/login">Login</a>
+                    </li>
+                    <?php } ?>
                     <li class="listItem dropbtn" id="admin">
                         <div class="dropdown">
                             <div class="hvr-grow">
@@ -99,11 +104,7 @@ $login = false;
                             </div>
                         </div>
                     </li>
-                    <?php if (!$login){ ?>
-                    <li class="listItem" id="connection">
-                        <a href="/login">Connection</a>
-                    </li>
-                    <?php } ?>
+                    
                 </ul>
                 <div class="menu" id="toggleButton">
                     <div class="menuLine"></div>

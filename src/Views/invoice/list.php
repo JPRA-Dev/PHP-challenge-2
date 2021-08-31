@@ -1,7 +1,7 @@
 <?php
 ?>
     <main>
-      <h1 class="invoicelisttitle">COGIP: List of invoices:</h1>
+      <h1 class="invoicelisttitle">COGIP: List of invoices</h1>
 
         <div class="containerinvoicelist">
              <table class="container1invoicelist">

@@ -34,7 +34,8 @@ a:link{
     border-radius: 10px ;
     font-size: 30px;
     font-weight: bold;
-    background-color: #79AACB;
+    background-color:#79AACB ;
+    width: 900px;
     color: #fff;
     box-shadow: #111 5px 5px 5px;
     margin-top: 20px;
@@ -65,8 +66,8 @@ a:link{
     border-radius: 10px;
     font-weight: bold;
     background-size: cover;
-    background-color: aqua;
-    color: blue;
+   background-color: aqua;
+   color: blue;
     font-size: 20px;
     margin: 0 auto;
     transition: transform .2s; /* Animation */
@@ -126,6 +127,7 @@ th{
     background-color: grey;
     color: white;
     border-bottom: 1px solid #111;
+    font-weight: bold;
 }
 .titletab1{
     background-color: aqua;
@@ -140,7 +142,7 @@ th{
     color:#111
 }
 .containerindex{
-    height: 600px;
+    height: auto;
 }
 .container1index {
 table-layout: auto;
