@@ -79,9 +79,10 @@ class UserModel extends Model
 
         } else {
             $user=$this->find($username);
-
+            
             if($user){
-                if(password_verify($password, $this->data()->password)){
+                $this->_data=$this->_data[0];
+                if(password_verify($password, $this->data()->pwd)){
                     SessionHelper::put($this->_sessionName,$this->data()->id);
                     if($remember){
                         $hash=HashHelper::unique();

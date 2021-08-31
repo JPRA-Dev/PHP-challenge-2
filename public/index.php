@@ -21,7 +21,7 @@ $GLOBALS['config']= array(
     'mysql' => array(
         'host'=>'127.0.0.1',
         'username'=>'root',
-        'pwd'=>'root',
+        'pwd'=>'',
         'dbName'=>'cogip'
     ),
     'remember'=> array(
@@ -58,6 +58,7 @@ $router->get('/error-500', fn() => $errorController->error500(), "error.500");
 $router->get('/test', fn() => $testController->index(), "test.index");
 $router->get('/test/:id', fn($id) => $testController->show($id), 'test.show');
 $router->get('/login', fn() => $authController->login(), 'auth.login');
+$router->post('/login', fn() => $authController->login(), 'auth.login.post');
 $router->get('/logout', fn() => $authController->logout(), 'auth.logout');
 $router->get('/contact', fn() => $contactController->list(), 'contact.list');
 $router->get('/contact/show/:id', fn($id) => $contactController->show($id), 'contact.show');
