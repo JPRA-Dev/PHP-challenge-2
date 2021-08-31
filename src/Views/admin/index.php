@@ -72,35 +72,35 @@
                  <td>US456 654 342</td>
                  <td>United States</td>
                  <td>Fournisseur</td>
-                 <td><a href="">🗑️</td>
+                 <td><a class="delete" href="">🗑️</a></td>
              </tr>
              <tr class="row2">
                 <td>Dunder Mifflin</td>
                 <td>US678 765 765</td>
                 <td>United States</td>
                 <td>Clients</td>
-                <td><a class="delete" href="">🗑️</td>
+                <td><a class="delete" href="">🗑️</a></td>
              </tr>
              <tr class="row1">
                  <td>Pierre Cailloux</td>
                  <td>FR 678 908 654</td>
                  <td>France</td>
                  <td>Fournisseur</td>
-                 <td><a class="delete" href="">🗑️</td>
+                 <td><a class="delete" href="">🗑️</a></td>
              </tr>
              <tr class="row2">
                 <td>Belgalol</td>
                 <td>BE0876 654 665</td>
                 <td>Belgique</td>
                 <td>Fournisseur</td>
-                <td><a class="delete" href="">🗑️</td>
+                <td><a class="delete" href="">🗑️</a></td>
              </tr>
              <tr class="row1">
                  <td>Jouets Jean-Michel</td>
                  <td>FR 677 544 000</td>
                  <td>France</td>
                  <td>Clients</td>
-                 <td><a class="delete" href="">🗑️</td>
+                 <td><a class="delete" href="">🗑️</a></td>
              </tr>
          </tbody>
  </table>
