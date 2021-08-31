@@ -17,10 +17,10 @@
 			        <input class="input" id="tvanumber" type="text" name="tvanumber" value="" placeholder="BEXXXXXXXX..." autocomplete="off" required>
 		         </div>
 
-		         <div class="phone">
-			        <label for="phonenumber">Phone Number :</label>
+		         <div class="country">
+			        <label for="country">Country :</label>
 			        <br>
-			        <input class="input" id="phonenumber" type="tel" name="phonenumber" placeholder="+32 xx xx xx..." required>
+			        <input class="input" id="country" type="text" name="country" placeholder="Country" required>
 		         </div>
 
 		         <div class="companytype">
