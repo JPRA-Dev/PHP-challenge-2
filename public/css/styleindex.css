@@ -111,7 +111,8 @@ a:link{
 
 table{
     border-collapse: collapse;
-    width: 500px;
+    width: 900px;
+    height: auto;
     margin-bottom: 20px;
     background-color: honeydew;
     box-shadow: 5px 5px 5px;
@@ -147,14 +148,14 @@ border: 1px solid #111;
    table-layout: auto;
    border: 1px solid #111;
   
- 
-
 }
 .container3index{
   table-layout: auto;
   border: 1px solid #111;
-  
-    
+   
+}
+.delete{
+    font-size: 13px;
 }
 
 .row1{
