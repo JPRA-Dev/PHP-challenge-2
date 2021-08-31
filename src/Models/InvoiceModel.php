@@ -24,6 +24,13 @@ class InvoiceModel extends Model
         }
     }
 
+    public function findByContact($contactId)
+    {
+        $data = $this->getDB()->getWithJointure('invoices', "LEFT JOIN contact_person ON contact_person.contact_person_id=invoices.contact_person_id LEFT JOIN company ON company.id=invoices.company_id LEFT JOIN company_type ON company.company_type_id=company_type.company_type_id",array('invoices.contact_person_id', '=', $contactId));
+
+        $this->_data = $data;
+    }
+
     public function findLimit(int $limit)
     {
         $this->_data = $this->getDB()->action(
@@ -42,7 +49,7 @@ class InvoiceModel extends Model
             $field= (is_numeric($params)) ? 'invoice_id' : 'nbrinvoice';
             $data = $this->getDB()->getWithJointure('invoices', "LEFT JOIN contact_person ON contact_person.contact_person_id=invoices.contact_person_id LEFT JOIN company ON company.id=invoices.company_id LEFT JOIN company_type ON company.company_type_id=company_type.company_type_id", array($field, '=', $params));
 
-            $this->_data = $data->first();
+            $this->_data = $data[0];
             return true;
         }
         return false;

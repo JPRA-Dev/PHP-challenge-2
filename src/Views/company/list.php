@@ -11,14 +11,19 @@
                        <th>Country</th>
                     </tr>
 
-                <?php $i = 0; foreach ($companies as $company) { ?>
+                <?php
+                $i = 0;
+                foreach ($companies as $company) {
+                    if ($company->type === 'Client') { ?>
                     <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
-                        <td><a href="/company/show/1"><?= $company->name?></a></td>
+                        <td><a href="/company/show/<?= $company->id; ?>"><?= $company->name?></a></td>
                         <td><?= $company->vatnumber ?></td>
                         <td><?= $company->country ?></td>
                         <!--<td><?= $company->type ?></td> voir avec Adrien comment on fait pour selectioner seulement les types clients!-->
                     </tr>
-                <?php $i++; } ?>
+                <?php $i++;
+                    }
+                } ?>
                     
                </table>
         </div>
@@ -31,15 +36,19 @@
                         <th>Country</th>
                     </tr>
 
-                    <?php $i = 0; foreach ($companies as $company) { ?>
-                        <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
-                            <td><a href="/company/show/1"><?= $company->name?></a></td>
-                            <td><?= $company->vatnumber ?></td>
-                            <td><?= $company->country ?></td>
-                            <!--<td><?= $company->type ?></td> voir avec Adrien comment on fait pour selectioner seulement les types suppliers!-->
-                        </tr>
-                    <?php $i++; } ?>    
-                    
+                   <?php
+                   $i = 0;
+                   foreach ($companies as $company) {
+                       if ($company->type === 'Supplier') { ?>
+                           <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
+                               <td><a href="/company/show/<?= $company->id; ?>"><?= $company->name?></a></td>
+                               <td><?= $company->vatnumber ?></td>
+                               <td><?= $company->country ?></td>
+                           </tr>
+                           <?php $i++;
+                       }
+                   } ?>
+
               </table>
         </div>  
 </main>

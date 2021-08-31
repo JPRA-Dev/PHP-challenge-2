@@ -87,7 +87,7 @@ class Database
                     ) : ( "{$action} FROM {$table} WHERE {$field} {$operator} ?". (isset($orderBy) ? " {$orderBy}" : "") . (isset($limit) ? " LIMIT {$limit}" : "") );
 
                 if (!$this->query($sql, array($value))->error()) {
-                    return $this;
+                    return $this->results();
                 }
             }
         } else {

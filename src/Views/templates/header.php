@@ -62,6 +62,7 @@ $login = false;
     <link rel="stylesheet" href="/../css/showcontact.css">
     <link rel="stylesheet" href="/../css/invoicelist.css">
     <link rel="stylesheet" href="/../css/showinvoice.css">
+    <link rel="stylesheet" href="/../css/login.css">
     <title>COGIP</title>
 </head>
 <body>
@@ -69,7 +70,7 @@ $login = false;
             <nav class ="navbar">
                 <div class="containerLogo">
                     <a href="/">
-                        <img class="logoHeader" src="assets/images/COGIP_LOGO.png">
+                        <img class="logoHeader" src="/../assets/images/logo.png">
                     </a>
                 </div>
                     <div class="menu" id="toggleButton">

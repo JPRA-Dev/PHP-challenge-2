@@ -21,7 +21,7 @@
                         <td><?= $invoice->nbrinvoice?></td>
                         <td><?= $invoice->dateinvoice ?></td>
                         <td><?= $invoice->name ?></td>
-                        <td><a href="/admin/invoice/delete<?php echo $invoice->invoice_id; ?>">🗑️</a></td>
+                        <td><a class="delete" href="/admin/invoice/delete<?php echo $invoice->invoice_id; ?>">🗑️</a></td>
                     </tr>
                     <?php $i++; } ?>
             </table>
@@ -43,7 +43,7 @@
                     <td><?= $company->vatnumber ?></td>
                     <td><?= $company->country ?></td>
                     <td><?= $company->type ?></td>
-                    <td><a href="/admin/company/delete<?php echo $company->id; ?>">🗑️</a></td>
+                    <td><a class="delete" href="/admin/company/delete<?php echo $company->id; ?>">🗑️</a></td>
                </tr>
                <?php $i++; } ?>
           </table>
@@ -56,7 +56,7 @@
                          <th>Names</th>
                          <th>phone</th>
                          <th>E-mail</th>
-                         <th>compagny</th>
+                         <th>company</th>
                          <th></th>
                      </tr>
                <?php $i = 0; foreach ($contacts as $contact) { ?>
@@ -65,7 +65,7 @@
                     <td><?= $contact->telephone ?></td>
                     <td><?= $contact->email ?></td>
                     <td><?= $contact->name ?></td>
-                    <td><a href="/admin/contact/delete<?php echo $contact->contact_person_id; ?>">🗑️</a></td>
+                    <td><a class="delete" href="/admin/contact/delete<?php echo $contact->contact_person_id; ?>">🗑️</a></td>
                </tr>
                <?php $i++; } ?>
              </table>
