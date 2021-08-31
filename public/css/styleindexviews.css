@@ -40,18 +40,24 @@ table{
     box-shadow: 5px 5px 5px;
 }
 .title1indexviews{
-    background-color: aqua;
+    /*background-color: aqua;*/
+    /*background-color: #C1CFC0;*/
+     background-color: #F8485E;
     color: #111;
     font-weight: bold;
   
 }
 .title2indexviews {
-    background-color: rgb(233, 204, 210);
+    /*background-color: rgb(233, 204, 210);*/
+    /*background-color: #E7E0C9;*/
+    background-color: #00C1D4;
     color: #111;
     font-weight: bold;
 }
 .title3indexviews {
-    background-color: rgb(225, 188, 243);
+    /*background-color: rgb(225, 188, 243);*/
+    /*background-color: #6B7AA1;*/
+    background-color: #EEEE;
     color:#111;
     font-weight: bold;
 }
