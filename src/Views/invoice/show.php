@@ -13,7 +13,7 @@
                    <th>Type company</th>
                 </tr>
                 <tr>
-                   <td><?php echo $invoice->name; ?></td>
+                   <td><a href="/company/show/1"><?php echo $invoice->name; ?></a></td>
                    <td><?php echo $invoice->vatnumber; ?></td>
                    <td><?php echo $invoice->type; ?></td>
                 </tr>
@@ -26,7 +26,7 @@
                    <th>Phone</th>
                 </tr>
                 <tr>
-                  <td><?php echo $contact->firstname . ' ' . $contact->lastname; ?></td>
+                  <td><a href="/contact/show/1"><?php echo $contact->firstname . ' ' . $contact->lastname; ?></a></td>
                   <td><?php echo $contact->email; ?></td>
                   <td><?php echo $contact->telephone; ?></td>
                 </tr>
