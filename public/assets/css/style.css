@@ -60,10 +60,6 @@ header {
   margin-bottom: 4px;
 }
 
-#connection {
-  display: none;
-}
-
 /******** SUB DROPDOWN MENU *************/
 .dropdown .dropbtn {
   border: none;
