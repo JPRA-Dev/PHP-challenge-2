@@ -72,6 +72,11 @@ $login = false;
                         <img class="logoHeader" src="assets/images/COGIP_LOGO.png">
                     </a>
                 </div>
+                    <div class="menu" id="toggleButton">
+                        <div class="menuLine"></div>
+                        <div class="menuLine"></div>
+                        <div class="menuLine"></div>
+                    </div>
                 <ul class="navList" id="navListId">
                     <li class="listItem">
                         <a href="/" class="hvr-grow">Home</a>
@@ -104,11 +109,7 @@ $login = false;
                     </li>
                     <?php } ?>
                 </ul>
-                <div class="menu" id="toggleButton">
-                    <div class="menuLine"></div>
-                    <div class="menuLine"></div>
-                    <div class="menuLine"></div>
-                </div>
+               
             </nav>
     </header>
 </body>

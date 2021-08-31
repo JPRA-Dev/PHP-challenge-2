@@ -11,6 +11,7 @@ header {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -168,11 +169,11 @@ header {
     width: 100%;
   }
   .menu {
-    position: fixed;
     right: 40px;
     top: 29px;
     display: inline-block;
     vertical-align: middle;
+    position: absolute;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);

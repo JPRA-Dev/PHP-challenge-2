@@ -8,6 +8,7 @@ header {
     color: white;
     display: flex;
     justify-content: space-around;
+    position: relative;
     align-items: center;
     font-size: 20px;
     font-family: Helvetica, Sans-Serif;
@@ -156,12 +157,13 @@ header {
         width: 100%;
     }
 
+
     .menu {
-        position:fixed;
         right:40px;
         top: 29px;
         display: inline-block;
         vertical-align: middle;
+        position: absolute;
         -webkit-transform: perspective(1px) translateZ(0);
         transform: perspective(1px) translateZ(0);
         box-shadow: 0 0 1px rgba(0, 0, 0, 0);
