@@ -25,7 +25,7 @@
 <body>
     <footer>
         <div class="fixed-footer">
-            <div class="footer">"Vive la COGIP!"</div>        
+            <div class="footer">  © 2021 COGIP, Inc.     "Vive la COGIP!"</div>        
         </div>
     </footer>
 </body>
