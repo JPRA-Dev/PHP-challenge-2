@@ -25,6 +25,13 @@ class ContactModel extends Model
         }
     }
 
+    public function findByCompany($companyId)
+    {
+        $data = $this->getDB()->getWithJointure('contact_person', "LEFT JOIN company ON company.id=contact_person.company_id",array('company_id', '=', $companyId));
+
+        $this->_data = $data;
+    }
+
     public function findLimit(int $limit)
     {
         $this->_data = $this->getDB()->action(
@@ -43,7 +50,7 @@ class ContactModel extends Model
             $field= (is_numeric($params)) ? 'contact_person_id' : 'name';
             $data = $this->getDB()->getWithJointure('contact_person', "LEFT JOIN company ON company.id=contact_person.company_id", array($field, '=', $params));
 
-            $this->_data = $data->first();
+            $this->_data = $data[0];
             return true;
         }
         return false;

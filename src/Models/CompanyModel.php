@@ -42,7 +42,7 @@ class CompanyModel extends Model
             $field= (is_numeric($params)) ? 'id' : 'name';
             $data = $this->getDB()->getWithJointure('company', "LEFT JOIN company_type ON company_type.company_type_id=company.company_type_id", array($field, '=', $params));
 
-            $this->_data = $data->first();
+            $this->_data = $data[0];
             return true;
         }
         return false;
