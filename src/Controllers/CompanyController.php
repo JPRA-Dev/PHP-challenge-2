@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\CompanyModel;
+use App\Models\ContactModel;
+use App\Models\InvoiceModel;
 
 class CompanyController extends Controller
 {
@@ -17,7 +19,24 @@ class CompanyController extends Controller
     {
         $companyModel = new CompanyModel();
         $companyModel->findOne($id);
-        $this->render("company/show", ["company" => $companyModel->data()]);
+
+        $contactModel = new ContactModel();
+        $contactModel->findByCompany($id);
+
+        $invoiceModel = new InvoiceModel();
+        $invoices = [];
+
+        foreach ($contactModel->data() as $contact)
+        {
+            $invoiceModel->findByContact($contact->contact_person_id);
+            array_push($invoices, ...$invoiceModel->data());
+        }
+
+        $this->render("company/show", [
+            "company" => $companyModel->data(),
+            "invoices" => $invoices,
+            "contacts" => $contactModel->data()
+        ]);
     }
 }
 
