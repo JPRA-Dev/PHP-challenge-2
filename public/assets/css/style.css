@@ -15,6 +15,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   font-size: 20px;
+  font-weight: bold;
   font-family: Helvetica, Sans-Serif;
   /* box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);*/
 }
@@ -40,6 +41,15 @@ header {
 .navbar a {
   text-decoration: none;
   /*color: white;*/
+  color: #79AACB;
+}
+
+.navbar .connect {
+  color: #E0394C;
+}
+
+.navbar .connect:hover {
+  text-decoration: none;
   color: #79AACB;
 }
 
@@ -244,12 +254,13 @@ header {
 }
 
 footer {
-  padding-bottom: 20px;
+  margin-bottom: 30px;
+  height: 30px;
 }
 
 .fixed-footer {
-  left: 0;
-  bottom: 0;
+  /*left: 0;
+    bottom: 0;*/
   width: 100%;
   /*background-color: #79AABC;*/
   background-image: url(../images/backgroundpapier.jpg);
