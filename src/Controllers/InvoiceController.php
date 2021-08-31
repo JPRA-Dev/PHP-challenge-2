@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\CompanyModel;
 use App\Models\InvoiceModel;
 
 class InvoiceController extends Controller

@@ -66,12 +66,13 @@ $router->get('/invoice/show/:id', fn($id) => $invoiceController->show($id), 'inv
 $router->get('/company', fn() => $companyController->list(), 'company.list');
 $router->get('/company/show/:id', fn($id) => $companyController->show($id), 'company.show');
 $router->get('/admin', fn() => $adminController->index(), 'admin.index');
+$router->get('/admin/users/', fn() => $adminController->users(), 'admin.users');
 $router->get('/admin/addcontact', fn() => $adminController->addcontact(), 'admin.addcontact');
-$router->post('/admin/addcontact', fn() => $adminController->addcontact(), 'admin.addcontact');
+$router->post('/admin/addcontact', fn() => $adminController->addcontact(), 'admin.addcontact.post');
 $router->get('/admin/addinvoice', fn() => $adminController->addinvoice(), 'admin.addinvoice');
-$router->post('/admin/addinvoice', fn() => $adminController->addinvoice(), 'admin.addinvoice');
+$router->post('/admin/addinvoice', fn() => $adminController->addinvoice(), 'admin.addinvoice.post');
 $router->get('/admin/addcompany', fn() => $adminController->addcompany(), 'admin.addcompany');
-$router->post('/admin/addcompany', fn() => $adminController->addcompany(), 'admin.addcompany');
+$router->post('/admin/addcompany', fn() => $adminController->addcompany(), 'admin.addcompany.post');
 
 
 if(CookieHelper::exists(ConfigHelper::get('remember/cookie_name')) && !SessionHelper::exists(ConfigHelper::get('session/session_name'))){
