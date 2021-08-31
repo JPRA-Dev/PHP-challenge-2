@@ -67,8 +67,11 @@ $router->get('/company', fn() => $companyController->list(), 'company.list');
 $router->get('/company/show/:id', fn($id) => $companyController->show($id), 'company.show');
 $router->get('/admin', fn() => $adminController->index(), 'admin.index');
 $router->get('/admin/addcontact', fn() => $adminController->addcontact(), 'admin.addcontact');
+$router->post('/admin/addcontact', fn() => $adminController->addcontact(), 'admin.addcontact');
 $router->get('/admin/addinvoice', fn() => $adminController->addinvoice(), 'admin.addinvoice');
+$router->post('/admin/addinvoice', fn() => $adminController->addinvoice(), 'admin.addinvoice');
 $router->get('/admin/addcompany', fn() => $adminController->addcompany(), 'admin.addcompany');
+$router->post('/admin/addcompany', fn() => $adminController->addcompany(), 'admin.addcompany');
 
 
 if(CookieHelper::exists(ConfigHelper::get('remember/cookie_name')) && !SessionHelper::exists(ConfigHelper::get('session/session_name'))){
