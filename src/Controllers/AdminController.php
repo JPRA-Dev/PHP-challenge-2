@@ -6,6 +6,7 @@ use App\Models\CompanyModel;
 use App\Models\CompanyTypeModel;
 use App\Models\ContactModel;
 use App\Models\UserModel;
+use App\Models\InvoiceModel;
 
 class AdminController extends Controller
 {
@@ -28,7 +29,7 @@ class AdminController extends Controller
                     echo "Please provide a valid first name!";
                     unset($_POST["firstname"]);
                 }
-                else if ((empty($_POST["phone"])) OR (!preg_match('/^[0-9]{10}+$/', $_POST["phone"]))) {                                                                            //gives an error if the string is empty or if it is not a string
+                else if ((empty($_POST["phone"])) OR (!preg_match('/^[0-9]{7}+$/', $_POST["phone"]))) {                                                                            //gives an error if the string is empty or if it is not a string
                     echo "Please provide a valid phone number!";
                     unset($_POST["phone"]);
                 }
@@ -42,6 +43,16 @@ class AdminController extends Controller
                 $phone = $_POST["phone"];
                 $email = $_POST["email"];
                 $company = $_POST["company"];
+
+                $contactModel=new ContactModel();
+                $contactModel->create(
+                    [
+                        "lastname"=>$name,
+                        "firstname"=>$firstname,
+                        "telephone"=>$phone,
+                        "email"=>$email,
+                        "company_id"=>$company
+                    ]);
 
             } else {
                 echo "error : MESSAGE";
@@ -63,6 +74,16 @@ class AdminController extends Controller
                 $company = $_POST["company"];
                 $contact = $_POST["contact"];
 
+                $invoiceModel=new InvoiceModel();
+                $invoiceModel->create(
+                    [
+                        "nbrinvoice"=>$invoicenumber,
+                        "dateinvoice"=>$date,
+                        "company_id"=>$company,
+                        "contact_person_id"=>$contact
+                        
+                    ]);
+
 
             } else {
                 echo "error : MESSAGE";
@@ -80,27 +101,26 @@ class AdminController extends Controller
     public function addcompany()
     {
         if (isset($_POST["submit"])) {
-            if (isset($_POST["companyname"]) && isset($_POST["tavnumber"]) && isset($_POST["phonenumber"]) && isset($_POST["companytype"])) {
+            if (isset($_POST["companyname"]) && isset($_POST["tvanumber"]) && isset($_POST["country"]) && isset($_POST["companytype"])) {
 
                 if (empty($_POST["companyname"])) {                                                          
                     echo "Please provide a valid companyname!";
                     unset($_POST["companyname"]);
                 }
-                else if ((empty($_POST["tavnumber"])) OR (!is_string($_POST["tavnumber"]))) {                                                                           
+                else if ((empty($_POST["tvanumber"])) OR (!is_string($_POST["tvanumber"]))) {                                                                           
                     echo "Please provide a valid tva number";
-                    unset($_POST["tavnumber"]);
+                    unset($_POST["tvanumber"]);
                 }
-                else if ((empty($_POST["phonenumber"])) OR (!preg_match('/^[0-9]{10}+$/', $_POST["phonenumber"]))) {                                                                            
-                    echo "Please provide a valid phone number!";
-                    unset($_POST["phonenumber"]);
+                else if ((empty($_POST["country"]))) {                                                                            
+                    echo "Please insert a country!";
+                    unset($_POST["country"]);
                 }
                 
                 
                 $companyname = $_POST["companyname"];
-                $tavnumber = $_POST["tvanumber"];
-                $phonenumber = $_POST["phonenumber"];
+                $tvanumber = $_POST["tvanumber"];
+                $country = $_POST["country"];
                 $companytype = $_POST["companytype"];
-
 
                 $companyModel = new CompanyModel();
                 $companyModel->create(

@@ -6,9 +6,9 @@ use App\Helpers\TokenHelper;
 
 
 <main >
-	<h1>Welcome to COGIP</h1>
-    <div class="container">
-	    <div class="container1">
+	<h1 class="logintitle">Welcome to COGIP</h1>
+    <div class="containerlogin">
+	    <div class="container1login">
 	        <form action="" method="post">
 		        <div class="username">
 			        <label for="username">Your Username:</label>
@@ -23,7 +23,7 @@ use App\Helpers\TokenHelper;
 		        </div>
                 <br>
 						
-				<div>
+				<div class="remember">
 					<label for="remember">
 					<input type="checkbox" name="remember">Remember me
 					</label>
