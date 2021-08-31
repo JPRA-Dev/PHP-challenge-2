@@ -11,7 +11,7 @@ use App\Helpers\TokenHelper;
 	    <div class="container1login">
 	        <form action="" method="post">
 		        <div class="username">
-			        <label for="username">Your Username:</label>
+			        <label class="usernamelabel" for="username">Your Username:</label>
 			        <br>
 			        <input class="input" type="text" name="username" value="" placeholder="Username..." autocomplete="off" required autofocus>
 		        </div>	

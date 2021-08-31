@@ -1,7 +1,13 @@
+main{
+    margin:0;
+    min-height: 100vh;
+}
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin:0;
+    min-height: 100vh;
     width: 100%;
     height: auto;
     font-family: Arial, Helvetica, sans-serif;
@@ -16,9 +22,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 550px;
-    height: 450px;
-    margin-top: 50px;
+    width: 450px;
+    height: 400px;
     border-radius: 10px;
     background-repeat: no-repeat;
     background-position: bottom;  
@@ -32,7 +37,7 @@ body{
     color: #fff;
     font-weight: bold;
     font-size:40px;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -47,6 +52,7 @@ body{
     flex-direction: column;
     justify-content: center;
     color: #111;
+    padding-top:20px;
    
    
 }

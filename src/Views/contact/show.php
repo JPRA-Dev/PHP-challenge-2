@@ -1,10 +1,10 @@
 <?php
 ?>
 <main>
-    <h1 class="contactshowtitle">Contact :</h1>
+    <h1 class="contactshowtitle">Contact</h1>
 
-    <div class="contact">
-        <p>Contact</p>
+    <div class="contactshow">
+        <p>Contact :</p>
         <p>company :</p>
         <p>email :</p>
         <p>phone :</p>

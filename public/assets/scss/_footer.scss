@@ -1,21 +1,20 @@
 footer {
-  margin-top: 100px;
+padding-bottom: 20px;
 }
 
 .fixed-footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    background-color: #79AABC;
-    color: white;
+    /*background-color: #79AABC;*/
+    background-image: url(../images/backgroundpapier.jpg);
+    color: #79AABC;
   }
   
 .footer {
-      text-align: left;
+      display: flex;
       font-size: 15px;
+      font-weight: bold;
       margin-left: 60px;
       font-family: Helvetica, Sans-Serif;
       font-style: italic;
