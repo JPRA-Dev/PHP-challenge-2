@@ -30,7 +30,7 @@
                         <div class="input">
                         <option value="">--Please choose a type of Company--</option>
                         	<?php foreach ($companytypes as $companytype) { ?>
-            				<option value="<?= $companytype->company_type_id; ?>"><?= $companytype->type; ?></option>
+            			<option value="<?= $companytype->company_type_id; ?>"><?= $companytype->type; ?></option>
         					<?php } ?>
                         </div>
                     </select>
