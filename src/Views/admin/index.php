@@ -42,7 +42,7 @@
         <tbody>
             <?php $i = 0; foreach ($invoices as $invoice) { ?>
                 <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
-                    <td><?= $invoice->nbrinvoice?></td>
+                    <td><a href="/invoice/show/1"><?= $invoice->nbrinvoice?></a></td>
                     <td><?= $invoice->dateinvoice ?></td>
                     <td><?= $invoice->name ?></td>
                     <td><a class="delete" href="/admin/invoice/delete<?php echo $invoice->invoice_id; ?>">🗑️</a></td>
@@ -69,7 +69,7 @@
         <tbody>
         <?php $i = 0; foreach ($companies as $company) { ?>
                <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
-                    <td><?= $company->name?></td>
+                    <td><a href="/company/show/1"><?= $company->name?></a></td>
                     <td><?= $company->vatnumber ?></td>
                     <td><?= $company->country ?></td>
                     <td><?= $company->type ?></td>
@@ -96,7 +96,7 @@
            <tbody>
            <?php $i = 0; foreach ($contacts as $contact) { ?>
                <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
-                    <td><?= $contact->firstname . ' ' . $contact->lastname ?></td>
+                    <td><a href="/contact/show/1"><?= $contact->firstname . ' ' . $contact->lastname ?></a></td>
                     <td><?= $contact->telephone ?></td>
                     <td><?= $contact->email ?></td>
                     <td><?= $contact->name ?></td>
