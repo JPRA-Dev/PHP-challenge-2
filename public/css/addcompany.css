@@ -22,8 +22,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 450px;
-    height: 400px;
+    width: 550px;
+    height: 450px;
     border-radius: 10px;
     background-repeat: no-repeat;
     background-position: bottom;  
@@ -81,7 +81,7 @@ margin-bottom: 15px;
     height: 50PX;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 10px;
     
 }
 .input{

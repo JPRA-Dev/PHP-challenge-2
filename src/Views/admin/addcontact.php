@@ -34,7 +34,7 @@
 		<div class="company">
                         <label for="company">Company :</label>
                         <br>
-                        <select name="company" id="company">
+                        <select class="input" name="company" id="company">
                             <option value="">Please select a company</option>
                             <?php foreach ($companies as $company) { ?>
                                    <option value="<?= $company->id; ?>"><?= $company->name; ?></option>
