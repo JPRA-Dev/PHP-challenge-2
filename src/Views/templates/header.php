@@ -69,7 +69,7 @@ $login = false;
             <nav class ="navbar">
                 <div class="containerLogo">
                     <a href="/">
-                        <img class="logoHeader" src="assets/images/COGIP_LOGO.png">
+                        <img class="logoHeader" src="/../assets/images/logo.png">
                     </a>
                 </div>
                 <ul class="navList" id="navListId">
