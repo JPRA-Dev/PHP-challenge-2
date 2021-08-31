@@ -3,7 +3,7 @@
  <main>
         <div class="addbutton">
         
-           <h1 class="indextitle">Hello, Jean-Christian!<br> What do you want to do today?</h1>
+           <h1 class="indextitle">Hello, <!--<?=$user->firstname . '' . $user->lastname?>!-->!<br> What do you want to do today?</h1>
          
           <div class="add">
                 <div class="buttonindex">
