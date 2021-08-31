@@ -41,10 +41,10 @@ class CompanyController extends Controller
 }
 
 if (isset($_POST["submit"])) {
-    if (isset($_POST["companyname"]) && isset($_POST["tvanumber"]) && isset($_POST["phonenumber"]) && isset($_POST["companytype"])) {
+    if (isset($_POST["companyname"]) && isset($_POST["tvanumber"]) && isset($_POST["country"]) && isset($_POST["companytype"])) {
         $companyname = $_POST["companyname"];
         $tvanumber = $_POST["tvanumber"];
-        $phonenumber = $_POST["phonenumber"];
+        $phonenumber = $_POST["country"];
         $companytype = $_POST["companytype"];
 
 
