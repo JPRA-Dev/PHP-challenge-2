@@ -56,7 +56,7 @@
                          <th>Names</th>
                          <th>phone</th>
                          <th>E-mail</th>
-                         <th>compagny</th>
+                         <th>company</th>
                          <th></th>
                      </tr>
                <?php $i = 0; foreach ($contacts as $contact) { ?>
