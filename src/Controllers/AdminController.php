@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\CompanyModel;
 use App\Models\CompanyTypeModel;
 use App\Models\ContactModel;
+use App\Models\UserModel;
 use App\Models\InvoiceModel;
 
 class AdminController extends Controller
@@ -130,17 +131,17 @@ class AdminController extends Controller
                 $tvanumber = $_POST["tvanumber"];
                 $country = $_POST["country"];
                 $companytype = $_POST["companytype"];
-                
-                $CompanyModel=new CompanyModel();
-                $CompanyModel->create(
+
+                $companyModel = new CompanyModel();
+                $companyModel->create(
                     [
-                        "name"=>$companyname,
-                        "vatnumber"=>$tvanumber,
-                        "country"=>$country,
-                        "company_type_id"=>$companytype
-                    ]);
-
-
+                        "firstname" => "ppppp",
+                        "lastname" => "jjjjj",
+                        "email" => "test@gmail.com",
+                        "company_id" => "3",
+                        "telephone" => "84654648915"
+                    ]
+                );
             } else {
                 echo "error : MESSAGE";
             }
@@ -151,5 +152,13 @@ class AdminController extends Controller
 
         $this->render("admin/addcompany",["companytypes"=>$companyTypeModel->data()]);
     }
-  
+
+    public function users()
+    {
+        $userModel = new UserModel();
+        $userModel->find();
+
+        $this->render("admin/users",["users"=>$userModel->data(), "userModel"=>$userModel]);
+    }
+
 }

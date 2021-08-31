@@ -2,7 +2,6 @@
 ?>
 <main>
     <h1 class="contactshowtitle">Contact</h1>
-
     <div class="contact">
         <p>company : <?= $contact->company_id?></p>
         <p>email : <?=$contact->email?></p>
