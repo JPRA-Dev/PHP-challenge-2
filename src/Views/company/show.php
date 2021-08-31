@@ -2,7 +2,7 @@
 ?>
 <main>
 
-<h1 class="companyshowtitle">Company:</h1> 
+<h1 class="companyshowtitle">Company: <?=$company->name?></h1> 
 
    <div class="tvatype">
       <p>TVA: <?= $company->vatnumber ?></p>

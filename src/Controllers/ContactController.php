@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\ContactModel;
+use App\Models\InvoiceModel;
 
 class ContactController extends Controller
 {
@@ -25,6 +26,9 @@ class ContactController extends Controller
     {
         $contactModel = new ContactModel();
         $contactModel->findOne($id);
-        $this->render("contact/show", ["contact" => $contactModel->data()]);
+
+        $invoicesModel = new InvoiceModel();
+        $invoicesModel->findByContact($contactModel->data()->contact_person_id);
+        $this->render("contact/show", ["contact" => $contactModel->data(), "invoices"=>$invoicesModel->data()]);
     }
 }

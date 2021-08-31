@@ -11,7 +11,17 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $this->render("admin/index");
+        $invoiceModel = new InvoiceModel();
+        $invoiceModel->findLimit(5);
+        $companyModel = new CompanyModel();
+        $companyModel->findLimit(5);
+        $contactModel = new ContactModel();
+        $contactModel->findLimit(5);
+        $this->render("admin/index", [
+            "invoices" => $invoiceModel->data(),
+            "companies" => $companyModel->data(),
+            "contacts" => $contactModel->data()
+        ]);
     }
 
     public function addcontact()
