@@ -3,7 +3,8 @@ header {
 }
 
 .navbar {
-    background-color: #79AABC;
+    /*background-color: #79AABC;*/
+    background-image: url(../images/backgroundpapier.jpg);
     margin-bottom: 50px;
     color: white;
     display: flex;
@@ -16,7 +17,7 @@ header {
 
 .logoHeader {
   height: 40px;
-  background-color: white;
+  /*background-color: white;*/
   padding: 7px;
   border-radius: 4px;
   margin-top: 15px;
