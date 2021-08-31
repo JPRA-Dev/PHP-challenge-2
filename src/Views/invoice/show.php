@@ -1,7 +1,8 @@
 <?php
+
 ?>
 <main>
-   <h1 class="invoiceshowtitle">Invoice:</h1>
+   <h1 class="invoiceshowtitle">Invoice: <?= $invoice->nbrinvoice?></h1>
 
       <div class="containerinvoiceshow">
          <h3>Company linked to the invoice</h3>
@@ -25,9 +26,9 @@
                    <th>Phone</th>
                 </tr>
                 <tr>
-                   <td>Meredith Palmer</td>
-                   <td>meredith.palmer@jouetsjm.fr</td>
-                   <td>06 85 69 74 58</td>
+                  <td><?php echo $contact->firstname . ' ' . $contact->lastname; ?></td>
+                  <td><?php echo $contact->email; ?></td>
+                  <td><?php echo $contact->telephone; ?></td>
                 </tr>
              </table>
        </div>
