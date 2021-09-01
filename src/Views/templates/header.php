@@ -63,6 +63,10 @@ $login = false;
     <link rel="stylesheet" href="/../css/invoicelist.css">
     <link rel="stylesheet" href="/../css/showinvoice.css">
     <link rel="stylesheet" href="/../css/login.css">
+    <link rel="stylesheet" href="/../css/404.css">
+    <link rel="stylesheet" href="/../css/500.css">
+    <link rel="stylesheet" href="/../css/noPermission.css">
+
     <title>COGIP</title>
 </head>
 <body>
