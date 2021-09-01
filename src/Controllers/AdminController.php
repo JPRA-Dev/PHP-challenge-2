@@ -179,7 +179,7 @@ class AdminController extends Controller
         $this->redirect('/admin');
     }
 
-    public function deleteCompany()
+    public function deleteCompany($id)
     {
         $companyModel = new CompanyModel();
         $companyModel->delete($id);
