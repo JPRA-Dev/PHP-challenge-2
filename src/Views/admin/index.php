@@ -3,7 +3,7 @@
 <main>
     <div class="addbutton">
 
-        <h1 class="indextitle">Hello, <!--<?=$user->firstname . '' . $user->lastname?>!-->!<br> What do you want to do today?</h1>
+        <h1 class="indextitle">Hello, <!--<?=$user->firstname . '' . $user->lastname?>!-->!<br> What would you like to do today?</h1>
 
         <div class="add">
             <div class="buttonindex">
@@ -40,7 +40,7 @@
             <?php $i = 0; foreach ($invoices as $invoice) { ?>
                 <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
                     <td><a href="/invoice/show/<?=$invoice->invoice_id;?>"><?= $invoice->nbrinvoice?></a></td>
-                    <td><?= $invoice->dateinvoice ?></td>
+                    <td><?php $date=new DateTime($invoice->dateinvoice); echo $date->format("d-m-Y"); ?></td>
                     <td><?= $invoice->name ?></td>
                     <?php if ($has_permission_for_delete) { ?><td><a class="delete" href="/admin/invoice/delete/<?php echo $invoice->invoice_id; ?>">🗑️</a></td><?php } ?>
                 </tr>
@@ -55,7 +55,7 @@
                     <th class="titletab2" colspan="5">Last Companies</th>
                 </tr>
                 <tr>
-                    <th>Names</th>
+                    <th>Name</th>
                     <th>TVA</th>
                     <th>Country</th>
                     <th>Type</th>
@@ -82,8 +82,8 @@
                     <th class="titletab3" colspan="5">Last Contacts</th>
                 </tr>
                 <tr>
-                    <th>Names</th>
-                    <th>Phone</th>
+                    <th>Name</th>
+                    <th>Telephone</th>
                     <th>E-mail</th>
                     <th>Company</th>
                     <?php if ($has_permission_for_delete) { ?><th></th><?php } ?>

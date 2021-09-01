@@ -23,7 +23,7 @@ var_dump($invoice);
 						<label for="company">Company :</label>
 						<br>
 						<select class="inputinvoice" name="company" id="company">
-							<option value="">Please select a company</option>
+							<option value="">--Please choose a Company--</option>
 							<?php foreach ($companies as $company) { ?>
            						<option <?php if(isset($invoice->company_id) && $invoice->company_id == $company->id) { ?>selected<?php } ?> value="<?= $company->id; ?>"><?= $company->name; ?></option>
         					<?php } ?>
@@ -34,7 +34,7 @@ var_dump($invoice);
 						<label for="contact">Contact Name for the Invoice:</label>
 						<br>
 						<select class="inputinvoice" name="contact" id="contact">
-						<option value="">Please select a contact</option>
+						<option value="">--Please choose a contact person--</option>
 							<?php foreach ($contacts as $contact) { ?>
             					<option <?php if(isset($invoice->contact_person_id) && $invoice->contact_person_id == $contact->contact_person_id) { ?>selected<?php } ?> value="<?= $contact->contact_person_id; ?>"><?= $contact->firstname . ' ' . $contact->lastname; ?></option>
         					<?php } ?>
