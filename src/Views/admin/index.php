@@ -31,7 +31,7 @@
 
                 <tr>
                     <th>Invoice Number</th>
-                    <th>Dates</th>
+                    <th>Date</th>
                     <th>Company</th>
                     <?php if ($has_permission_for_delete) { ?><th></th><?php } ?>
                 </tr>
@@ -39,7 +39,7 @@
             <tbody>
             <?php $i = 0; foreach ($invoices as $invoice) { ?>
                 <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
-                    <td><a href="/invoice/show/1"><?= $invoice->nbrinvoice?></a></td>
+                    <td><a href="/invoice/show/<?=$invoice->invoice_id;?>"><?= $invoice->nbrinvoice?></a></td>
                     <td><?= $invoice->dateinvoice ?></td>
                     <td><?= $invoice->name ?></td>
                     <?php if ($has_permission_for_delete) { ?><td><a class="delete" href="/admin/invoice/delete/<?php echo $invoice->invoice_id; ?>">🗑️</a></td><?php } ?>
@@ -47,7 +47,6 @@
                 <?php $i++; } ?>
             </tbody>
         </table>
-
 
         <table class="container2index">
 
@@ -66,7 +65,7 @@
             <tbody>
             <?php $i = 0; foreach ($companies as $company) { ?>
                 <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
-                    <td><a href="/company/show/1"><?= $company->name?></a></td>
+                    <td><a href="/company/show/<?= $company->id;?>"><?= $company->name?></a></td>
                     <td><?= $company->vatnumber ?></td>
                     <td><?= $company->country ?></td>
                     <td><?= $company->type ?></td>
@@ -89,11 +88,12 @@
                     <th>Company</th>
                     <?php if ($has_permission_for_delete) { ?><th></th><?php } ?>
                 </tr>
+
             </thead>
             <tbody>
             <?php $i = 0; foreach ($contacts as $contact) { ?>
                 <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
-                    <td><a href="/contact/show/1"><?= $contact->firstname . ' ' . $contact->lastname ?></a></td>
+                    <td><a href="/contact/show/<?=$contact->contact_person_id;?>"><?= $contact->firstname . ' ' . $contact->lastname ?></a></td>
                     <td><?= $contact->telephone ?></td>
                     <td><?= $contact->email ?></td>
                     <td><?= $contact->name ?></td>

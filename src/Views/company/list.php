@@ -1,7 +1,7 @@
 <?php
 ?>
 <main>
-   <h1 class="companylist">COGIP: Companies Directory</h1>
+   <h1 class="companylist">Companies Directory</h1>
         <div class="containercompanylist">
              <h3>Clients</h3>
                   <table class="container1companylist">
@@ -19,7 +19,6 @@
                         <td><a href="/company/show/<?= $company->id; ?>"><?= $company->name?></a></td>
                         <td><?= $company->vatnumber ?></td>
                         <td><?= $company->country ?></td>
-                        <!--<td><?= $company->type ?></td> voir avec Adrien comment on fait pour selectioner seulement les types clients!-->
                     </tr>
                 <?php $i++;
                     }

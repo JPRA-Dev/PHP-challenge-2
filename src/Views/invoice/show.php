@@ -10,10 +10,10 @@
                 <tr>
                    <th>Name</th>
                    <th>TVA</th>
-                   <th>Type company</th>
+                   <th>Type of company</th>
                 </tr>
                 <tr>
-                   <td><a href="/company/show/1"><?php echo $invoice->name; ?></a></td>
+                   <td><a href="/company/show/<?=$invoice->id;?>"><?php echo $invoice->name; ?></a></td>
                    <td><?php echo $invoice->vatnumber; ?></td>
                    <td><?php echo $invoice->type; ?></td>
                 </tr>
@@ -22,11 +22,11 @@
             <table class="container1invoiceshow">
                 <tr>
                    <th>Name</th>
-                   <th>Email</th>
-                   <th>Phone</th>
+                   <th>E-mail</th>
+                   <th>Telephone</th>
                 </tr>
                 <tr>
-                  <td><a href="/contact/show/1"><?php echo $contact->firstname . ' ' . $contact->lastname; ?></a></td>
+                  <td><a href="/contact/show/<?=$contact->contact_person_id;?>"><?php echo $contact->firstname . ' ' . $contact->lastname; ?></a></td>
                   <td><?php echo $contact->email; ?></td>
                   <td><?php echo $contact->telephone; ?></td>
                 </tr>

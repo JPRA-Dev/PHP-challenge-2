@@ -2,7 +2,7 @@
 ?>
 <main>
 
-<h1 class="companyshowtitle">Company: <?=$company->name?></h1> 
+<h1 class="companyshowtitle">Company: <?=$company->name;?></h1> 
 
    <div class="tvatype">
       <p>TVA: <?= $company->vatnumber ?></p>
@@ -14,12 +14,12 @@
         <table class="container1companyshow">
            <tr>
               <th>Name</th>
-              <th>Phone</th>
-              <th>Email</th>
+              <th>Telephone</th>
+              <th>E-mail</th>
            </tr>
             <?php $i = 0; foreach ($contacts as $contact) { ?>
                 <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
-                    <td><a href="/contact/show/<?= $contact->contact_person_id ?>"><?php echo $contact->lastname . ' ' . $contact->lastname; ?></a></td>
+                    <td><a href="/contact/show/<?= $contact->contact_person_id ?>"><?php echo $contact->firstname . ' ' . $contact->lastname; ?></a></td>
                     <td><?php echo $contact->telephone; ?></td>
                     <td><?php echo $contact->email; ?></td>
                 </tr>

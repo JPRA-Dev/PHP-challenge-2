@@ -12,8 +12,8 @@
                   </tr>
                   <tr>
                        <th>Invoice Number</th>
-                       <th>Dates</th>
-                       <th>company</th>
+                       <th>Date</th>
+                       <th>Company</th>
                   </tr>
                 <?php $i = 0; foreach ($invoices as $invoice) { ?>
                     <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
@@ -31,7 +31,7 @@
                   <tr>
                      <th>Names</th>
                      <th>TVA</th>
-                     <th>country</th>
+                     <th>Country</th>
                      <th>Type</th>
 
                   </tr>
@@ -50,10 +50,10 @@
                          <th class="title3indexviews" colspan="5" >Last Contacts</th>
                     </tr>
                      <tr>
-                         <th>Names</th>
-                         <th>phone</th>
+                         <th>Name</th>
+                         <th>Telephone</th>
                          <th>E-mail</th>
-                         <th>company</th>
+                         <th>Company</th>
                      </tr>
                <?php $i = 0; foreach ($contacts as $contact) { ?>
                <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">

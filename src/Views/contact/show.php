@@ -3,13 +3,13 @@
 <main>
     <h1 class="contactshowtitle">Contact</h1>
     <div class="contact">
-        <p>company : <?= $contact->company_id?></p>
-        <p>email : <?=$contact->email?></p>
-        <p>phone :<?=$contact->telephone?></p>
+        <p>Company : <?= $contact->name?></p>
+        <p>E-mail : <?=$contact->email?></p>
+        <p>Telephone :<?=$contact->telephone?></p>
     </div>
 
     <div class="containercontactshow">
-       <h3>Contact  person for these invoices: <?=$contact->firstname . '' . $contact->lastname?> </h3>
+       <h3>Contact  person for these invoices: <?=$contact->firstname . ' ' . $contact->lastname?> </h3>
 
           <table class="container1contactshow">
               <tr>
