@@ -13,7 +13,7 @@
 					</div>	
 
 					<div class="date">
-						<label for="date">Date of Invoice :</label>
+						<label for="date">Invoice Date :</label>
 						<br>
 						<input class="inputinvoice" type="date" id="date" name="date" value="" placeholder="Date of Invoice..." autocomplete="off" required>
 					</div>
