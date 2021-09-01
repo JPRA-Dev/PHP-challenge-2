@@ -18,10 +18,10 @@
                 <?php $i = 0; foreach ($invoices as $invoice) { ?>
                     <tr class="<?= $i % 2 === 0 ? 'row1' : 'row2' ?>">
                         <td><?= $invoice->nbrinvoice?></td>
-                        <td><?= $invoice->dateinvoice ?></td>
+                        <td><?php $date=new DateTime($invoice->dateinvoice); echo $date->format("d-m-Y"); ?></td>
                         <td><?= $invoice->name ?></td>
                     </tr>
-                    <?php $i++; } ?>
+                <?php $i++; } ?>
             </table>
             <table class="container2indexviews">
       
@@ -29,7 +29,7 @@
                      <th class="title2indexviews" colspan="5">Last Companies</th>
                   </tr>
                   <tr>
-                     <th>Names</th>
+                     <th>Name</th>
                      <th>TVA</th>
                      <th>Country</th>
                      <th>Type</th>
