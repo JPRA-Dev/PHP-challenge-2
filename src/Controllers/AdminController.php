@@ -139,10 +139,10 @@ class AdminController extends Controller
                 $companyModel = new CompanyModel();
                 $companyModel->create(
                     [
-                        "companyname" => $companyname,
-                        "tvanumber" => $tvanumber,
+                        "name" => $companyname,
+                        "vatnumber" => $tvanumber,
                         "country" => $country,
-                        "companytype" => $companytype
+                        "company_type_id" => $companytype
                        
                     ]
                 );
