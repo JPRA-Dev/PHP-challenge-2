@@ -21,7 +21,7 @@ $GLOBALS['config']= array(
     'mysql' => array(
         'host'=>'127.0.0.1',
         'username'=>'root',
-        'pwd'=>'',
+        'pwd'=>'root',
         'dbName'=>'cogip'
     ),
     'remember'=> array(
@@ -48,6 +48,12 @@ $invoiceController = new InvoiceController();
 $companyController = new CompanyController();
 $adminController = new AdminController();
 
+$user = new UserModel();
+if(SessionHelper::exists(ConfigHelper::get('session/session_name'))){
+    $userId = SessionHelper::get(ConfigHelper::get('session/session_name'));
+    $user= new UserModel($userId);
+}
+
 /**
  * Routes
  */
@@ -70,21 +76,16 @@ $router->get('/admin', fn() => $adminController->index(), 'admin.index');
 $router->get('/admin/users/', fn() => $adminController->users(), 'admin.users');
 $router->get('/admin/addcontact', fn() => $adminController->addcontact(), 'admin.addcontact');
 $router->post('/admin/addcontact', fn() => $adminController->addcontact(), 'admin.addcontact.post');
+$router->get('/admin/contact/update/:id', fn($id) => $adminController->updateContact($id), 'admin.contact.update');
+$router->get('/admin/contact/delete/:id', fn($id) => $adminController->deleteContact($id), 'admin.contact.delete');
 $router->get('/admin/addinvoice', fn() => $adminController->addinvoice(), 'admin.addinvoice');
 $router->post('/admin/addinvoice', fn() => $adminController->addinvoice(), 'admin.addinvoice.post');
+$router->get('/admin/invoice/update/:id', fn($id) => $adminController->updateInvoice($id), 'admin.invoice.update');
+$router->get('/admin/invoice/delete/:id', fn($id) => $adminController->deleteInvoice($id), 'admin.invoice.delete');
 $router->get('/admin/addcompany', fn() => $adminController->addcompany(), 'admin.addcompany');
 $router->post('/admin/addcompany', fn() => $adminController->addcompany(), 'admin.addcompany.post');
-
-
-if(CookieHelper::exists(ConfigHelper::get('remember/cookie_name')) && !SessionHelper::exists(ConfigHelper::get('session/session_name'))){
-    $hash=CookieHelper::get(ConfigHelper::get('remember/cookie_name'));
-    $hashCheck = Database::getInstance()->get('users_session', array('hash', '=', $hash));
-
-    if ($hashCheck->count()){
-        $user= new UserModel($hashCheck->first()->user_id);
-        $user->login();
-    }
-}
+$router->get('/admin/company/update/:id', fn($id) => $adminController->updateCompany($id), 'admin.company.update');
+$router->get('/admin/company/delete/:id', fn($id) => $adminController->deleteCompany($id), 'admin.company.delete');
 
 try {
     include '../src/Views/templates/header.php';

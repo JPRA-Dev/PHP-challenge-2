@@ -11,18 +11,20 @@ use App\Models\UserModel;
 class AuthController extends Controller
 {
     public function logout(){
-        $user=new UserModel();
-        $user->logout();
+        $this->userLogout();
 
-        RedirectHelper::to('/');
+        $this->redirect('/');
     }
 
     public function login()
     {
+        if ($this->userIsLogged()) {
+            $this->redirect('/');
+            return;
+        }
+
         if(InputHelper::exists()){
             if(TokenHelper::check(InputHelper::get('token'))){
-        
-        
                 $validate = new ValidatorHelper();
                 $validation=$validate->check($_POST,array(
                     'username'=>array('required'=>true),
