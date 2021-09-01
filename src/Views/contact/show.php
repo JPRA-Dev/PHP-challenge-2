@@ -9,9 +9,10 @@
     </div>
 
     <div class="containercontactshow">
-       <h3>Contact  person for these invoices: <?=$contact->firstname . ' ' . $contact->lastname?> </h3>
-
           <table class="container1contactshow">
+              <tr>
+                  <th class="titlecontactshow" colspan="2">Contact  person for these invoices: <?=$contact->firstname . ' ' . $contact->lastname?></th>
+              </tr>
               <tr>
                  <th>Invoice Number</th>
                  <th>Date</th>

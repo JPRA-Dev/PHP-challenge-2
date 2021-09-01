@@ -5,8 +5,10 @@
    <h1 class="invoiceshowtitle">Invoice: <?= $invoice->nbrinvoice?></h1>
 
       <div class="containerinvoiceshow">
-         <h3>Company linked to the invoice</h3>
              <table class="container1invoiceshow">
+                <tr>
+                <th class="titleinvoiceshow" colspan="3">Company linked to the invoice</th>
+                </tr>
                 <tr>
                    <th>Name</th>
                    <th>TVA</th>
@@ -18,8 +20,10 @@
                    <td><?php echo $invoice->type; ?></td>
                 </tr>
              </table>
-         <h3>Contact person</h3>
             <table class="container1invoiceshow">
+               <tr>
+                  <th class="titleinvoiceshow" colspan="3">Contact Person</th>
+               </tr>
                 <tr>
                    <th>Name</th>
                    <th>E-mail</th>
