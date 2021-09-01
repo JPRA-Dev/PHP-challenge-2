@@ -1,10 +1,3 @@
-$font:Arial, Helvetica, sans-serif;
-$backgroundbody: url(../images/backgroundpapier.jpg);
-$backgroundbutton: url(../images/backgroundbutton.jpg);
-$colorcompany:#00C1D4;
-$backgroundtab:  honeydew;
-$backgroundrow:gainsboro;
-
 
 .companylist{
     display: flex;
@@ -43,10 +36,14 @@ th{
     background-color: grey;
     color: white;
     border-bottom: 1px solid #111;
+    border-left: 2px solid  #fff;
     font-size: 25px;
 }
 td{
     font-size:20px;
+    text-align: left;
+    border-left: 2px solid  #fff;
+    padding-left: 10px;
 }
 .container1companylist {
     table-layout: auto;

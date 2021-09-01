@@ -1,7 +1,13 @@
 $font:Arial, Helvetica, sans-serif;
 $backgroundbody: url(../images/backgroundpapier.jpg);
-$backgroundbutton: url(../images/backgroundpapier.jpg);
+$backgroundbutton: url(../images/backgroundbutton.jpg);
 $colorcompany:#00C1D4;
+$colorcontact:#71DBB8;
+$colorinvoice:#F8485E;
+$colortextbutton: blue;
+$colorblue:#79AACB;
+$backgroundtab:  honeydew;
+$backgroundrow:gainsboro;
 
 body{
     display: flex;
@@ -13,12 +19,12 @@ body{
     background-image: $backgroundbody;
     background-position: center;
     background-size: cover;
-
+}
 
 main{
     margin:0;
     min-height: 100vh;
-
+}
     .companytitle{
   
         display: flex;
@@ -112,8 +118,7 @@ margin-bottom: 15px;
 .submit:hover{
     transform: scale(1.1);
 }
-}
-}
+
 
 @media screen and (max-width: 320px){
     main, h1{
