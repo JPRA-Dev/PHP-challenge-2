@@ -82,18 +82,14 @@ class Database
             $value       = $where[2];
 
             if (in_array($operator,$operators)) {
-                $sql= isset($jointure) ?
-                    ( "{$action} FROM {$table} {$jointure} WHERE {$field} {$operator} ?". (isset($orderBy) ? " {$orderBy}" : "") . (isset($limit) ? " LIMIT {$limit}" : "")
-                    ) : ( "{$action} FROM {$table} WHERE {$field} {$operator} ?". (isset($orderBy) ? " {$orderBy}" : "") . (isset($limit) ? " LIMIT {$limit}" : "") );
+                $sql= "{$action} FROM {$table}". (isset($jointure) ? " {$jointure}" : '')." WHERE {$field} {$operator} ?". (isset($orderBy) ? " {$orderBy}" : "") . (isset($limit) ? " LIMIT {$limit}" : "");
 
                 if (!$this->query($sql, array($value))->error()) {
                     return $this->results();
                 }
             }
         } else {
-            $sql= isset($jointure) ?
-                ( "{$action} FROM {$table} {$jointure}" ) : ( "{$action} FROM {$table}". (isset($orderBy) ? " {$orderBy}" : "") . (isset($limit) ? " LIMIT {$limit}" : ""));
-
+            $sql= "{$action} FROM {$table}" . (isset($jointure) ? " {$jointure}" : '') . (isset($orderBy) ? " {$orderBy}" : "") . (isset($limit) ? " LIMIT {$limit}" : "");
             if (!$this->query($sql)->error()) {
                 return $this->results();
             }
