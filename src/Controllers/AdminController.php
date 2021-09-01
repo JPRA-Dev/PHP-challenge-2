@@ -21,16 +21,20 @@ class AdminController extends Controller
         $companyModel->findLimit(5);
         $contactModel = new ContactModel();
         $contactModel->findLimit(5);
+
         $this->render("admin/index", [
             "invoices" => $invoiceModel->data(),
             "companies" => $companyModel->data(),
             "contacts" => $contactModel->data(),
-            "has_permission_for_delete" => $this->userHasPermission('admin')
+            "has_permission_for_delete" => $this->userHasPermission('admin'),
+            "has_permission_for_update" => $this->userHasPermission('admin')
         ]);
     }
 
     public function addcontact()
     {
+        if (!$this->userIsLogged()) $this->redirect(403);
+
         if (isset($_POST["submit"])) {
             if (isset($_POST["name"]) && isset($_POST["firstname"]) && isset($_POST["phone"]) && isset($_POST["email"]) 
             && isset($_POST["company"])) {
@@ -81,6 +85,8 @@ class AdminController extends Controller
 
     public function addinvoice()
     {
+        if (!$this->userIsLogged()) $this->redirect(403);
+
         if (isset($_POST["submit"])) {
             if (isset($_POST["invoicenumber"]) && isset($_POST["date"]) && isset($_POST["company"]) && isset($_POST["contact"])) {
                 $invoicenumber = $_POST["invoicenumber"];
@@ -114,6 +120,8 @@ class AdminController extends Controller
 
     public function addcompany()
     {
+        if (!$this->userIsLogged()) $this->redirect(403);
+
         if (isset($_POST["submit"])) {
             if (isset($_POST["companyname"]) && isset($_POST["tvanumber"]) && isset($_POST["country"]) && isset($_POST["companytype"])) {
 
@@ -159,6 +167,8 @@ class AdminController extends Controller
 
     public function users()
     {
+        if (!$this->userIsLogged()) $this->redirect(403);
+
         $userModel = new UserModel();
         $userModel->find();
 
@@ -167,6 +177,9 @@ class AdminController extends Controller
 
     public function deleteContact($id)
     {
+        if (!$this->userIsLogged()) $this->redirect(403);
+        if (!$this->userHasPermission('admin')) $this->redirect(403);
+
         $contactModel = new ContactModel();
         $contactModel->delete($id);
         $this->redirect('/admin');
@@ -174,6 +187,9 @@ class AdminController extends Controller
 
     public function deleteInvoice($id)
     {
+        if (!$this->userIsLogged()) $this->redirect(403);
+        if (!$this->userHasPermission('admin')) $this->redirect(403);
+
         $invoiceModel = new InvoiceModel();
         $invoiceModel->delete($id);
         $this->redirect('/admin');
@@ -181,6 +197,9 @@ class AdminController extends Controller
 
     public function deleteCompany($id)
     {
+        if (!$this->userIsLogged()) $this->redirect(403);
+        if (!$this->userHasPermission('admin')) $this->redirect(403);
+
         $companyModel = new CompanyModel();
         $companyModel->delete($id);
         $this->redirect('/admin');
@@ -188,6 +207,9 @@ class AdminController extends Controller
 
     public function updateCompany($id)
     {
+        if (!$this->userIsLogged()) $this->redirect(403);
+        if (!$this->userHasPermission('admin')) $this->redirect(403);
+
         if (isset($_POST["submit"])) {
             if (isset($_POST["companyname"]) && isset($_POST["tvanumber"]) && isset($_POST["country"]) && isset($_POST["companytype"])) {
 
@@ -236,6 +258,9 @@ class AdminController extends Controller
 
     public function updateInvoice($id)
     {
+        if (!$this->userIsLogged()) $this->redirect(403);
+        if (!$this->userHasPermission('admin')) $this->redirect(403);
+
         if (isset($_POST["submit"])) {
             if (isset($_POST["invoicenumber"]) && isset($_POST["date"]) && isset($_POST["company"]) && isset($_POST["contact"])) {
                 $invoicenumber = $_POST["invoicenumber"];
@@ -269,6 +294,9 @@ class AdminController extends Controller
 
     public function updateContact($id)
     {
+        if (!$this->userIsLogged()) $this->redirect(403);
+        if (!$this->userHasPermission('admin')) $this->redirect(403);
+
         if (isset($_POST["submit"])) {
             if (isset($_POST["name"]) && isset($_POST["firstname"]) && isset($_POST["phone"]) && isset($_POST["email"]) 
             && isset($_POST["company"])) {

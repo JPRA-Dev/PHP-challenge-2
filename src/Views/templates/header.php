@@ -1,6 +1,8 @@
 <?php
+
 global $user;
 $login = $user->isLoggedIn();
+
 ?>
 
 <!DOCTYPE html>
@@ -16,50 +18,49 @@ $login = $user->isLoggedIn();
 </head>
 <body>
     <header>
-            <nav class ="navbar">
-                <div class="containerLogo">
+    <nav class ="navbarHeader">
+                <div class="containerLogoHeader">
                     <a href="/">
                         <img class="logoHeader" src="/../assets/images/logo.png">
                     </a>
                 </div>
-                <ul class="navList" id="navListId">
-                    <li class="listItem">
-                        <a href="/" class="hvr-grow">Home</a>
+                    <div class="menuHeader" id="toggleButtonHeader">
+                        <div class="menuLineHeader"></div>
+                        <div class="menuLineHeader"></div>
+                        <div class="menuLineHeader"></div>
+                    </div>
+                <ul class="navListHeader" id="navListIdHeader">
+                    <li class="listItemHeader">
+                        <a href="/" class="hvr-growHeader">Home</a>
                     </li>
-                    <li class="listItem" >
-                        <a href="/invoice" class="hvr-grow">Invoices</a>
+                    <li class="listItemHeader" >
+                        <a href="/invoice" class="hvr-growHeader">Invoices</a>
                     </li>
-                    <li class="listItem">
-                        <a href="/company" class="hvr-grow">Companies</a>
+                    <li class="listItemHeader">
+                        <a href="/company" class="hvr-growHeader">Companies</a>
                     </li>
-                    <li class="listItem">
-                        <a href="/contact" class="hvr-grow">Contacts</a>
+                    <li class="listItemHeader">
+                        <a href="/contact" class="hvr-growHeader">Contacts</a>
                     </li>
                     <?php if (!$login){ ?>
-                    <li class="listItem" id="connection">
+                    <li class="listItemHeader" id="connectionHeader">
                         <a class="connect" href="/login">Login</a>
                     </li>
                     <?php } else { ?>
-                    <li class="listItem dropbtn" id="admin">
-                        <div class="dropdown">
-                            <div class="hvr-grow">
+                        <li class="listItemHeader dropbtnHeader" id="adminHeader">
+                        <div class="dropdownHeader">
+                            <div class="hvr-growHeader">
                             <a href="#" >Admin</a> 
                                 <i class="fa fa-caret-down"></i> </div>                   
-                            <div class="dropdown-content" ID="submenuID">
-                                <a href="/admin" class="hvr-shrink">Dashboard</a>
-                                <a href="/admin/addcontact" class="hvr-shrink">New Contact</a>
-                                <a href="/admin/addinvoice" class="hvr-shrink">New Invoice</a>
-                                <a href="/admin/addcompany" class="hvr-shrink">New Company</a>
-                                <a href="/logout" class="hvr-shrink">Logout</a>
+                            <div class="dropdown-contentHeader" ID="submenuIDHeader">
+                                <a href="/admin" class="hvr-shrinkHeader">Dashboard</a>
+                                <a href="/admin/addcontact" class="hvr-shrinkHeader">New Contact</a>
+                                <a href="/admin/addinvoice" class="hvr-shrinkHeader">New Invoice</a>
+                                <a href="/admin/addcompany" class="hvr-shrinkHeader">New Company</a>
                             </div>
                         </div>
                     </li>
                     <?php } ?>
                 </ul>
-                <div class="menu" id="toggleButton">
-                    <div class="menuLine"></div>
-                    <div class="menuLine"></div>
-                    <div class="menuLine"></div>
-                </div>
             </nav>
     </header>
