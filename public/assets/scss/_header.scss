@@ -1,0 +1,247 @@
+header {
+    width: 100%;
+  }
+  
+  .navbarHeader  {
+      /*background-color: #79AABC;*/
+      background-image: url(../images/backgroundpapier.jpg);
+      color: #79AABC;
+      display: flex;
+      justify-content: space-around;
+      position: relative;
+      align-items: center;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: Helvetica, Sans-Serif;
+     /* box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);*/
+  }
+  
+  .logoHeader {
+    height: 40px;
+    /*background-color: white;*/
+    padding: 7px;
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .navListHeader {
+      list-style-type: none;
+  }
+  
+  .navListHeader .listItemHeader {
+      display: inline-block;
+      padding: 30px 10px;
+  }
+  
+  .navbarHeader a {
+      text-decoration: none;
+      /*color: white;*/
+      color: #79AACB;
+  
+  }
+  .navbarHeader .connect{
+    color: #E0394C;
+  }
+  
+  .navbarHeader .connect:hover{
+    text-decoration: none;
+    color: #79AACB;
+  }
+  
+  .navbarHeader a:hover {
+      text-decoration: none;
+      color: #E0394C;
+  }
+  
+  .menuHeader {
+      display: none;
+      margin-bottom: 4px;
+  }
+  
+  .menuLineHeader {
+      width: 20px;
+      height: 3px;
+      background-color: white;
+      /*background-image: url(../images/backgroundpapier.jpg);*/
+      margin-bottom: 4px;
+  }
+  
+  // #connection {
+  //     display: none;
+  // }
+  
+  /******** SUB DROPDOWN MENU *************/
+  
+  .dropdownHeader .dropbtnHeader { 
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+      width: auto;
+    }
+  
+    .dropdownHeader:hover .dropbtnHeader {
+      background-color: red;
+    }
+  
+    .dropdown-contentHeader {
+      padding-top: 10px;
+      display: none;
+      position: fixed;
+      /*background-color: #79AABC;*/
+      background-image: url(../images/backgroundpapier.jpg);
+      width: 160;
+      box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-contentHeader a {
+      float: none;
+      /*color: white;*/
+      color: #79AACB;
+      padding: 12px 16px;
+      text-decoration: none;
+      font-size: 18px;
+      display: block;
+      text-align: left;
+    }
+    
+    .dropdown-contentHeader a:hover {
+     /* background-color: #79AABC;*/
+     background-image: url(../images/backgroundpapier.jpg);
+    }
+    
+    .dropdown-contentHeader:hover .dropdown-contentHeader {
+      display: flex;
+      justify-content: space-around;
+      -webkit-flex-direction: column; 
+      flex-direction: column; 
+    }
+  
+  /******** EFFECTS *************/
+  
+  .hvr-shrinkHeader {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-property: transform;
+      transition-property: transform;
+    }
+  
+    .hvr-shrinkHeader:hover, .hvr-shrinkHeader:focus, .hvr-shrinkHeader:active {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  
+    .hvr-growHeader {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-property: transform;
+      transition-property: transform;
+    }
+  
+    .hvr-growHeader:hover, .hvr-growHeader:focus, .hvr-growHeaderHeader:active {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  
+  
+  /******** RESPONSIVE *************/
+    
+  
+  @media all and (max-width: 805px) {
+      .navbarHeader {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+      }
+  
+      .navbarHeader .containerLogoHeader {
+          width: 100%;
+      }
+  
+      .menuHeader {
+          position:fixed;
+          right:40px;
+          top: 29px;
+          display: inline-block;
+          vertical-align: middle;
+          position: absolute;
+          -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+          -webkit-transition-property: transform;
+          transition-property: transform;
+      }
+  
+      .menuHeader:hover {
+          -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+          cursor: pointer;
+      }
+  
+      .navListHeader {
+          list-style-type: none;
+          width: 100%;
+          text-align: center;
+          display: none;
+      }
+  
+      .navListHeader .listItemHeader {
+          display: block;
+          padding: 10px;
+          border-top: 1px solid white;
+      }
+  
+      .logoHeader {
+          margin-left: 60px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          padding: 6px;
+      }
+  
+      .active {
+          display:block;
+      }
+  
+      .dropdown-contentHeader {
+          display: none;
+          text-align: center;
+          background-color: #79AABC;
+          max-width: 160px;
+          box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+  
+        .dropdown-contentHeader a {
+          text-align: center;
+          padding-top: 10px;
+      }
+  
+      .dropdown-contentHeader a:first-child {
+          padding-top: 30px;
+      }
+  
+      .dropdownHeader:hover .dropdown-contentHeader {
+          display: inline;
+          text-align: center;
+          position: relative;
+        }
+  
+  }

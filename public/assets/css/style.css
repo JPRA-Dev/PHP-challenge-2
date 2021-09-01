@@ -1,8 +1,50 @@
+footer {
+  background-image: url(../images/backgroundpapier.jpg);
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.fixed-footer {
+  width: 100%;
+  color: #79AABC;
+}
+
+.footerClass {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+  /* margin-left: 60px;*/
+  font-family: Helvetica, Sans-Serif;
+  font-style: italic;
+}
+
+@media all and (max-width: 805px) {
+  .footer {
+    text-align: center;
+    font-size: 14px;
+    margin-left: 0px;
+    font-family: Helvetica, Sans-Serif;
+  }
+}
+
 header {
   width: 100%;
 }
 
-.navbar {
+.navbarHeader {
   /*background-color: #79AABC;*/
   background-image: url(../images/backgroundpapier.jpg);
   color: #79AABC;
@@ -11,6 +53,7 @@ header {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -29,41 +72,41 @@ header {
   margin-bottom: 15px;
 }
 
-.navList {
+.navListHeader {
   list-style-type: none;
 }
 
-.navList .listItem {
+.navListHeader .listItemHeader {
   display: inline-block;
   padding: 30px 10px;
 }
 
-.navbar a {
+.navbarHeader a {
   text-decoration: none;
   /*color: white;*/
   color: #79AACB;
 }
 
-.navbar .connect {
+.navbarHeader .connect {
   color: #E0394C;
 }
 
-.navbar .connect:hover {
+.navbarHeader .connect:hover {
   text-decoration: none;
   color: #79AACB;
 }
 
-.navbar a:hover {
+.navbarHeader a:hover {
   text-decoration: none;
   color: #E0394C;
 }
 
-.menu {
+.menuHeader {
   display: none;
   margin-bottom: 4px;
 }
 
-.menuLine {
+.menuLineHeader {
   width: 20px;
   height: 3px;
   background-color: white;
@@ -72,7 +115,7 @@ header {
 }
 
 /******** SUB DROPDOWN MENU *************/
-.dropdown .dropbtn {
+.dropdownHeader .dropbtnHeader {
   border: none;
   outline: none;
   color: white;
@@ -83,11 +126,11 @@ header {
   width: auto;
 }
 
-.dropdown:hover .dropbtn {
+.dropdownHeader:hover .dropbtnHeader {
   background-color: red;
 }
 
-.dropdown-content {
+.dropdown-contentHeader {
   padding-top: 10px;
   display: none;
   position: fixed;
@@ -99,7 +142,7 @@ header {
   z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-contentHeader a {
   float: none;
   /*color: white;*/
   color: #79AACB;
@@ -110,12 +153,12 @@ header {
   text-align: left;
 }
 
-.dropdown-content a:hover {
+.dropdown-contentHeader a:hover {
   /* background-color: #79AABC;*/
   background-image: url(../images/backgroundpapier.jpg);
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-contentHeader:hover .dropdown-contentHeader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,7 +171,7 @@ header {
 }
 
 /******** EFFECTS *************/
-.hvr-shrink {
+.hvr-shrinkHeader {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -144,12 +187,12 @@ header {
   transition-property: transform, -webkit-transform;
 }
 
-.hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
+.hvr-shrinkHeader:hover, .hvr-shrinkHeader:focus, .hvr-shrinkHeader:active {
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
 }
 
-.hvr-grow {
+.hvr-growHeader {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -165,28 +208,29 @@ header {
   transition-property: transform, -webkit-transform;
 }
 
-.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+.hvr-growHeader:hover, .hvr-growHeader:focus, .hvr-growHeaderHeader:active {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
 
 /******** RESPONSIVE *************/
 @media all and (max-width: 805px) {
-  .navbar {
+  .navbarHeader {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  .navbar .containerLogo {
+  .navbarHeader .containerLogoHeader {
     width: 100%;
   }
-  .menu {
+  .menuHeader {
     position: fixed;
     right: 40px;
     top: 29px;
     display: inline-block;
     vertical-align: middle;
+    position: absolute;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -199,18 +243,18 @@ header {
     transition-property: transform;
     transition-property: transform, -webkit-transform;
   }
-  .menu:hover {
+  .menuHeader:hover {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
     cursor: pointer;
   }
-  .navList {
+  .navListHeader {
     list-style-type: none;
     width: 100%;
     text-align: center;
     display: none;
   }
-  .navList .listItem {
+  .navListHeader .listItemHeader {
     display: block;
     padding: 10px;
     border-top: 1px solid white;
@@ -224,13 +268,7 @@ header {
   .active {
     display: block;
   }
-  .footer {
-    text-align: center;
-    font-size: 14px;
-    margin-left: 0px;
-    font-family: Helvetica, Sans-Serif;
-  }
-  .dropdown-content {
+  .dropdown-contentHeader {
     display: none;
     text-align: center;
     background-color: #79AABC;
@@ -239,51 +277,18 @@ header {
             box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
-  .dropdown-content a {
+  .dropdown-contentHeader a {
     text-align: center;
     padding-top: 10px;
   }
-  .dropdown-content a:first-child {
+  .dropdown-contentHeader a:first-child {
     padding-top: 30px;
   }
-  .dropdown:hover .dropdown-content {
+  .dropdownHeader:hover .dropdown-contentHeader {
     display: inline;
     text-align: center;
     position: relative;
   }
-}
-
-footer {
-  background-image: url(../images/backgroundpapier.jpg);
-  width: 100%;
-  height: 30px;
-  margin: 0;
-  padding-top: 10px;
-}
-
-.fixed-footer {
-  width: 100%;
-  color: #79AABC;
-}
-
-.footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 15px;
-  font-weight: bold;
-  /* margin-left: 60px;*/
-  font-family: Helvetica, Sans-Serif;
-  font-style: italic;
 }
 
 body {
