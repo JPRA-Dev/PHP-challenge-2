@@ -139,11 +139,11 @@ class AdminController extends Controller
                 $companyModel = new CompanyModel();
                 $companyModel->create(
                     [
-                        "firstname" => "ppppp",
-                        "lastname" => "jjjjj",
-                        "email" => "test@gmail.com",
-                        "company_id" => "3",
-                        "telephone" => "84654648915"
+                        "companyname" => $companyname,
+                        "tvanumber" => $tvanumber,
+                        "country" => $country,
+                        "companytype" => $companytype
+                       
                     ]
                 );
             } else {
@@ -189,6 +189,42 @@ class AdminController extends Controller
     public function updateCompany($id)
     {
         // update company check if form is complet etc
+        if (isset($_POST["submit"])) {
+            if (isset($_POST["companyname"]) && isset($_POST["tvanumber"]) && isset($_POST["country"]) && isset($_POST["companytype"])) {
+
+                if (empty($_POST["companyname"])) {                                                          
+                    echo "Please provide a valid companyname!";
+                    unset($_POST["companyname"]);
+                }
+                else if ((empty($_POST["tvanumber"])) OR (!is_string($_POST["tvanumber"]))) {                                                                           
+                    echo "Please provide a valid tva number";
+                    unset($_POST["tvanumber"]);
+                }
+                else if ((empty($_POST["country"]))) {                                                                            
+                    echo "Please insert a country!";
+                    unset($_POST["country"]);
+                }
+                
+                
+                $companyname = $_POST["companyname"];
+                $tvanumber = $_POST["tvanumber"];
+                $country = $_POST["country"];
+                $companytype = $_POST["companytype"];
+
+                $companyModel=new CompanyModel();
+                $companyModel->update(
+                    [
+                        "companyname" => $companyname,
+                        "tvanumber" => $tvanumber,
+                        "country" => $country,
+                        "companytype" => $companytype
+                       
+                    ],["id","=",$id]
+                );
+            }
+        }
+       
+    
 
         $companyModel = new CompanyModel();
         $companyModel->findOne($id);
@@ -202,6 +238,25 @@ class AdminController extends Controller
     public function updateInvoice($id)
     {
         // update invoice check if form is complet etc
+        if (isset($_POST["submit"])) {
+            if (isset($_POST["invoicenumber"]) && isset($_POST["date"]) && isset($_POST["company"]) && isset($_POST["contact"])) {
+                $invoicenumber = $_POST["invoicenumber"];
+                $date = $_POST["date"];
+                $company = $_POST["company"];
+                $contact = $_POST["contact"];
+
+                $invoiceModel=new InvoiceModel();
+                $invoiceModel->update(
+                    [
+                        "nbrinvoice"=>$invoicenumber,
+                        "dateinvoice"=>$date,
+                        "company_id"=>$company,
+                        "contact_person_id"=>$contact
+                        
+                    ],["invoice_id","=",$id]
+                );
+            }
+        }
 
         $invoiceModel = new InvoiceModel();
         $invoiceModel->findOne($id);
@@ -218,6 +273,45 @@ class AdminController extends Controller
     public function updateContact($id)
     {
         // update contact check if form is complet etc
+        if (isset($_POST["submit"])) {
+            if (isset($_POST["name"]) && isset($_POST["firstname"]) && isset($_POST["phone"]) && isset($_POST["email"]) 
+            && isset($_POST["company"])) {
+
+                if ((empty($_POST["name"])) OR (!is_string($_POST["name"]))) {                                                                            //gives an error if the string is empty or if it is not a string
+                    echo "Please provide a valid name!";
+                    unset($_POST["name"]);
+                }
+                else if ((empty($_POST["firstname"])) OR (!is_string($_POST["firstname"]))) {                                                                            //gives an error if the string is empty or if it is not a string
+                    echo "Please provide a valid first name!";
+                    unset($_POST["firstname"]);
+                }
+                else if ((empty($_POST["phone"])) OR (!preg_match('/^[0-9]{7}+$/', $_POST["phone"]))) {                                                                            //gives an error if the string is empty or if it is not a string
+                    echo "Please provide a valid phone number!";
+                    unset($_POST["phone"]);
+                }
+                else if ((empty($_POST["email"]) OR (false === filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)))) {
+                    echo "Please provide a valid email!";
+                    unset($_POST["email"]);
+                }
+                
+                $name = $_POST["name"];
+                $firstname = $_POST["firstname"];
+                $phone = $_POST["phone"];
+                $email = $_POST["email"];
+                $company = $_POST["company"];
+
+                $contactModel=new ContactModel();
+                $contactModel->update(
+                    [
+                        "lastname"=>$name,
+                        "firstname"=>$firstname,
+                        "telephone"=>$phone,
+                        "email"=>$email,
+                        "company_id"=>$company
+                    ],["contact_person_id","=",$id]
+                );
+            }
+        }
 
         $contactModel = new ContactModel();
         $contactModel->findOne($id);
