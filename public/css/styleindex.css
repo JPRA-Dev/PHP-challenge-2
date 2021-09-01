@@ -34,9 +34,10 @@ a:link{
     border-radius: 10px ;
     font-size: 30px;
     font-weight: bold;
-    background-color:#79AACB ;
+    /*background-color:#79AACB ;*/
     width: 900px;
-    color: #fff;
+    /*color: #fff;*/
+    color: #79AACB;
     box-shadow: #111 5px 5px 5px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -66,8 +67,8 @@ a:link{
     border-radius: 10px;
     font-weight: bold;
     background-size: cover;
-   background-color: aqua;
-   color: blue;
+    background-color: #F8485E;
+    color: blue;
     font-size: 20px;
     margin: 0 auto;
     transition: transform .2s; /* Animation */
@@ -84,7 +85,7 @@ a:link{
     border-radius: 10px;
     font-weight: bold;
     background-size: cover;
-    background-color:  rgb(233, 204, 210);
+    background-color: #00C1D4 ;
     color: blue;
     font-size: 20px;
     margin: 0 auto;
@@ -102,7 +103,7 @@ a:link{
     border-radius: 10px;
     font-weight: bold;
     background-size: cover;
-    background-color: rgb(225, 188, 243);
+    background-color: #71DBB8;
     color: blue;
     font-size: 20px;
     margin: 0 auto;
@@ -127,19 +128,22 @@ th{
     background-color: grey;
     color: white;
     border-bottom: 1px solid #111;
-    font-weight: bold;
+   
 }
 .titletab1{
-    background-color: aqua;
-    color: #111
+    background-color:#F8485E ;
+    color: #111;
+    font-weight: bold;
 }
 .titletab2{
-    background-color: rgb(233, 204, 210);
-    color: #111
+    background-color:#00C1D4 ;
+    color: #111;
+    font-weight: bold;
 }
 .titletab3{
-    background-color: rgb(225, 188, 243);
-    color:#111
+    background-color: #71DBB8;
+    color:#111;
+    font-weight: bold;
 }
 .containerindex{
     height: auto;

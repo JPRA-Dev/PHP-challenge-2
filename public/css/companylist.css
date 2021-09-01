@@ -18,16 +18,17 @@ body{
 .companylist{
     display: flex;
     justify-content: center;
-    color: #fff;
+    /*color: #fff;*/
+    color: #00C1D4;
     font-weight: bold;
     font-size:40px;
     margin-top: 50px;
     margin-bottom: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    border: 2px solid rgb(233, 204, 210);
+    border: 2px solid #00C1D4;
     border-radius: 10px;
-    background-color: rgb(233, 204, 210);
+   /*background-color: rgb(233, 204, 210);*/
     box-shadow: #111 5px 5px 5px;
     
 }

@@ -20,8 +20,9 @@ body{
     text-align: center;
     border: 2px solid #79AACB;
     border-radius: 10px ;
-    background-color: #79AACB;
-    color: #fff;
+    /*background-color: #79AACB;*/
+    /*color: #fff;*/
+    color:#79AACB ;
     box-shadow: #111 5px 5px 5px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -31,6 +32,7 @@ body{
     font-weight: bold;
    
 }
+
 table{
     border-collapse: collapse;
     width: 500px;
@@ -40,24 +42,19 @@ table{
     box-shadow: 5px 5px 5px;
 }
 .title1indexviews{
-    /*background-color: aqua;*/
-    /*background-color: #C1CFC0;*/
-     background-color: #F8485E;
+    background-color: #F8485E;
     color: #111;
     font-weight: bold;
   
 }
 .title2indexviews {
-    /*background-color: rgb(233, 204, 210);*/
-    /*background-color: #E7E0C9;*/
     background-color: #00C1D4;
     color: #111;
     font-weight: bold;
 }
 .title3indexviews {
-    /*background-color: rgb(225, 188, 243);*/
-    /*background-color: #6B7AA1;*/
-    background-color: #EEEE;
+    /*background-color: #DAD0C2;*/
+    background-color: #71DBB8;
     color:#111;
     font-weight: bold;
 }
