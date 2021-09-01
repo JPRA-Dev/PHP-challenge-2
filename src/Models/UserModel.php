@@ -52,19 +52,23 @@ class UserModel extends Model
 
     }
 
-    public function find($user = null): bool
+    public function find($params=null)
     {
+        if (isset($params)){
+            $field= (is_numeric($params)) ? 'id' : 'username';
+            $data = $this->getDB()->getWithJointure('users',"LEFT JOIN users_group ON users.group=users_group.id",array($field, '=', $params));
 
-        if($user){
-            $field= (is_numeric($user)) ? 'id' : 'username';
-            $data = $this->getDB()->get('users', array($field, '=', $user));
-
-            if($data->count()){
-                $this->_data = $data->first();
+            $this->_data = $data;
+            if ($data)
                 return true;
+        } else {
+            $data = $this->getDB()->getWithJointure('users',"LEFT JOIN users_group ON users.group=users_group.id");
 
-            }
+            $this->_data = $data;
+            if ($data)
+                return true;
         }
+
         return false;
     }
 
@@ -73,11 +77,12 @@ class UserModel extends Model
         if(!$username && !$password &&$this->exists()){
             SessionHelper::put($this->_sessionName,$this->data()->id);
 
-        }else{
+        } else {
             $user=$this->find($username);
-
+            
             if($user){
-                if(password_verify($password, $this->data()->password)){
+                $this->_data=$this->_data[0];
+                if(password_verify($password, $this->data()->pwd)){
                     SessionHelper::put($this->_sessionName,$this->data()->id);
                     if($remember){
                         $hash=HashHelper::unique();
@@ -111,6 +116,22 @@ class UserModel extends Model
             $permissions=json_decode($group->first()->permissions, true);
 
             if($permissions[$key]== true){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public function userHasPermission($usergroup, $key): bool
+    {
+        $group = $this->getDB()->get('users_group',array('id','=',$usergroup));
+        if($group) {
+            if (!isset($group[0]) || !isset($group[0]->permissions))
+                return true;
+
+            $permissions= json_decode($group[0]->permissions,true);
+
+            if(isset($permissions[$key]) && $permissions[$key]== true){
                 return true;
             }
         }

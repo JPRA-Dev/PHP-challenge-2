@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\CompanyModel;
 use App\Models\InvoiceModel;
 
 class InvoiceController extends Controller
@@ -26,6 +27,10 @@ class InvoiceController extends Controller
     {
         $invoicesModel = new InvoiceModel();
         $invoicesModel->findOne($id);
-        $this->render("invoice/show", ["invoice" => $invoicesModel->data()]);
+
+        $contactModel = new InvoiceModel();
+        $contactModel->findOne($invoicesModel->data()->contact_person_id);
+
+        $this->render("invoice/show", ["invoice" => $invoicesModel->data(), 'contact'=>$contactModel->data()]);
     }
 }

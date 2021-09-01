@@ -1,7 +1,13 @@
+main{
+    margin:0;
+    min-height: 100vh;
+}
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin:0;
+    min-height: 100vh;
     width: 100%;
     height: auto;
     font-family: Arial, Helvetica, sans-serif;
@@ -18,7 +24,6 @@ body{
     justify-content: center;
     width: 550px;
     height: 450px;
-    margin-top: 50px;
     border-radius: 10px;
     background-repeat: no-repeat;
     background-position: bottom;  
@@ -29,16 +34,17 @@ body{
   
     display: flex;
     justify-content: center;
-    color: #fff;
+   /* color: #fff;*/
+    color:#00C1D4;
     font-weight: bold;
     font-size:40px;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    border: 2px solid rgb(233, 204, 210);
+    border: 2px solid #00C1D4;
     border-radius: 10px;
-    background-color: rgb(233, 204, 210);
+   /* background-color: rgb(233, 204, 210);*/
     box-shadow: #111 5px 5px 5px;
     
 }
@@ -47,6 +53,7 @@ body{
     flex-direction: column;
     justify-content: center;
     color: #111;
+    padding-top:20px;
    
    
 }
@@ -75,7 +82,7 @@ margin-bottom: 15px;
     height: 50PX;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 10px;
     
 }
 .input{

@@ -58,6 +58,7 @@ $router->get('/error-500', fn() => $errorController->error500(), "error.500");
 $router->get('/test', fn() => $testController->index(), "test.index");
 $router->get('/test/:id', fn($id) => $testController->show($id), 'test.show');
 $router->get('/login', fn() => $authController->login(), 'auth.login');
+$router->post('/login', fn() => $authController->login(), 'auth.login.post');
 $router->get('/logout', fn() => $authController->logout(), 'auth.logout');
 $router->get('/contact', fn() => $contactController->list(), 'contact.list');
 $router->get('/contact/show/:id', fn($id) => $contactController->show($id), 'contact.show');
@@ -66,12 +67,13 @@ $router->get('/invoice/show/:id', fn($id) => $invoiceController->show($id), 'inv
 $router->get('/company', fn() => $companyController->list(), 'company.list');
 $router->get('/company/show/:id', fn($id) => $companyController->show($id), 'company.show');
 $router->get('/admin', fn() => $adminController->index(), 'admin.index');
+$router->get('/admin/users/', fn() => $adminController->users(), 'admin.users');
 $router->get('/admin/addcontact', fn() => $adminController->addcontact(), 'admin.addcontact');
-$router->post('/admin/addcontact', fn() => $adminController->addcontact(), 'admin.addcontact');
+$router->post('/admin/addcontact', fn() => $adminController->addcontact(), 'admin.addcontact.post');
 $router->get('/admin/addinvoice', fn() => $adminController->addinvoice(), 'admin.addinvoice');
-$router->post('/admin/addinvoice', fn() => $adminController->addinvoice(), 'admin.addinvoice');
+$router->post('/admin/addinvoice', fn() => $adminController->addinvoice(), 'admin.addinvoice.post');
 $router->get('/admin/addcompany', fn() => $adminController->addcompany(), 'admin.addcompany');
-$router->post('/admin/addcompany', fn() => $adminController->addcompany(), 'admin.addcompany');
+$router->post('/admin/addcompany', fn() => $adminController->addcompany(), 'admin.addcompany.post');
 
 
 if(CookieHelper::exists(ConfigHelper::get('remember/cookie_name')) && !SessionHelper::exists(ConfigHelper::get('session/session_name'))){
