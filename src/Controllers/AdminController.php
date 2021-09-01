@@ -188,7 +188,6 @@ class AdminController extends Controller
 
     public function updateCompany($id)
     {
-        // update company check if form is complet etc
         if (isset($_POST["submit"])) {
             if (isset($_POST["companyname"]) && isset($_POST["tvanumber"]) && isset($_POST["country"]) && isset($_POST["companytype"])) {
 
@@ -204,23 +203,23 @@ class AdminController extends Controller
                     echo "Please insert a country!";
                     unset($_POST["country"]);
                 }
-                
-                
-                $companyname = $_POST["companyname"];
-                $tvanumber = $_POST["tvanumber"];
-                $country = $_POST["country"];
-                $companytype = $_POST["companytype"];
 
-                $companyModel=new CompanyModel();
-                $companyModel->update(
-                    [
-                        "companyname" => $companyname,
-                        "tvanumber" => $tvanumber,
-                        "country" => $country,
-                        "companytype" => $companytype
-                       
-                    ],["id","=",$id]
-                );
+                if (isset($_POST["companyname"]) && isset($_POST["tvanumber"]) && isset($_POST["country"]) && isset($_POST["companytype"])) {
+                    $companyname = $_POST["companyname"];
+                    $tvanumber = $_POST["tvanumber"];
+                    $country = $_POST["country"];
+                    $companytype = $_POST["companytype"];
+
+                    $companyModel=new CompanyModel();
+                    $companyModel->update(
+                        [
+                            "name" => $companyname,
+                            "vatnumber" => $tvanumber,
+                            "country" => $country,
+                            "company_type_id" => $companytype
+                        ],["id","=",$id]
+                    );
+                }
             }
         }
        
@@ -237,7 +236,6 @@ class AdminController extends Controller
 
     public function updateInvoice($id)
     {
-        // update invoice check if form is complet etc
         if (isset($_POST["submit"])) {
             if (isset($_POST["invoicenumber"]) && isset($_POST["date"]) && isset($_POST["company"]) && isset($_POST["contact"])) {
                 $invoicenumber = $_POST["invoicenumber"];
@@ -245,14 +243,13 @@ class AdminController extends Controller
                 $company = $_POST["company"];
                 $contact = $_POST["contact"];
 
-                $invoiceModel=new InvoiceModel();
-                $invoiceModel->update(
+                $invoiceModelUpdate=new InvoiceModel();
+                $invoiceModelUpdate->update(
                     [
                         "nbrinvoice"=>$invoicenumber,
                         "dateinvoice"=>$date,
                         "company_id"=>$company,
                         "contact_person_id"=>$contact
-                        
                     ],["invoice_id","=",$id]
                 );
             }
@@ -272,7 +269,6 @@ class AdminController extends Controller
 
     public function updateContact($id)
     {
-        // update contact check if form is complet etc
         if (isset($_POST["submit"])) {
             if (isset($_POST["name"]) && isset($_POST["firstname"]) && isset($_POST["phone"]) && isset($_POST["email"]) 
             && isset($_POST["company"])) {
@@ -293,23 +289,25 @@ class AdminController extends Controller
                     echo "Please provide a valid email!";
                     unset($_POST["email"]);
                 }
-                
-                $name = $_POST["name"];
-                $firstname = $_POST["firstname"];
-                $phone = $_POST["phone"];
-                $email = $_POST["email"];
-                $company = $_POST["company"];
 
-                $contactModel=new ContactModel();
-                $contactModel->update(
-                    [
-                        "lastname"=>$name,
-                        "firstname"=>$firstname,
-                        "telephone"=>$phone,
-                        "email"=>$email,
-                        "company_id"=>$company
-                    ],["contact_person_id","=",$id]
-                );
+                if (isset($_POST["name"]) && isset($_POST["firstname"]) && isset($_POST["phone"]) && isset($_POST["email"]) && isset($_POST["company"])) {
+                    $name = $_POST["name"];
+                    $firstname = $_POST["firstname"];
+                    $phone = $_POST["phone"];
+                    $email = $_POST["email"];
+                    $company = $_POST["company"];
+
+                    $contactModel=new ContactModel();
+                    $contactModel->update(
+                        [
+                            "lastname"=>$name,
+                            "firstname"=>$firstname,
+                            "telephone"=>$phone,
+                            "email"=>$email,
+                            "company_id"=>$company
+                        ],["contact_person_id","=",$id]
+                    );
+                }
             }
         }
 

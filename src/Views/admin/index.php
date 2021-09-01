@@ -42,7 +42,12 @@
                     <td><a href="/invoice/show/<?=$invoice->invoice_id;?>"><?= $invoice->nbrinvoice?></a></td>
                     <td><?php $date=new DateTime($invoice->dateinvoice); echo $date->format("d-m-Y"); ?></td>
                     <td><?= $invoice->name ?></td>
-                    <?php if ($has_permission_for_delete) { ?><td><a class="delete" href="/admin/invoice/delete/<?php echo $invoice->invoice_id; ?>">🗑️</a></td><?php } ?>
+                    <?php if ($has_permission_for_delete) { ?>
+                        <td>
+                            <a class="delete" href="/admin/invoice/update/<?php echo $invoice->invoice_id; ?>">✏️️</a>
+                            <a class="delete" href="/admin/invoice/delete/<?php echo $invoice->invoice_id; ?>">🗑️</a>
+                        </td>
+                    <?php } ?>
                 </tr>
                 <?php $i++; } ?>
             </tbody>
@@ -69,7 +74,12 @@
                     <td><?= $company->vatnumber ?></td>
                     <td><?= $company->country ?></td>
                     <td><?= $company->type ?></td>
-                    <?php if ($has_permission_for_delete) { ?><td><a class="delete" href="/admin/company/delete/<?php echo $company->id; ?>">🗑️</a></td><?php } ?>
+                    <?php if ($has_permission_for_delete) { ?>
+                        <td>
+                            <a class="delete" href="/admin/company/update/<?php echo $company->id; ?>">✏️️</a>
+                            <a class="delete" href="/admin/company/delete/<?php echo $company->id; ?>">🗑️</a>
+                        </td>
+                    <?php } ?>
                 </tr>
                 <?php $i++; } ?>
             </tbody>
@@ -98,7 +108,12 @@
                     <td><?= $contact->email ?></td>
                     <td><?= $contact->name ?></td>
 
-                    <?php if ($has_permission_for_delete) { ?><td><a class="delete" href="/admin/contact/delete/<?php echo $contact->contact_person_id; ?>">🗑️</a></td><?php } ?>
+                    <?php if ($has_permission_for_delete) { ?>
+                        <td>
+                            <a class="delete" href="/admin/contact/update/<?php echo $contact->contact_person_id; ?>">✏️️</a>
+                            <a class="delete" href="/admin/contact/delete/<?php echo $contact->contact_person_id; ?>">🗑️</a>
+                        </td>
+                    <?php } ?>
                 </tr>
                 <?php $i++; } ?>
 
