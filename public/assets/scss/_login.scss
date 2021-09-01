@@ -1,3 +1,11 @@
+$font:Arial, Helvetica, sans-serif;
+$backgroundbody: url(../images/backgroundpapier.jpg);
+$backgroundbutton: url(../images/backgroundbutton.jpg);
+$colorcompany:#71DBB8;
+$backgroundtab:  honeydew;
+$backgroundrow:gainsboro;
+$colorblue:#79AACB;
+
 main{
     margin:0;
     min-height: 100vh;
@@ -8,8 +16,8 @@ body{
     align-items: center;
     width: 100%;
     height: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(../images/backgroundpapier.jpg);
+    font-family: $font;
+    background-image: $backgroundbody;
     background-position: center;
     background-size: cover;
    
@@ -43,12 +51,10 @@ body{
     display: flex;
     justify-content: center;
     text-align: center;
-    border: 2px solid #79AACB;
+    border: 2px solid $colorblue;
     border-radius: 10px ;
-   /* background-color: #79AACB;*/
     box-shadow: #111 5px 5px 5px;
-    /*color: #fff;*/
-    color: #79AACB;
+    color: $colorblue;
     font-weight: bold;
     font-size:40px;
     margin-top: 30px;
@@ -100,7 +106,7 @@ font-weight: bold;
     height: 50px;
     border-radius: 10px;
     font-weight: bold;
-    background-image: url(../images/backgroundbutton.jpg);
+    background-image: $backgroundbutton;
     background-size: cover;
     color: #111;
     font-size: 20px;

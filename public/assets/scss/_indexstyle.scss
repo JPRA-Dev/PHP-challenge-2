@@ -1,3 +1,11 @@
+$font:Arial, Helvetica, sans-serif;
+$backgroundbody: url(../images/backgroundpapier.jpg);
+$backgroundbutton: url(../images/backgroundbutton.jpg);
+$colorcompany:#71DBB8;
+$backgroundtab:  honeydew;
+$backgroundrow:gainsboro;
+$colortextbutton: blue;
+
 main{
     margin:0;
     min-height: 100vh;
@@ -8,8 +16,8 @@ body{
     align-items: center;
     width: 100%;
     height: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(../images/backgroundpapier.jpg);
+    font-family: $font;
+    background-image: $backgroundbody;
     background-position: center;
     background-size: cover;
    
@@ -30,14 +38,12 @@ a:link{
     display: flex;
     justify-content: center;
     text-align: center;
-    border: 2px solid #79AACB;
+    border: 2px solid $colorblue;
     border-radius: 10px ;
     font-size: 30px;
     font-weight: bold;
-    /*background-color:#79AACB ;*/
     width: 900px;
-    /*color: #fff;*/
-    color: #79AACB;
+    color: $colorblue;
     box-shadow: #111 5px 5px 5px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -67,8 +73,8 @@ a:link{
     border-radius: 10px;
     font-weight: bold;
     background-size: cover;
-    background-color: #F8485E;
-    color: blue;
+    background-color: $colorinvoice;
+    color: $colortextbutton;
     font-size: 20px;
     margin: 0 auto;
     transition: transform .2s; /* Animation */
@@ -85,8 +91,8 @@ a:link{
     border-radius: 10px;
     font-weight: bold;
     background-size: cover;
-    background-color: #00C1D4 ;
-    color: blue;
+    background-color: $colorcompany;
+    color: $colortextbutton;
     font-size: 20px;
     margin: 0 auto;
     transition: transform .2s; /* Animation */
@@ -103,8 +109,8 @@ a:link{
     border-radius: 10px;
     font-weight: bold;
     background-size: cover;
-    background-color: #71DBB8;
-    color: blue;
+    background-color: $colorcontact;
+    color: $colortextbutton;
     font-size: 20px;
     margin: 0 auto;
     transition: transform .2s; /* Animation */
@@ -120,7 +126,7 @@ table{
     width: 100%;
     height: auto;
     margin-bottom: 20px;
-    background-color: honeydew;
+    background-color:$backgroundtab;
     box-shadow: 5px 5px 5px;
 }
 
@@ -131,17 +137,17 @@ th{
    
 }
 .titletab1{
-    background-color:#F8485E ;
+    background-color:$colorinvoice ;
     color: #111;
     font-weight: bold;
 }
 .titletab2{
-    background-color:#00C1D4 ;
+    background-color:$colorcompany ;
     color: #111;
     font-weight: bold;
 }
 .titletab3{
-    background-color: #71DBB8;
+    background-color: $colorcontact;
     color:#111;
     font-weight: bold;
 }
@@ -174,7 +180,7 @@ border: 1px solid #111;
 }
 .row2{
     font-size: 12px;
-    background-color: gainsboro;
+    background-color: $backgroundrow;
 }
 
 @media screen and (max-width:320px){

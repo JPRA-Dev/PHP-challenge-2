@@ -1,3 +1,11 @@
+$font:Arial, Helvetica, sans-serif;
+$backgroundbody: url(../images/backgroundpapier.jpg);
+$backgroundbutton: url(../images/backgroundbutton.jpg);
+$colorcompany:#71DBB8;
+$backgroundtab:  honeydew;
+$backgroundrow:gainsboro;
+$colortextbutton: blue;
+
 main{
     margin:0;
     min-height: 100vh;
@@ -8,8 +16,8 @@ body{
     align-items: center;
     width: 100%;
     height: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(../images/backgroundpapier.jpg);
+    font-family: $font;
+    background-image:$backgroundbody;
     background-position: center;
     background-size: cover;
    
@@ -18,11 +26,9 @@ body{
     display: flex;
     justify-content: center;
     text-align: center;
-    border: 2px solid #79AACB;
+    border: 2px solid $colorblue;
     border-radius: 10px ;
-    /*background-color: #79AACB;*/
-    /*color: #fff;*/
-    color:#79AACB ;
+    color:$colorblue;
     box-shadow: #111 5px 5px 5px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -38,23 +44,23 @@ table{
     width: 500px;
     height: auto;
     margin-bottom: 20px;
-    background-color: honeydew;
+    background-color: $backgroundtab;
     box-shadow: 5px 5px 5px;
+   
 }
 .title1indexviews{
-    background-color: #F8485E;
+    background-color: $colorinvoice;
     color: #111;
     font-weight: bold;
   
 }
 .title2indexviews {
-    background-color: #00C1D4;
+    background-color: $colorcompany;
     color: #111;
     font-weight: bold;
 }
 .title3indexviews {
-    /*background-color: #DAD0C2;*/
-    background-color: #71DBB8;
+    background-color: $colorcontact;
     color:#111;
     font-weight: bold;
 }
@@ -85,5 +91,5 @@ border: 1px solid #111;
 }
 .row2{
     font-size: 12px;
-    background-color: gainsboro;
+    background-color: $backgroundrow;
 }

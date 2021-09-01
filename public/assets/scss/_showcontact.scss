@@ -1,3 +1,10 @@
+$font:Arial, Helvetica, sans-serif;
+$backgroundbody: url(../images/backgroundpapier.jpg);
+$backgroundbutton: url(../images/backgroundbutton.jpg);
+$colorcompany:#71DBB8;
+$backgroundtab:  honeydew;
+$backgroundrow:gainsboro;
+
 main{
     margin:0;
     min-height: 100vh;
@@ -8,8 +15,8 @@ body{
     align-items: center;
     width: 100%;
     height: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(../images/backgroundpapier.jpg);
+    font-family: $font;
+    background-image: $backgroundbody;
     background-position: center;
     background-size: cover;
    
@@ -17,17 +24,15 @@ body{
 .contactshowtitle{
     display: flex;
     justify-content: center;
-    /*color: #fff;*/
-    color: #71DBB8;
+    color: $colorcontact;
     font-weight: bold;
     font-size:40px;
     margin-top: 30px;
     margin-bottom: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    border: 2px solid #71DBB8;
+    border: 2px solid $colorcontact;
     border-radius: 10px;
-    /*background-color: rgb(225, 188, 243);*/
     box-shadow: #111 5px 5px 5px;
     
 }
@@ -50,8 +55,7 @@ table{
     border-collapse: collapse;
     width: 900px;
     height: auto;
-   /* margin-bottom: 20px;*/
-    background-color: honeydew;
+    background-color: $backgroundtab;
     box-shadow: 5px 5px 5px;
   
 }
@@ -60,10 +64,13 @@ th{
     color: white;
     border-bottom: 1px solid #111;
     font-size: 25px;
+    border-left: 2px solid  #fff;
 }
 td{
     font-size:20px;
-    text-align: center;
+    text-align: left;
+    border-left: 2px solid  #fff;
+    padding-left: 10px;
    
 }
 .container1contactshow {
@@ -77,7 +84,7 @@ td{
 }
   .row2{
     font-size: 12px;
-    background-color: gainsboro;
+    background-color: $backgroundrow;
 }
 
 @media screen and (max-width:900px){

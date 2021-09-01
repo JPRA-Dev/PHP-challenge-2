@@ -52,9 +52,8 @@ $login = false;
     <link rel=stylesheet href="/../css/reset.css">
     <link rel="stylesheet" href="/../css/styleindexviews.css">
     <link rel="stylesheet" href="/../css/styleindex.css">
-    <link rel="stylesheet" href="/../css/addcompany.css">
-    <link rel="stylesheet" href="/../css/addcontact.css">
-    <link rel="stylesheet" href="/../css/addinvoice.css">
+    
+    <
     <link rel="stylesheet" href="/../css/showinvoice.css">
     <link rel="stylesheet" href="/../css/companylist.css">
     <link rel="stylesheet" href="/../css/showcompany.css">

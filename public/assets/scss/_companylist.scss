@@ -1,38 +1,49 @@
+$font:Arial, Helvetica, sans-serif;
+$backgroundbody: url(../images/backgroundpapier.jpg);
+$backgroundbutton: url(../images/backgroundbutton.jpg);
+$colorcompany:#00C1D4;
+$backgroundtab:  honeydew;
+$backgroundrow:gainsboro;
 
-    main{
-        margin:0;
-        min-height: 100vh;
-    }
-    body{
+main{
+    margin:0;
+    min-height: 100vh;
+}
+body{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     height: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(../images/backgroundpapier.jpg);
+    font-family: $font;
+    background-image: $backgroundbody;
     background-position: center;
     background-size: cover;
-   
 }
-.invoicelisttitle{
+
+
+.companylist{
     display: flex;
     justify-content: center;
-    color: #F8485E;
+    color: $colorcompany;
     font-weight: bold;
     font-size:40px;
     margin-top: 50px;
     margin-bottom: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    border: 2px solid #F8485E;
+    border: 2px solid $colorcompany;
     border-radius: 10px;
-    /*background-color: #F8485E;*/
     box-shadow: #111 5px 5px 5px;
-   
     
 }
-.containerinvoicelist{
+.titlecompanylist{
+    font-size: 25px;
+    font-weight: bold;
+    background-color: $colorcompany;
+    color: #111;
+}
+.containercompanylist{
 
     margin-top: 50px;
 }
@@ -41,9 +52,8 @@ table{
     width: 900px;
     height: auto;
     margin-bottom: 20px;
-    background-color: honeydew;
+    background-color: $backgroundtab;
     box-shadow: 5px 5px 5px;
-    overflow-x: auto;
 }
 th{
     background-color: grey;
@@ -54,7 +64,7 @@ th{
 td{
     font-size:20px;
 }
-.container1invoicelist {
+.container1companylist {
     table-layout: auto;
     border: 1px solid #111;
   }
@@ -64,11 +74,10 @@ td{
 }
 .row2{
     font-size: 12px;
-    background-color: gainsboro;
+    background-color:$backgroundrow;
 }
-
 @media screen and (max-width:900px){
-    main, .container1, h1 {
+    main, h1 {
        width: 100%;
     }
 }
