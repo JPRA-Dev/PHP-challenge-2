@@ -1,31 +1,28 @@
 $font:Arial, Helvetica, sans-serif;
 $backgroundbody: url(../images/backgroundpapier.jpg);
-$backgroundbutton: url(../images/backgroundbutton.jpg);
+$backgroundbutton: url(/public/images/backgroundpapier.jpg);
 $colorcompany:#00C1D4;
 
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin:0;
-    min-height: 100vh;
     width: 100%;
     height: auto;
     font-family: $font;
-    background-image: $background;
+    background-image: $backgroundbody;
     background-position: center;
     background-size: cover;
-}
+
 
 main{
     margin:0;
     min-height: 100vh;
-}
+
     .companytitle{
   
         display: flex;
         justify-content: center;
-       /* color: #fff;*/
         color: $colorcompany;
         font-weight: bold;
         font-size:40px;
@@ -35,7 +32,6 @@ main{
         padding-bottom: 10px;
         border: 2px solid $colorcompany;
         border-radius: 10px;
-       /* background-color: rgb(233, 204, 210);*/
         box-shadow: #111 5px 5px 5px;
         
     }
@@ -115,6 +111,8 @@ margin-bottom: 15px;
 }
 .submit:hover{
     transform: scale(1.1);
+}
+}
 }
 
 @media screen and (max-width: 320px){

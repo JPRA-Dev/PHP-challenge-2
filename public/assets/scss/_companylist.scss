@@ -5,22 +5,6 @@ $colorcompany:#00C1D4;
 $backgroundtab:  honeydew;
 $backgroundrow:gainsboro;
 
-main{
-    margin:0;
-    min-height: 100vh;
-}
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    font-family: $font;
-    background-image: $backgroundbody;
-    background-position: center;
-    background-size: cover;
-}
-
 
 .companylist{
     display: flex;
