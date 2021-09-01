@@ -14,11 +14,21 @@ class InvoiceModel extends Model
     {
         if (isset($params)){
             $field= (is_numeric($params)) ? 'invoice_id' : 'nbrinvoice';
-            $data = $this->getDB()->getWithJointure('invoices', "LEFT JOIN contact_person ON contact_person.contact_person_id=invoices.contact_person_id LEFT JOIN company ON company.id=invoices.company_id LEFT JOIN company_type ON company.company_type_id=company_type.company_type_id",array($field, '=', $params));
+            $data = $this->getDB()->action(
+                "SELECT invoices.*, contact_person.contact_person_id, contact_person.firstname, contact_person.lastname, contact_person.email, contact_person.telephone, company.*, company_type.*",
+                'invoices',
+                array($field, '=', $params),
+                "LEFT JOIN contact_person ON contact_person.contact_person_id=invoices.contact_person_id LEFT JOIN company ON company.id=invoices.company_id LEFT JOIN company_type ON company.company_type_id=company_type.company_type_id"
+            );
 
             $this->_data = $data;
         } else {
-            $data = $this->getDB()->getWithJointure('invoices', "LEFT JOIN contact_person ON contact_person.contact_person_id=invoices.contact_person_id LEFT JOIN company ON company.id=invoices.company_id LEFT JOIN company_type ON company.company_type_id=company_type.company_type_id");
+            $data = $this->getDB()->action(
+                "SELECT invoices.*, contact_person.contact_person_id, contact_person.firstname, contact_person.lastname, contact_person.email, contact_person.telephone, company.*, company_type.*",
+                'invoices',
+                null,
+                "LEFT JOIN contact_person ON contact_person.contact_person_id=invoices.contact_person_id LEFT JOIN company ON company.id=invoices.company_id LEFT JOIN company_type ON company.company_type_id=company_type.company_type_id"
+            );
 
             $this->_data = $data;
         }
@@ -47,7 +57,12 @@ class InvoiceModel extends Model
     {
         if($params){
             $field= (is_numeric($params)) ? 'invoice_id' : 'nbrinvoice';
-            $data = $this->getDB()->getWithJointure('invoices', "LEFT JOIN contact_person ON contact_person.contact_person_id=invoices.contact_person_id LEFT JOIN company ON company.id=invoices.company_id LEFT JOIN company_type ON company.company_type_id=company_type.company_type_id", array($field, '=', $params));
+            $data = $this->getDB()->action(
+                "SELECT invoices.*, contact_person.contact_person_id, contact_person.firstname, contact_person.lastname, contact_person.email, contact_person.telephone, company.*, company_type.*",
+                'invoices',
+                array($field, '=', $params),
+                "LEFT JOIN contact_person ON contact_person.contact_person_id=invoices.contact_person_id LEFT JOIN company ON company.id=invoices.company_id LEFT JOIN company_type ON company.company_type_id=company_type.company_type_id"
+            );
 
             $this->_data = $data[0];
             return true;

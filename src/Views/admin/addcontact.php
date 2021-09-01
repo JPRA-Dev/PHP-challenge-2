@@ -19,13 +19,13 @@
 		</div>
 
 		<div class="phone">
-			<label for="phone">Phone :</label>
+			<label for="phone">Telephone :</label>
 			<br>
 			<input class="input" id="phone" type="tel" name="phone" placeholder="Phone..." required>
 		</div>
 
 		<div class="email">
-		<label for="email">Email:</label>
+		<label for="email">E-mail:</label>
 		<br>
 		<input class="input" id="email" type="email" name="email" placeholder="Email@..." required><br>
 		</div>
