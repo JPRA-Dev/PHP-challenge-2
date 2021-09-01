@@ -1,23 +1,32 @@
+$font:Arial, Helvetica, sans-serif;
+$backgroundbody: url(../images/backgroundpapier.jpg);
+$backgroundbutton: url(../images/backgroundbutton.jpg);
+$colorcompany:#00C1D4;
+$colorcontact:#71DBB8;
+$colorinvoice:#F8485E;
+$colortextbutton: blue;
+$colorblue:#79AACB;
+$backgroundtab:  honeydew;
+$backgroundrow:gainsboro;
+
 header {
   width: 100%;
 }
 
 .navbar {
-    /*background-color: #79AABC;*/
-    background-image: url(../images/backgroundpapier.jpg);
-    color: #79AABC;
+    background-image: $backgroundbody;
+    color: $colorblue;
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-size: 20px;
     font-weight: bold;
-    font-family: Helvetica, Sans-Serif;
-   /* box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);*/
+    font-family: $font;
+ 
 }
 
 .logoHeader {
   height: 40px;
-  /*background-color: white;*/
   padding: 7px;
   border-radius: 4px;
   margin-top: 15px;
@@ -35,20 +44,19 @@ header {
 
 .navbar a {
     text-decoration: none;
-    /*color: white;*/
-    color: #79AACB;
+    color: $colorblue;
 }
 .navbar .connect{
-  color: #E0394C;
+  color: $colorinvoice;
 }
 .navbar .connect:hover{
   text-decoration: none;
-  color: #79AACB;
+  color: $colorblue;
 }
 
 .navbar a:hover {
     text-decoration: none;
-    color: #E0394C;
+    color: $colorinvoice;
 }
 
 .menu {
@@ -60,7 +68,6 @@ header {
     width: 20px;
     height: 3px;
     background-color: white;
-    /*background-image: url(../images/backgroundpapier.jpg);*/
     margin-bottom: 4px;
 }
 
@@ -82,15 +89,14 @@ header {
   }
 
   .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: $colorinvoice;
   }
 
   .dropdown-content {
     padding-top: 10px;
     display: none;
     position: fixed;
-    /*background-color: #79AABC;*/
-    background-image: url(../images/backgroundpapier.jpg);
+    background-image: $backgroundbody;
     width: 160;
     box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -98,8 +104,7 @@ header {
   
   .dropdown-content a {
     float: none;
-    /*color: white;*/
-    color: #79AACB;
+    color: $colorblue;
     padding: 12px 16px;
     text-decoration: none;
     font-size: 18px;
@@ -108,8 +113,7 @@ header {
   }
   
   .dropdown-content a:hover {
-   /* background-color: #79AABC;*/
-   background-image: url(../images/backgroundpapier.jpg);
+   background-image: $backgroundbody;
   }
   
   .dropdown:hover .dropdown-content {
@@ -218,13 +222,13 @@ header {
         text-align: center;
         font-size: 14px;
         margin-left: 0px;
-        font-family: Helvetica, Sans-Serif;
+        font-family: $font;
     }
 
     .dropdown-content {
         display: none;
         text-align: center;
-        background-color: #79AABC;
+        background-color: $colorblue;
         max-width: 160px;
         box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.2);
         z-index: 1;
@@ -247,4 +251,4 @@ header {
 
 }
 
-@import 'footer', 'addcompany', 'addcontact', 'addinvoice', 'companylist' ,'contactlist', 'invoicelist', 'indexstyle', 'indexviews', 'login', 'showcompany', 'showcontact', 'showinvoice';
+@import 'footer', 'addcompany', 'addcontact', 'addinvoice', 'companylist' ,'contactlist', 'invoicelist', 'indexstyle', 'indexnologin', 'login', 'showcompany', 'showcontact', 'showinvoice';
