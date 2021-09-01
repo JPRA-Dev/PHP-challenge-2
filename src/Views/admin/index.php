@@ -35,7 +35,7 @@
                 <tr>
                     <th>Invoice Number</th>
                     <th>Dates</th>
-                    <th>company</th>
+                    <th>Company</th>
                     <th></th>
                 </tr>
              </theader>
@@ -61,7 +61,7 @@
              <tr>
                  <th>Names</th>
                  <th>TVA</th>
-                 <th>country</th>
+                 <th>Country</th>
                  <th>Type</th>
                  <th></th>
              </tr>
@@ -87,9 +87,9 @@
                 </tr>
                  <tr>
                      <th>Names</th>
-                     <th>phone</th>
+                     <th>Phone</th>
                      <th>E-mail</th>
-                     <th>company</th>
+                     <th>Company</th>
                      <th></th>
                  </tr>
            </theader>
