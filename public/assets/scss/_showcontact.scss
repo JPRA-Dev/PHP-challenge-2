@@ -26,30 +26,12 @@ $backgroundrow:gainsboro;
     font-weight: bold;
     margin-top: 20px;
 }
-h3{
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+
 .containercontactshow{
 
     margin-top: 50px;
 }
-table{
-    border-collapse: collapse;
-    width: 900px;
-    height: auto;
-    background-color: $backgroundtab;
-    box-shadow: 5px 5px 5px;
-  
-}
-th{
-    background-color: grey;
-    color: white;
-    border-bottom: 1px solid #111;
-    font-size: 25px;
-    border-left: 2px solid  #fff;
-}
+
 td{
     font-size:20px;
     text-align: left;
@@ -62,17 +44,3 @@ td{
     border: 1px solid #111;
     margin-top: 20px;
   }
-  .row1{
-    font-size: 12px;
-
-}
-  .row2{
-    font-size: 12px;
-    background-color: $backgroundrow;
-}
-
-@media screen and (max-width:900px){
-    main, .container1, h1 {
-       width: 100%;
-    }
-}

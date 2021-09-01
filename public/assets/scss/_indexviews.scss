@@ -23,15 +23,6 @@ $colortextbutton: blue;
    
 }
 
-table{
-    border-collapse: collapse;
-    width: 500px;
-    height: auto;
-    margin-bottom: 20px;
-    background-color: $backgroundtab;
-    box-shadow: 5px 5px 5px;
-   
-}
 .title1indexviews{
     background-color: $colorinvoice;
     color: #111;
@@ -48,11 +39,7 @@ table{
     color:#111;
     font-weight: bold;
 }
-th{
-    background-color: grey;
-    color: white;
-    border-bottom: 1px solid #111;
-}
+
 
 .container1indexviews {
 table-layout: auto;
@@ -69,11 +56,3 @@ border: 1px solid #111;
     
 }
 
-.row1{
-    font-size: 12px;
-
-}
-.row2{
-    font-size: 12px;
-    background-color: $backgroundrow;
-}

@@ -68,38 +68,4 @@ margin-bottom: 15px;
     font-weight: bold;
     margin-bottom: 15px;
 }
-.button{
-    height: 50PX;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    
-}
-.input{
-    width: 350px;
-    height: 20px;
-    border-radius: 5px;
-    box-shadow: #111 3px 3px 3px;
-}
-.submit{
-    width: 100px;
-    height: 50px;
-    border-radius: 10px;
-    font-weight: bold;
-    background-image:$backgroundbutton;
-    background-size: cover;
-    color: #111;
-    font-size: 20px;
-    margin: 0 auto;
-    transition: transform .2s; /* Animation */
-    cursor: pointer;
-    box-shadow: 3px 3px 3px;
-}
-.submit:hover{
-    transform: scale(1.1);
-}
-@media screen and (max-width: 320px){
-    main, h1{
-        width: 100%;
-    }
-}
+
