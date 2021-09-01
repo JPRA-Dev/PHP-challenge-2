@@ -1,6 +1,8 @@
 <?php
+
 global $user;
 $login = $user->isLoggedIn();
+
 ?>
 
 <!DOCTYPE html>
