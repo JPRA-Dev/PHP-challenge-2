@@ -1,0 +1,105 @@
+$font:Arial, Helvetica, sans-serif;
+$backgroundbody: url(../images/backgroundpapier.jpg);
+$backgroundbutton: url(../images/backgroundbutton.jpg);
+$colorcontact:#71DBB8;
+
+
+.contacttitle{
+    display: flex;
+    justify-content: center;
+    color: $colorcontact;
+    font-weight: bold;
+    font-size:40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid $colorcontact;
+    border-radius: 10px;
+    box-shadow: #111 5px 5px 5px;
+    
+}
+
+.containercontact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    height: 450px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: bottom;  
+    box-shadow: 10px 5px 25px #111;
+    color: #111;
+    
+}
+.container1contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #111;
+}
+.lastname{
+height: 50px;
+font-weight: bold;
+margin-bottom: 15px;
+}
+.firstname{
+    height: 50px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.phone{
+    height: 50px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.email{
+    height: 50px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.company{
+    height: 50px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.button{
+    height: 50PX;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+.input{
+    width: 350px;
+    height: 20px;
+    border-radius: 5px;
+    box-shadow: #111 3px 3px 3px;
+}
+.submit{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    background-image:$backgroundbutton;
+    background-size: cover;
+    color: #111;
+    font-size: 20px;
+    margin: 0 auto;
+    transition: transform .2s; /* Animation */
+    cursor: pointer;
+    box-shadow: 3px 3px 3px;
+}
+.submit:hover{
+    transform: scale(1.1);
+}
+@media screen and (max-width: 320px){
+    main, h1{
+        width: 100%;
+    }
+}

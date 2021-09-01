@@ -1,0 +1,73 @@
+$font:Arial, Helvetica, sans-serif;
+$backgroundbody: url(../images/backgroundpapier.jpg);
+$backgroundbutton: url(../images/backgroundbutton.jpg);
+$colorcompany:#71DBB8;
+$backgroundtab:  honeydew;
+$backgroundrow:gainsboro;
+
+.companyshowtitle{
+    display: flex;
+    justify-content: center;
+    color: $colorcompany;
+    font-weight: bold;
+    font-size:40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid $colorcompany;
+    border-radius: 10px;
+    box-shadow: #111 5px 5px 5px;
+    
+}
+.tvatype{
+
+    font-size: 30px;
+    font-weight: bold;
+}
+h3{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.containercompanyshow{
+
+    margin-top: 50px;
+}
+table{
+    border-collapse: collapse;
+    width: 900px;
+    height: auto;
+    margin-bottom: 20px;
+    background-color: $backgroundtab;
+    box-shadow: 5px 5px 5px;
+}
+th{
+    background-color: grey;
+    color: white;
+    border-bottom: 1px solid #111;
+    font-size: 25px;
+}
+td{
+    font-size:20px;
+    text-align: center;
+   
+}
+.container1companyshow {
+    table-layout: auto;
+    border: 1px solid #111;
+    margin-top: 20px;
+  }
+  .row1{
+    font-size: 12px;
+
+}
+  .row2{
+    font-size: 12px;
+    background-color: $backgroundrow;
+}
+@media screen and (max-width:900px){
+    main, h1 {
+       width: 100%;
+    }
+}
