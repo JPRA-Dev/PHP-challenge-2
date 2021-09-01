@@ -1,22 +1,24 @@
 footer {
-margin-bottom: 30px;
+background-image: url(../images/backgroundpapier.jpg);
+width: 100%;
 height: 30px;
+margin:0;
+padding-top: 10px;
 }
 
 .fixed-footer {
-    /*left: 0;
-    bottom: 0;*/
     width: 100%;
-    /*background-color: #79AABC;*/
-    background-image: url(../images/backgroundpapier.jpg);
     color: #79AABC;
   }
   
 .footer {
       display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
       font-size: 15px;
       font-weight: bold;
-      margin-left: 60px;
+     /* margin-left: 60px;*/
       font-family: Helvetica, Sans-Serif;
       font-style: italic;
 }

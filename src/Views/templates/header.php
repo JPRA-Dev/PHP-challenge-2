@@ -10,7 +10,7 @@ $login = $user->isLoggedIn();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link rel=stylesheet href="/../css/style.css">
+    <link rel=stylesheet href="/../assets/css/style.css">
     <link rel=stylesheet href="/../css/reset.css">
     <title>COGIP</title>
 </head>
@@ -63,20 +63,3 @@ $login = $user->isLoggedIn();
                 </div>
             </nav>
     </header>
-</body>
-<script>
-    var toggleButton = document.getElementById("toggleButton");
-    var navList = document.getElementById("navListId");
-    var admin = document.getElementById("admin");
-    var subMenuID = document.getElementById("subMenuID");
-
-    toggleButton.addEventListener('click', () => {
-        navList.classList.toggle('active');
-    });
-    
-
-    admin.addEventListener('click', () => {
-        subMenuID.style.display = "inline"; 
-    });
-</script>
-</html>
