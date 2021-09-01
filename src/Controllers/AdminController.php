@@ -204,8 +204,7 @@ class AdminController extends Controller
                     echo "Please insert a country!";
                     unset($_POST["country"]);
                 }
-                
-                
+
                 $companyname = $_POST["companyname"];
                 $tvanumber = $_POST["tvanumber"];
                 $country = $_POST["country"];
@@ -218,7 +217,6 @@ class AdminController extends Controller
                         "tvanumber" => $tvanumber,
                         "country" => $country,
                         "companytype" => $companytype
-                       
                     ],["id","=",$id]
                 );
             }
@@ -245,14 +243,15 @@ class AdminController extends Controller
                 $company = $_POST["company"];
                 $contact = $_POST["contact"];
 
-                $invoiceModel=new InvoiceModel();
-                $invoiceModel->update(
+                var_dump($company);
+
+                $invoiceModelUpdate=new InvoiceModel();
+                $invoiceModelUpdate->update(
                     [
                         "nbrinvoice"=>$invoicenumber,
                         "dateinvoice"=>$date,
                         "company_id"=>$company,
                         "contact_person_id"=>$contact
-                        
                     ],["invoice_id","=",$id]
                 );
             }

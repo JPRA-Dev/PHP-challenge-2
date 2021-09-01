@@ -21,7 +21,7 @@ $GLOBALS['config']= array(
     'mysql' => array(
         'host'=>'127.0.0.1',
         'username'=>'root',
-        'pwd'=>'',
+        'pwd'=>'root',
         'dbName'=>'cogip'
     ),
     'remember'=> array(
@@ -77,14 +77,17 @@ $router->get('/admin/users/', fn() => $adminController->users(), 'admin.users');
 $router->get('/admin/addcontact', fn() => $adminController->addcontact(), 'admin.addcontact');
 $router->post('/admin/addcontact', fn() => $adminController->addcontact(), 'admin.addcontact.post');
 $router->get('/admin/contact/update/:id', fn($id) => $adminController->updateContact($id), 'admin.contact.update');
+$router->post('/admin/contact/update/:id', fn($id) => $adminController->updateContact($id), 'admin.contact.update.post');
 $router->get('/admin/contact/delete/:id', fn($id) => $adminController->deleteContact($id), 'admin.contact.delete');
 $router->get('/admin/addinvoice', fn() => $adminController->addinvoice(), 'admin.addinvoice');
 $router->post('/admin/addinvoice', fn() => $adminController->addinvoice(), 'admin.addinvoice.post');
 $router->get('/admin/invoice/update/:id', fn($id) => $adminController->updateInvoice($id), 'admin.invoice.update');
+$router->post('/admin/invoice/update/:id', fn($id) => $adminController->updateInvoice($id), 'admin.invoice.update.post');
 $router->get('/admin/invoice/delete/:id', fn($id) => $adminController->deleteInvoice($id), 'admin.invoice.delete');
 $router->get('/admin/addcompany', fn() => $adminController->addcompany(), 'admin.addcompany');
 $router->post('/admin/addcompany', fn() => $adminController->addcompany(), 'admin.addcompany.post');
 $router->get('/admin/company/update/:id', fn($id) => $adminController->updateCompany($id), 'admin.company.update');
+$router->post('/admin/company/update/:id', fn($id) => $adminController->updateCompany($id), 'admin.company.update.post');
 $router->get('/admin/company/delete/:id', fn($id) => $adminController->deleteCompany($id), 'admin.company.delete');
 
 try {
