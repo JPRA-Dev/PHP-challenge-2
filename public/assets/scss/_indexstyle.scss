@@ -105,21 +105,6 @@ a:link{
     transform: scale(1.1);
 }
 
-table{
-    border-collapse: collapse;
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    background-color:$backgroundtab;
-    box-shadow: 5px 5px 5px;
-}
-
-th{
-    background-color: grey;
-    color: white;
-    border-bottom: 1px solid #111;
-   
-}
 .titletab1{
     background-color:$colorinvoice ;
     color: #111;
@@ -156,19 +141,4 @@ border: 1px solid #111;
 }
 .delete{
     font-size: 13px;
-}
-
-.row1{
-    font-size: 12px;
-
-}
-.row2{
-    font-size: 12px;
-    background-color: $backgroundrow;
-}
-
-@media screen and (max-width:320px){
-    main {
-        width: 100%;
-    }
 }

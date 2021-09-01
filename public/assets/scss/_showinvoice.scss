@@ -28,23 +28,4 @@ $backgroundrow:gainsboro;
     margin-top: 50px;
   
 }
-table{
-    border-collapse: collapse;
-    width: 900px;
-    height: auto;
-    margin-bottom: 20px;
-    background-color: $backgroundtab;
-    box-shadow: 5px 5px 5px;
-    overflow-x: auto;
-}
-th{
-    background-color: grey;
-    color: white;
-    border-bottom: 1px solid #111;
-}
 
-@media screen and (max-width:900px){
-    main, .container1, h1 {
-       width: 100%;
-    }
-}

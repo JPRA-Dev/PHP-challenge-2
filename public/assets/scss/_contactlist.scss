@@ -24,41 +24,8 @@ $backgroundrow:gainsboro;
 
     margin-top: 50px;
 }
-table{
-    border-collapse: collapse;
-    width: 900px;
-    height: auto;
-    margin-bottom: 20px;
-    background-color: $backgroundtab;
-    box-shadow: 5px 5px 5px;
-    overflow-x: auto;
-}
 
-th{
-    background-color: grey;
-    color: white;
-    border-bottom: 1px solid #111;
-    font-size: 25px;
-}
-td{
-    font-size:20px;
-   
-}
 .container1contactlist {
     table-layout: auto;
     border: 1px solid #111;
   }
-  .row1{
-    font-size: 12px;
-
-}
-.row2{
-    font-size: 12px;
-    background-color: $backgroundrow;
-}
-
-@media screen and (max-width:900px){
-    main, .container1, h1 {
-       width: 100%;
-    }
-}
