@@ -3,8 +3,10 @@
 <main>
    <h1 class="companylist">Companies Directory</h1>
         <div class="containercompanylist">
-             <h3>Clients</h3>
                   <table class="container1companylist">
+                      <tr>
+                        <th class="titlecompanylist" colspan="3">Clients</th>
+                      </tr>
                     <tr>
                        <th>Name</th>
                        <th>TVA</th>
@@ -27,8 +29,10 @@
                </table>
         </div>
        <div class="containercompanylist">
-            <h3>Suppliers</h3>
                <table class="container1companylist">
+                   <tr>
+                   <th class="titlecompanylist" colspan="3">Suppliers</th>
+                   </tr>
                     <tr>
                         <th>Name</th>
                         <th>TVA</th>

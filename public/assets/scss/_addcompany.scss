@@ -1,21 +1,40 @@
-main{
-    margin:0;
-    min-height: 100vh;
-}
+$font:Arial, Helvetica, sans-serif;
+$backgroundbody: url(../images/backgroundpapier.jpg);
+$backgroundbutton: url(/public/images/backgroundpapier.jpg);
+$colorcompany:#00C1D4;
+
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin:0;
-    min-height: 100vh;
     width: 100%;
     height: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(../images/backgroundpapier.jpg);
+    font-family: $font;
+    background-image: $backgroundbody;
     background-position: center;
     background-size: cover;
-   
-}
+
+
+main{
+    margin:0;
+    min-height: 100vh;
+
+    .companytitle{
+  
+        display: flex;
+        justify-content: center;
+        color: $colorcompany;
+        font-weight: bold;
+        font-size:40px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 2px solid $colorcompany;
+        border-radius: 10px;
+        box-shadow: #111 5px 5px 5px;
+        
+    }
 
 .containercompany{
     display: flex;
@@ -28,26 +47,9 @@ body{
     background-repeat: no-repeat;
     background-position: bottom;  
     box-shadow: 10px 5px 25px #111;
+
 }
 
-.companytitle{
-  
-    display: flex;
-    justify-content: center;
-   /* color: #fff;*/
-    color:#00C1D4;
-    font-weight: bold;
-    font-size:40px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: 2px solid #00C1D4;
-    border-radius: 10px;
-   /* background-color: rgb(233, 204, 210);*/
-    box-shadow: #111 5px 5px 5px;
-    
-}
 .container1company{
     display: flex;
     flex-direction: column;
@@ -98,7 +100,7 @@ margin-bottom: 15px;
     height: 50px;
     border-radius: 10px;
     font-weight: bold;
-    background-image: url(../images/backgroundbutton.jpg);
+    background-image:$backgroundbutton;
     background-size: cover;
     color: #111;
     font-size: 20px;
@@ -110,6 +112,9 @@ margin-bottom: 15px;
 .submit:hover{
     transform: scale(1.1);
 }
+}
+}
+
 @media screen and (max-width: 320px){
     main, h1{
         width: 100%;

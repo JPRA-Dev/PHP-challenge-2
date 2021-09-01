@@ -1,37 +1,36 @@
-main{
-    margin:0;
-    min-height: 100vh;
-}
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(../images/backgroundpapier.jpg);
-    background-position: center;
-    background-size: cover;
-   
-}
-.contactlisttitle{
+$font:Arial, Helvetica, sans-serif;
+$backgroundbody: url(../images/backgroundpapier.jpg);
+$backgroundbutton: url(../images/backgroundbutton.jpg);
+$colorcompany:#71DBB8;
+$backgroundtab:  honeydew;
+$backgroundrow:gainsboro;
+
+.companyshowtitle{
     display: flex;
     justify-content: center;
-    /*color: #fff;*/
-    color: #71DBB8;
+    color: $colorcompany;
     font-weight: bold;
     font-size:40px;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    border: 2px solid #71DBB8;
+    border: 2px solid $colorcompany;
     border-radius: 10px;
-    /*background-color: rgb(225, 188, 243);*/
     box-shadow: #111 5px 5px 5px;
     
 }
-.containercontactlist{
+.tvatype{
+
+    font-size: 30px;
+    font-weight: bold;
+}
+h3{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.containercompanyshow{
 
     margin-top: 50px;
 }
@@ -40,11 +39,9 @@ table{
     width: 900px;
     height: auto;
     margin-bottom: 20px;
-    background-color: honeydew;
+    background-color: $backgroundtab;
     box-shadow: 5px 5px 5px;
-    overflow-x: auto;
 }
-
 th{
     background-color: grey;
     color: white;
@@ -53,23 +50,24 @@ th{
 }
 td{
     font-size:20px;
+    text-align: center;
    
 }
-.container1contactlist {
+.container1companyshow {
     table-layout: auto;
     border: 1px solid #111;
+    margin-top: 20px;
   }
   .row1{
     font-size: 12px;
 
 }
-.row2{
+  .row2{
     font-size: 12px;
-    background-color: gainsboro;
+    background-color: $backgroundrow;
 }
-
 @media screen and (max-width:900px){
-    main, .container1, h1 {
+    main, h1 {
        width: 100%;
     }
 }

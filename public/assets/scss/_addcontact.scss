@@ -1,34 +1,21 @@
-main{
-    margin:0;
-    min-height: 100vh;
-}
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(../images/backgroundpapier.jpg);
-    background-position: center;
-    background-size: cover;
-    
-}
+$font:Arial, Helvetica, sans-serif;
+$backgroundbody: url(../images/backgroundpapier.jpg);
+$backgroundbutton: url(../images/backgroundbutton.jpg);
+$colorcontact:#71DBB8;
+
 
 .contacttitle{
     display: flex;
     justify-content: center;
-    /*color: #fff;*/
-    color: #71DBB8;
+    color: $colorcontact;
     font-weight: bold;
     font-size:40px;
     margin-top: 30px;
     margin-bottom: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    border: 2px solid #71DBB8;
+    border: 2px solid $colorcontact;
     border-radius: 10px;
-   /* background-color: rgb(225, 188, 243);*/
     box-shadow: #111 5px 5px 5px;
     
 }
@@ -99,7 +86,7 @@ margin-bottom: 15px;
     height: 50px;
     border-radius: 10px;
     font-weight: bold;
-    background-image: url(../images/backgroundbutton.jpg);
+    background-image:$backgroundbutton;
     background-size: cover;
     color: #111;
     font-size: 20px;
