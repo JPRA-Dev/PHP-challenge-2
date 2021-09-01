@@ -44,10 +44,14 @@ header {
   width: 100%;
 }
 
+<<<<<<< HEAD
+.navbar {
+=======
 .navbarHeader {
   /*background-color: #79AABC;*/
+>>>>>>> main
   background-image: url(../images/backgroundpapier.jpg);
-  color: #79AABC;
+  color: #79AACB;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,13 +63,11 @@ header {
           align-items: center;
   font-size: 20px;
   font-weight: bold;
-  font-family: Helvetica, Sans-Serif;
-  /* box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);*/
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .logoHeader {
   height: 40px;
-  /*background-color: white;*/
   padding: 7px;
   border-radius: 4px;
   margin-top: 15px;
@@ -83,12 +85,16 @@ header {
 
 .navbarHeader a {
   text-decoration: none;
-  /*color: white;*/
   color: #79AACB;
 }
 
+<<<<<<< HEAD
+.navbar .connect {
+  color: #F8485E;
+=======
 .navbarHeader .connect {
   color: #E0394C;
+>>>>>>> main
 }
 
 .navbarHeader .connect:hover {
@@ -98,7 +104,7 @@ header {
 
 .navbarHeader a:hover {
   text-decoration: none;
-  color: #E0394C;
+  color: #F8485E;
 }
 
 .menuHeader {
@@ -110,7 +116,6 @@ header {
   width: 20px;
   height: 3px;
   background-color: white;
-  /*background-image: url(../images/backgroundpapier.jpg);*/
   margin-bottom: 4px;
 }
 
@@ -126,15 +131,19 @@ header {
   width: auto;
 }
 
+<<<<<<< HEAD
+.dropdown:hover .dropbtn {
+  background-color: #F8485E;
+=======
 .dropdownHeader:hover .dropbtnHeader {
   background-color: red;
+>>>>>>> main
 }
 
 .dropdown-contentHeader {
   padding-top: 10px;
   display: none;
   position: fixed;
-  /*background-color: #79AABC;*/
   background-image: url(../images/backgroundpapier.jpg);
   width: 160;
   -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
@@ -144,7 +153,6 @@ header {
 
 .dropdown-contentHeader a {
   float: none;
-  /*color: white;*/
   color: #79AACB;
   padding: 12px 16px;
   text-decoration: none;
@@ -153,8 +161,12 @@ header {
   text-align: left;
 }
 
+<<<<<<< HEAD
+.dropdown-content a:hover {
+=======
 .dropdown-contentHeader a:hover {
   /* background-color: #79AABC;*/
+>>>>>>> main
   background-image: url(../images/backgroundpapier.jpg);
 }
 
@@ -268,10 +280,20 @@ header {
   .active {
     display: block;
   }
+<<<<<<< HEAD
+  .footer {
+    text-align: center;
+    font-size: 14px;
+    margin-left: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .dropdown-content {
+=======
   .dropdown-contentHeader {
+>>>>>>> main
     display: none;
     text-align: center;
-    background-color: #79AABC;
+    background-color: #79AACB;
     max-width: 160px;
     -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
@@ -651,7 +673,7 @@ main {
   font-size: 25px;
   font-weight: bold;
   background-color: #00C1D4;
-  color: #111;
+  color: #fff;
 }
 
 .containercompanylist {
@@ -673,7 +695,7 @@ th {
   color: white;
   border-bottom: 1px solid #111;
   border-left: 2px solid  #fff;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 td {
@@ -900,19 +922,19 @@ a:link {
 
 .titletab1 {
   background-color: #F8485E;
-  color: #111;
+  color: #fff;
   font-weight: bold;
 }
 
 .titletab2 {
   background-color: #00C1D4;
-  color: #111;
+  color: #fff;
   font-weight: bold;
 }
 
 .titletab3 {
   background-color: #71DBB8;
-  color: #111;
+  color: #fff;
   font-weight: bold;
 }
 
@@ -962,19 +984,19 @@ a:link {
 
 .title1indexviews {
   background-color: #F8485E;
-  color: #111;
+  color: #fff;
   font-weight: bold;
 }
 
 .title2indexviews {
   background-color: #00C1D4;
-  color: #111;
+  color: #fff;
   font-weight: bold;
 }
 
 .title3indexviews {
   background-color: #71DBB8;
-  color: #111;
+  color: #fff;
   font-weight: bold;
 }
 
@@ -1094,14 +1116,27 @@ a:link {
 }
 
 .tvatype {
-  font-size: 30px;
+  /*font-size: 30px;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-weight: bold;
+  margin-top: 30px;
 }
 
-h3 {
+.titlecompanyshow {
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 20px;
+  background-color: #00C1D4;
+  color: #111;
 }
 
 .containercompanyshow {
@@ -1111,7 +1146,7 @@ h3 {
 .container1companyshow {
   table-layout: auto;
   border: 1px solid #111;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .contactshowtitle {
@@ -1140,6 +1175,21 @@ h3 {
   margin-top: 20px;
 }
 
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
 .containercontactshow {
   margin-top: 50px;
 }
@@ -1148,6 +1198,14 @@ h3 {
   table-layout: auto;
   border: 1px solid #111;
   margin-top: 20px;
+}
+
+.titlecontactshow {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background-color: #71DBB8;
+  color: #111;
 }
 
 .invoiceshowtitle {
@@ -1183,5 +1241,16 @@ h3 {
           justify-content: center;
   color: #111;
   margin-top: 50px;
+}
+
+.container1invoiceshow {
+  margin-top: 50px;
+}
+
+.titleinvoiceshow {
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #F8485E;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

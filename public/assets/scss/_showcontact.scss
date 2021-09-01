@@ -20,6 +20,13 @@
     font-weight: bold;
     margin-top: 20px;
 }
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    margin-top: 30px;
+}
 
 .containercontactshow{
 
@@ -30,4 +37,11 @@
     table-layout: auto;
     border: 1px solid #111;
     margin-top: 20px;
+  }
+  .titlecontactshow{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: $colorcontact;
+    color: #111;
   }

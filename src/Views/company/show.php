@@ -10,8 +10,10 @@
    </div>
 
   <div class="containercompanyshow">
-    <h3>Contact Persons</h3>
         <table class="container1companyshow">
+            <tr>
+            <th class="titlecompanyshow" colspan="3">Contact Persons</th>
+            </tr>
            <tr>
               <th>Name</th>
               <th>Telephone</th>
@@ -26,8 +28,11 @@
             <?php $i++; } ?>
         </table>
 
-    <h3>Invoices</h3>
+    
        <table class="container1companyshow">
+           <tr>
+               <th class="titlecompanyshow" colspan="3">Invoices</th>
+           </tr>
            <tr>
                <th>Invoice Number</th>
                <th>Date</th>
