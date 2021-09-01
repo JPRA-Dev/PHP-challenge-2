@@ -12,6 +12,9 @@ class AdminController extends Controller
 {
     public function index()
     {
+        if (!$this->userIsLogged()) $this->redirect(403);
+        if (!$this->userHasPermission('admin') && !$this->userHasPermission('moderator')) $this->redirect(403);
+
         $invoiceModel = new InvoiceModel();
         $invoiceModel->findLimit(5);
         $companyModel = new CompanyModel();
@@ -21,7 +24,8 @@ class AdminController extends Controller
         $this->render("admin/index", [
             "invoices" => $invoiceModel->data(),
             "companies" => $companyModel->data(),
-            "contacts" => $contactModel->data()
+            "contacts" => $contactModel->data(),
+            "has_permission_for_delete" => $this->userHasPermission('admin')
         ]);
     }
 
@@ -159,6 +163,68 @@ class AdminController extends Controller
         $userModel->find();
 
         $this->render("admin/users",["users"=>$userModel->data(), "userModel"=>$userModel]);
+    }
+
+    public function deleteContact($id)
+    {
+        $contactModel = new ContactModel();
+        $contactModel->delete($id);
+        $this->redirect('/admin');
+    }
+
+    public function deleteInvoice($id)
+    {
+        $invoiceModel = new InvoiceModel();
+        $invoiceModel->delete($id);
+        $this->redirect('/admin');
+    }
+
+    public function deleteCompany($id)
+    {
+        $companyModel = new CompanyModel();
+        $companyModel->delete($id);
+        $this->redirect('/admin');
+    }
+
+    public function updateCompany($id)
+    {
+        // update company check if form is complet etc
+
+        $companyModel = new CompanyModel();
+        $companyModel->findOne($id);
+
+        $companyTypeModel=new CompanyTypeModel();
+        $companyTypeModel->find();
+
+        $this->render("admin/updatecompany",["company"=>$companyModel->data(), "companytypes"=>$companyTypeModel->data()]);
+    }
+
+    public function updateInvoice($id)
+    {
+        // update invoice check if form is complet etc
+
+        $invoiceModel = new InvoiceModel();
+        $invoiceModel->findOne($id);
+
+        $companyModel=new CompanyModel();
+        $companyModel->find();
+
+        $contactModel=new ContactModel();
+        $contactModel->find();
+
+        $this->render("admin/updateinvoice", ["invoice"=>$invoiceModel->data(), "companies"=>$companyModel->data(), "contacts"=>$contactModel->data()]);
+    }
+
+    public function updateContact($id)
+    {
+        // update contact check if form is complet etc
+
+        $contactModel = new ContactModel();
+        $contactModel->findOne($id);
+
+        $companyModel=new CompanyModel();
+        $companyModel->find();
+        $this->render("admin/updatecontact", ["contact"=>$contactModel->data(), "companies"=>$companyModel->data()]);
     }
 
 }

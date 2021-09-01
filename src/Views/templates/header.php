@@ -1,44 +1,6 @@
 <?php
-
-
-$login = false;
-
-// function adminMenu () {
-//     $userType = $row['user_type'];
-
-//         if ($userType == 'admin') {
-//             echo    "<li class='listItem dropbtn' id='admin'>
-//                         <div class='dropdown'>
-//                             <div class='hvr-grow'>
-//                             <a href='#' >Admin</a> 
-//                                 <i class='fa fa-caret-down'></i> </div>                   
-//                             <div class='dropdown-content' ID='submenuID'>
-//                                 <a href='/admin' class='hvr-shrink'>Dashboard</a>
-//                                 <a href='/admin/addcontact' class='hvr-shrink'>New Contact</a>
-//                                 <a href='/admin/addinvoice' class='hvr-shrink'>New Invoice</a>
-//                                 <a href='/admin/addcompany' class='hvr-shrink'>New Company</a>
-//                             </div>
-//                         </div>
-//                     </li>";
-
-//         } else if ($userType == 'moderator') {
-//             echo    "<li class='listItem dropbtn' id='admin'>
-//                         <div class='dropdown'>
-//                             <div class='hvr-grow'>
-//                             <a href='#' >Moderator</a> 
-//                                 <i class='fa fa-caret-down'></i> </div>                   
-//                             <div class='dropdown-content' ID='submenuID'>
-//                                 <a href='/admin' class='hvr-shrink'>Dashboard</a>
-//                                 <a href='/admin/addcontact' class='hvr-shrink'>New Contact</a>
-//                                 <a href='/admin/addinvoice' class='hvr-shrink'>New Invoice</a>
-//                                 <a href='/admin/addcompany' class='hvr-shrink'>New Company</a>
-//                             </div>
-//                         </div>
-//                     </li>";
-//         } 
-
-// }
-
+global $user;
+$login = $user->isLoggedIn();
 ?>
 
 <!DOCTYPE html>
@@ -50,23 +12,6 @@ $login = false;
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
     <link rel=stylesheet href="/../css/style.css">
     <link rel=stylesheet href="/../css/reset.css">
-    <link rel="stylesheet" href="/../css/styleindexviews.css">
-    <link rel="stylesheet" href="/../css/styleindex.css">
-    <link rel="stylesheet" href="/../css/addcompany.css">
-    <link rel="stylesheet" href="/../css/addcontact.css">
-    <link rel="stylesheet" href="/../css/addinvoice.css">
-    <link rel="stylesheet" href="/../css/showinvoice.css">
-    <link rel="stylesheet" href="/../css/companylist.css">
-    <link rel="stylesheet" href="/../css/showcompany.css">
-    <link rel="stylesheet" href="/../css/contactlist.css">
-    <link rel="stylesheet" href="/../css/showcontact.css">
-    <link rel="stylesheet" href="/../css/invoicelist.css">
-    <link rel="stylesheet" href="/../css/showinvoice.css">
-    <link rel="stylesheet" href="/../css/login.css">
-    <link rel="stylesheet" href="/../css/404.css">
-    <link rel="stylesheet" href="/../css/500.css">
-    <link rel="stylesheet" href="/../css/noPermission.css">
-
     <title>COGIP</title>
 </head>
 <body>
@@ -94,7 +39,7 @@ $login = false;
                     <li class="listItem" id="connection">
                         <a class="connect" href="/login">Login</a>
                     </li>
-                    <?php } ?>
+                    <?php } else { ?>
                     <li class="listItem dropbtn" id="admin">
                         <div class="dropdown">
                             <div class="hvr-grow">
@@ -105,10 +50,11 @@ $login = false;
                                 <a href="/admin/addcontact" class="hvr-shrink">New Contact</a>
                                 <a href="/admin/addinvoice" class="hvr-shrink">New Invoice</a>
                                 <a href="/admin/addcompany" class="hvr-shrink">New Company</a>
+                                <a href="/logout" class="hvr-shrink">Logout</a>
                             </div>
                         </div>
                     </li>
-                    
+                    <?php } ?>
                 </ul>
                 <div class="menu" id="toggleButton">
                     <div class="menuLine"></div>

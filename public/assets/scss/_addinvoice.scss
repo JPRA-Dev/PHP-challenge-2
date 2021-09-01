@@ -1,92 +1,80 @@
-main{
-    margin:0;
-    min-height: 100vh;
-}
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(../images/backgroundpapier.jpg);
-    background-position: center;
-    background-size: cover;
-   
+$font:Arial, Helvetica, sans-serif;
+$backgroundbody: url(../images/backgroundpapier.jpg);
+$backgroundbutton: url(../images/backgroundbutton.jpg);
+$colorinvoice:#F8485E ;
 
-}
 
-.containerlogin{
+.containerinvoice{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 500px;
-    height: 350px;
-    margin-top: 50px;
+    width: 550px;
+    height: 450px;
+    margin-bottom: 20px;
     border-radius: 10px;
     background-repeat: no-repeat;
     background-position: bottom;  
     box-shadow: 10px 5px 25px #111;
- 
   
 }
-.container1login{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 50px;
-    color: #111;
-}
 
-.logintitle{
+.invoicetitle{
     display: flex;
     justify-content: center;
-    text-align: center;
-    border: 2px solid #79AACB;
-    border-radius: 10px ;
-    background-color: #79AACB;
-    box-shadow: #111 5px 5px 5px;
-    color: #fff;
+    color:$colorinvoice;
     font-weight: bold;
     font-size:40px;
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
-
+    border: 2px solid $colorinvoice;
+    border-radius: 10px;
+    box-shadow: #111 5px 5px 5px;
     
 }
-
-.username{
+.container1invoice{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #111;
+   
+   
+}
+.invoicenumber{
 height: 50px;
 font-weight: bold;
+margin-bottom: 15px;
 
 }
-.usernamelabel{
-    margin-bottom: 30px;
-    
-}
-.pwd{
+.date{
     height: 50px;
     font-weight: bold;
-    margin-top: 20px;
-  
-}
-.remember{
-    height: 50px;
-    font-weight: bold;
-  
-}
+    margin-bottom: 15px;
 
+}
+.company{
+    height: 50px;
+    font-weight: bold;
+    margin-bottom: 15px;
+
+}
+.contactinvoice{
+    height: 50px;
+    font-weight: bold;
+    margin-bottom: 15px;
+
+}
 
 .button{
     height: 50PX;
     display: flex;
     justify-content: center;
+
     
 }
-.input{
+.inputinvoice{
     width: 350px;
     height: 20px;
     border-radius: 5px;
@@ -99,14 +87,20 @@ font-weight: bold;
     height: 50px;
     border-radius: 10px;
     font-weight: bold;
-    background-image: url(../images/backgroundbutton.jpg);
+    background-image:$colorinvoice;
     background-size: cover;
     color: #111;
     font-size: 20px;
     margin: 0 auto;
     transition: transform .2s; /* Animation */
-    box-shadow: #111 2px 2px 2px;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px;
 }
 .submit:hover{
     transform: scale(1.1);
+}
+@media screen and (max-width: 320px){
+    main, h1{
+        width: 100%;
+    }
 }

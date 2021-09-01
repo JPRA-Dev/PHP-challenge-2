@@ -1,19 +1,11 @@
-main{
-    margin:0;
-    min-height: 100vh;
-}
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(../images/backgroundpapier.jpg);
-    background-position: center;
-    background-size: cover;
-   
-}
+$font:Arial, Helvetica, sans-serif;
+$backgroundbody: url(../images/backgroundpapier.jpg);
+$backgroundbutton: url(../images/backgroundbutton.jpg);
+$colorcompany:#71DBB8;
+$backgroundtab:  honeydew;
+$backgroundrow:gainsboro;
+$colortextbutton: blue;
+
 
 .addbutton{
 display: flex;
@@ -30,13 +22,12 @@ a:link{
     display: flex;
     justify-content: center;
     text-align: center;
-    border: 2px solid #79AACB;
+    border: 2px solid $colorblue;
     border-radius: 10px ;
     font-size: 30px;
     font-weight: bold;
-    background-color:#79AACB ;
     width: 900px;
-    color: #fff;
+    color: $colorblue;
     box-shadow: #111 5px 5px 5px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -66,8 +57,8 @@ a:link{
     border-radius: 10px;
     font-weight: bold;
     background-size: cover;
-   background-color: aqua;
-   color: blue;
+    background-color: $colorinvoice;
+    color: $colortextbutton;
     font-size: 20px;
     margin: 0 auto;
     transition: transform .2s; /* Animation */
@@ -84,8 +75,8 @@ a:link{
     border-radius: 10px;
     font-weight: bold;
     background-size: cover;
-    background-color:  rgb(233, 204, 210);
-    color: blue;
+    background-color: $colorcompany;
+    color: $colortextbutton;
     font-size: 20px;
     margin: 0 auto;
     transition: transform .2s; /* Animation */
@@ -102,8 +93,8 @@ a:link{
     border-radius: 10px;
     font-weight: bold;
     background-size: cover;
-    background-color: rgb(225, 188, 243);
-    color: blue;
+    background-color: $colorcontact;
+    color: $colortextbutton;
     font-size: 20px;
     margin: 0 auto;
     transition: transform .2s; /* Animation */
@@ -119,7 +110,7 @@ table{
     width: 100%;
     height: auto;
     margin-bottom: 20px;
-    background-color: honeydew;
+    background-color:$backgroundtab;
     box-shadow: 5px 5px 5px;
 }
 
@@ -127,19 +118,22 @@ th{
     background-color: grey;
     color: white;
     border-bottom: 1px solid #111;
-    font-weight: bold;
+   
 }
 .titletab1{
-    background-color: aqua;
-    color: #111
+    background-color:$colorinvoice ;
+    color: #111;
+    font-weight: bold;
 }
 .titletab2{
-    background-color: rgb(233, 204, 210);
-    color: #111
+    background-color:$colorcompany ;
+    color: #111;
+    font-weight: bold;
 }
 .titletab3{
-    background-color: rgb(225, 188, 243);
-    color:#111
+    background-color: $colorcontact;
+    color:#111;
+    font-weight: bold;
 }
 .containerindex{
     height: auto;
@@ -170,7 +164,7 @@ border: 1px solid #111;
 }
 .row2{
     font-size: 12px;
-    background-color: gainsboro;
+    background-color: $backgroundrow;
 }
 
 @media screen and (max-width:320px){

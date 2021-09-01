@@ -1,0 +1,102 @@
+$font:Arial, Helvetica, sans-serif;
+$backgroundbody: url(../images/backgroundpapier.jpg);
+$backgroundbutton: url(../images/backgroundbutton.jpg);
+$colorcompany:#71DBB8;
+$backgroundtab:  honeydew;
+$backgroundrow:gainsboro;
+$colorblue:#79AACB;
+
+
+.containerlogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 350px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: bottom;  
+    box-shadow: 10px 5px 25px #111;
+ 
+  
+}
+.container1login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    color: #111;
+}
+
+.logintitle{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid $colorblue;
+    border-radius: 10px ;
+    box-shadow: #111 5px 5px 5px;
+    color: $colorblue;
+    font-weight: bold;
+    font-size:40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    
+}
+
+.username{
+height: 50px;
+font-weight: bold;
+
+}
+.usernamelabel{
+    margin-bottom: 30px;
+    
+}
+.pwd{
+    height: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+  
+}
+.remember{
+    height: 50px;
+    font-weight: bold;
+  
+}
+
+
+.button{
+    height: 50PX;
+    display: flex;
+    justify-content: center;
+    
+}
+.input{
+    width: 350px;
+    height: 20px;
+    border-radius: 5px;
+    box-shadow: #111 3px 3px 3px;
+    
+}
+.submit{
+    
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    background-image: $backgroundbutton;
+    background-size: cover;
+    color: #111;
+    font-size: 20px;
+    margin: 0 auto;
+    transition: transform .2s; /* Animation */
+    box-shadow: #111 2px 2px 2px;
+}
+.submit:hover{
+    transform: scale(1.1);
+}
