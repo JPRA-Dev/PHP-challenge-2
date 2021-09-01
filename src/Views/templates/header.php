@@ -7,31 +7,31 @@ $login = false;
 //     $userType = $row['user_type'];
 
 //         if ($userType == 'admin') {
-//             echo    "<li class='listItem dropbtn' id='admin'>
-//                         <div class='dropdown'>
-//                             <div class='hvr-grow'>
+//             echo    "<li class='listItemHeader dropbtnHeader' id='adminHeader'>
+//                         <div class='dropdownHeader'>
+//                             <div class='hvr-growHeader'>
 //                             <a href='#' >Admin</a> 
 //                                 <i class='fa fa-caret-down'></i> </div>                   
-//                             <div class='dropdown-content' ID='submenuID'>
-//                                 <a href='/admin' class='hvr-shrink'>Dashboard</a>
-//                                 <a href='/admin/addcontact' class='hvr-shrink'>New Contact</a>
-//                                 <a href='/admin/addinvoice' class='hvr-shrink'>New Invoice</a>
-//                                 <a href='/admin/addcompany' class='hvr-shrink'>New Company</a>
+//                             <div class='dropdown-contentHeader' ID='subMenuIDHeader'>
+//                                 <a href='/admin' class='hvr-shrinkHeader'>Dashboard</a>
+//                                 <a href='/admin/addcontact' class='hvr-shrinkHeader'>New Contact</a>
+//                                 <a href='/admin/addinvoice' class='hvr-shrinkHeader'>New Invoice</a>
+//                                 <a href='/admin/addcompany' class='hvr-shrinkHeader'>New Company</a>
 //                             </div>
 //                         </div>
 //                     </li>";
 
 //         } else if ($userType == 'moderator') {
-//             echo    "<li class='listItem dropbtn' id='admin'>
-//                         <div class='dropdown'>
-//                             <div class='hvr-grow'>
+//             echo    "<li class='listItemHeader dropbtnHeader' id='adminHeader'>
+//                         <div class='dropdownHeader'>
+//                             <div class='hvr-growHeader'>
 //                             <a href='#' >Moderator</a> 
 //                                 <i class='fa fa-caret-down'></i> </div>                   
-//                             <div class='dropdown-content' ID='submenuID'>
-//                                 <a href='/admin' class='hvr-shrink'>Dashboard</a>
-//                                 <a href='/admin/addcontact' class='hvr-shrink'>New Contact</a>
-//                                 <a href='/admin/addinvoice' class='hvr-shrink'>New Invoice</a>
-//                                 <a href='/admin/addcompany' class='hvr-shrink'>New Company</a>
+//                             <div class='dropdown-contentHeader' ID='subMenuIDHeader'>
+//                                 <a href='/admin' class='hvr-shrinkHeader'>Dashboard</a>
+//                                 <a href='/admin/addcontact' class='hvr-shrinkHeader'>New Contact</a>
+//                                 <a href='/admin/addinvoice' class='hvr-shrinkHeader'>New Invoice</a>
+//                                 <a href='/admin/addcompany' class='hvr-shrinkHeader'>New Company</a>
 //                             </div>
 //                         </div>
 //                     </li>";
@@ -67,46 +67,46 @@ $login = false;
 </head>
 <body>
     <header>
-            <nav class ="navbar">
-                <div class="containerLogo">
+            <nav class ="navbarHeader">
+                <div class="containerLogoHeader">
                     <a href="/">
                         <img class="logoHeader" src="/../assets/images/logo.png">
                     </a>
                 </div>
-                    <div class="menu" id="toggleButton">
-                        <div class="menuLine"></div>
-                        <div class="menuLine"></div>
-                        <div class="menuLine"></div>
+                    <div class="menuHeader" id="toggleButtonHeader">
+                        <div class="menuLineHeader"></div>
+                        <div class="menuLineHeader"></div>
+                        <div class="menuLineHeader"></div>
                     </div>
-                <ul class="navList" id="navListId">
-                    <li class="listItem">
-                        <a href="/" class="hvr-grow">Home</a>
+                <ul class="navListHeader" id="navListIdHeader">
+                    <li class="listItemHeader">
+                        <a href="/" class="hvr-growHeader">Home</a>
                     </li>
-                    <li class="listItem" >
-                        <a href="/invoice" class="hvr-grow">Invoices</a>
+                    <li class="listItemHeader" >
+                        <a href="/invoice" class="hvr-growHeader">Invoices</a>
                     </li>
-                    <li class="listItem">
-                        <a href="/company" class="hvr-grow">Companies</a>
+                    <li class="listItemHeader">
+                        <a href="/company" class="hvr-growHeader">Companies</a>
                     </li>
-                    <li class="listItem">
-                        <a href="/contact" class="hvr-grow">Contacts</a>
+                    <li class="listItemHeader">
+                        <a href="/contact" class="hvr-growHeader">Contacts</a>
                     </li>
-                    <li class="listItem dropbtn" id="admin">
-                        <div class="dropdown">
-                            <div class="hvr-grow">
+                    <li class="listItemHeader dropbtnHeader" id="adminHeader">
+                        <div class="dropdownHeader">
+                            <div class="hvr-growHeader">
                             <a href="#" >Admin</a> 
                                 <i class="fa fa-caret-down"></i> </div>                   
-                            <div class="dropdown-content" ID="submenuID">
-                                <a href="/admin" class="hvr-shrink">Dashboard</a>
-                                <a href="/admin/addcontact" class="hvr-shrink">New Contact</a>
-                                <a href="/admin/addinvoice" class="hvr-shrink">New Invoice</a>
-                                <a href="/admin/addcompany" class="hvr-shrink">New Company</a>
+                            <div class="dropdown-contentHeader" ID="submenuIDHeader">
+                                <a href="/admin" class="hvr-shrinkHeader">Dashboard</a>
+                                <a href="/admin/addcontact" class="hvr-shrinkHeader">New Contact</a>
+                                <a href="/admin/addinvoice" class="hvr-shrinkHeader">New Invoice</a>
+                                <a href="/admin/addcompany" class="hvr-shrinkHeader">New Company</a>
                             </div>
                         </div>
                     </li>
                     <?php if (!$login){ ?>
-                    <li class="listItem" id="connection">
-                        <a href="/login">Connection</a>
+                    <li class="listItemHeader" id="connectionHeader">
+                        <a href="/login" class="hvr-growHeader">Connection</a>
                     </li>
                     <?php } ?>
                 </ul>
@@ -115,10 +115,10 @@ $login = false;
     </header>
 </body>
 <script>
-    var toggleButton = document.getElementById("toggleButton");
-    var navList = document.getElementById("navListId");
-    var admin = document.getElementById("admin");
-    var subMenuID = document.getElementById("subMenuID");
+    var toggleButton = document.getElementById("toggleButtonHeader");
+    var navList = document.getElementById("navListIdHeader");
+    var admin = document.getElementById("adminHeader");
+    var subMenuID = document.getElementById("subMenuIDHeader");
 
     toggleButton.addEventListener('click', () => {
         navList.classList.toggle('active');

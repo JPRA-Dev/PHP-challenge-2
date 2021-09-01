@@ -2,7 +2,7 @@ header {
   width: 100%;
 }
 
-.navbar {
+.navbarHeader {
     /*background-color: #79AABC;*/
     background-image: url(../images/backgroundpapier.jpg);
     margin-bottom: 50px;
@@ -25,44 +25,44 @@ header {
   margin-bottom: 15px;
 }
 
-.navList {
+.navListHeader {
     list-style-type: none;
 }
 
-.navList .listItem {
+.navListHeader .listItemHeader {
     display: inline-block;
     padding: 30px 10px;
 }
 
-.navbar a {
+.navbarHeader a {
     text-decoration: none;
     color: white;
 }
 
-.navbar a:hover {
+.navbarHeader a:hover {
     text-decoration: none;
     color: #E0394C;
 }
 
-.menu {
+.menuHeader {
     display: none;
     margin-bottom: 4px;
 }
 
-.menuLine {
+.menuLineHeader {
     width: 20px;
     height: 3px;
     background-color: white;
     margin-bottom: 4px;
 }
 
-// #connection {
+// #connectionHeader {
 //     display: none;
 // }
 
-/******** SUB DROPDOWN MENU *************/
+/******** SUB DROPDOWN menuHeader *************/
 
-  .dropdown .dropbtn { 
+  .dropdownHeader .dropbtnHeader { 
     border: none;
     outline: none;
     color: white;
@@ -73,11 +73,11 @@ header {
     width: auto;
   }
 
-  .dropdown:hover .dropbtn {
+  .dropdownHeader:hover .dropbtnHeader {
     background-color: red;
   }
 
-  .dropdown-content {
+  .dropdown-contentHeader {
     padding-top: 10px;
     display: none;
     position: fixed;
@@ -87,7 +87,7 @@ header {
     z-index: 1;
   }
   
-  .dropdown-content a {
+  .dropdown-contentHeader a {
     float: none;
     color: white;
     padding: 12px 16px;
@@ -97,11 +97,11 @@ header {
     text-align: left;
   }
   
-  .dropdown-content a:hover {
+  .dropdown-contentHeader a:hover {
     background-color: #79AABC;
   }
   
-  .dropdown:hover .dropdown-content {
+  .dropdownHeader:hover .dropdown-contentHeader {
     display: flex;
     justify-content: space-around;
     -webkit-flex-direction: column; 
@@ -110,7 +110,7 @@ header {
 
 /******** EFFECTS *************/
 
-  .hvr-shrink {
+  .hvr-shrinkHeader {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -121,12 +121,12 @@ header {
     -webkit-transition-property: transform;
     transition-property: transform;
   }
-  .hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
+  .hvr-shrinkHeader:hover, .hvr-shrinkHeader:focus, .hvr-shrinkHeader:active {
     -webkit-transform: scale(0.9);
     transform: scale(0.9);
   }
 
-  .hvr-grow {
+  .hvr-growHeader {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -137,7 +137,7 @@ header {
     -webkit-transition-property: transform;
     transition-property: transform;
   }
-  .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  .hvr-growHeader:hover, .hvr-growHeader:focus, .hvr-growHeaderHeader:active {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
@@ -147,19 +147,19 @@ header {
   
 
 @media all and (max-width: 805px) {
-    .navbar {
+    .navbarHeader {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
     }
 
-    .navbar .containerLogo {
+    .navbarHeader .containerLogoHeader {
         width: 100%;
     }
 
 
-    .menu {
+    .menuHeader {
         right:40px;
         top: 29px;
         display: inline-block;
@@ -174,20 +174,20 @@ header {
         transition-property: transform;
     }
 
-    .menu:hover {
+    .menuHeader:hover {
         -webkit-transform: scale(1.2);
         transform: scale(1.2);
         cursor: pointer;
     }
 
-    .navList {
+    .navListHeader {
         list-style-type: none;
         width: 100%;
         text-align: center;
         display: none;
     }
 
-    .navList .listItem {
+    .navListHeader .listItemHeader {
         display: block;
         padding: 10px;
         border-top: 1px solid white;
@@ -204,14 +204,7 @@ header {
         display:block;
     }
 
-    .footer {
-        text-align: center;
-        font-size: 14px;
-        margin-left: 0px;
-        font-family: Helvetica, Sans-Serif;
-    }
-
-    .dropdown-content {
+    .dropdown-contentHeader {
         display: none;
         text-align: center;
         background-color: #79AABC;
@@ -220,16 +213,16 @@ header {
         z-index: 1;
       }
 
-    .dropdown-content a {
+    .dropdown-contentHeader a {
         text-align: center;
         padding-top: 10px;
     }
 
-    .dropdown-content a:first-child {
+    .dropdown-contentHeader a:first-child {
         padding-top: 30px;
     }
 
-    .dropdown:hover .dropdown-content {
+    .dropdownHeader:hover .dropdown-contentHeader {
         display: inline;
         text-align: center;
         position: relative;

@@ -11,7 +11,7 @@ footer {
     padding-bottom: 15px;
     background-color: #79AABC;
     color: white;
-  }
+}
   
 .footer {
       text-align: left;
@@ -19,5 +19,16 @@ footer {
       margin-left: 60px;
       font-family: Helvetica, Sans-Serif;
       font-style: italic;
+}
+
+@media all and (max-width: 805px) {
+  
+  .footer {
+      text-align: center;
+      font-size: 14px;
+      margin-left: 0px;
+      font-family: Helvetica, Sans-Serif;
+  }
+
 }
   
