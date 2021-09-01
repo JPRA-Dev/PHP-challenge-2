@@ -11,7 +11,7 @@ padding-top: 10px;
     color: #79AABC;
   }
   
-.footer {
+.footerClass {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
@@ -22,4 +22,17 @@ padding-top: 10px;
       font-family: Helvetica, Sans-Serif;
       font-style: italic;
 }
+
+@media all and (max-width: 805px) {
+  
+  .footer {
+    text-align: center;
+    font-size: 14px;
+    margin-left: 0px;
+    font-family: Helvetica, Sans-Serif;
+  }
+
+}
+
+
   
