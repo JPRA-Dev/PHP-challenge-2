@@ -1,6 +1,5 @@
 <?php
 $invoice->dateinvoice = isset($invoice->dateinvoice) ? $invoice->dateinvoice = new DateTime($invoice->dateinvoice) : $invoice->dateinvoice;
-var_dump($invoice);
 ?>
 <main >
         <h1 class="invoicetitle">Update Invoice </h1>
