@@ -9,9 +9,9 @@
                 <th>Lastname</th>
                 <th>Firstname</th>
                 <th>Group</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Admin</th>
+                <th>E-mail</th>
+                <th>Telephone</th>
+                <th>Administrator</th>
                 <th>Moderator</th>
             </tr>
 
