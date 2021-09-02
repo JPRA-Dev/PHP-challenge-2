@@ -19,7 +19,7 @@ class AuthController extends Controller
     public function login()
     {
         if ($this->userIsLogged()) {
-            $this->redirect('/');
+            $this->redirect('/admin');
             return;
         }
 
