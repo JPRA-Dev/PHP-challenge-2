@@ -9,19 +9,19 @@
 					<div class="invoicenumber">
 						<label for="invoicenumber">Invoice Number :</label>
 						<br>
-						<input class="inputinvoice" type="text" id="invoicenumber" name="invoicenumber" value="" placeholder="Invoice Number..." autocomplete="off" required>
+						<input class="input" type="text" id="invoicenumber" name="invoicenumber" value="" placeholder="Invoice Number..." autocomplete="off" required>
 					</div>	
 
 					<div class="date">
 						<label for="date">Invoice Date :</label>
 						<br>
-						<input class="inputinvoice" type="date" id="date" name="date" value="" placeholder="Date of Invoice..." autocomplete="off" required>
+						<input class="input" type="date" id="date" name="date" value="" placeholder="Date of Invoice..." autocomplete="off" required>
 					</div>
 
 					<div class="company">
 						<label for="company">Company :</label>
 						<br>
-						<select class="inputinvoice" name="company" id="company">
+						<select class="input" name="company" id="company">
 							<option value="">--Please choose a Company--</option>
 							<?php foreach ($companies as $company) { ?>
            						<option value="<?= $company->id; ?>"><?= $company->name; ?></option>
@@ -32,7 +32,7 @@
 					<div class="contactinvoice">
 						<label for="contact">Contact Name for the Invoice:</label>
 						<br>
-						<select class="inputinvoice" name="contact" id="contact">
+						<select class="input" name="contact" id="contact">
 						<option value="">--Please choose a contact person--</option>
 							<?php foreach ($contacts as $contact) { ?>
             					<option value="<?= $contact->contact_person_id; ?>"><?= $contact->firstname . ' ' . $contact->lastname; ?></option>

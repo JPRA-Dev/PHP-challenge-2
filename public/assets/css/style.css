@@ -410,9 +410,26 @@ main {
 .input {
   width: 350px;
   height: 20px;
+  background-color: #dad6d6;
   border-radius: 5px;
   -webkit-box-shadow: #111 3px 3px 3px;
           box-shadow: #111 3px 3px 3px;
+}
+
+::-webkit-input-placeholder {
+  color: #3a3838;
+}
+
+:-ms-input-placeholder {
+  color: #3a3838;
+}
+
+::-ms-input-placeholder {
+  color: #3a3838;
+}
+
+::placeholder {
+  color: #3a3838;
 }
 
 .submit {
