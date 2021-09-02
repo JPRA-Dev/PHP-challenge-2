@@ -15,7 +15,6 @@
         navList.classList.toggle('active');
     });
     
-
     admin.addEventListener('click', () => {
         subMenuID.style.display = "inline"; 
     });
