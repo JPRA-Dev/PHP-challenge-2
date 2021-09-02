@@ -9,7 +9,7 @@
  var toggleButton = document.getElementById("toggleButtonHeader");
     var navList = document.getElementById("navListIdHeader");
     var admin = document.getElementById("adminHeader");
-    var subMenuID = document.getElementById("subMenuIDHeader");
+    var subMenuID = document.getElementById("submenuIDHeader");
 
     toggleButton.addEventListener('click', () => {
         navList.classList.toggle('active');

@@ -22,12 +22,6 @@ use App\Helpers\TokenHelper;
 			        <input class="input" type="password" name="password" value="" placeholder="Password..." autocomplete="off" required>
 		        </div>
                 <br>
-						
-				<div class="remember">
-					<label for="remember">
-					<input type="checkbox" name="remember">Remember me
-					</label>
-				</div>
 
 				<div class="button">
 					<input type="hidden" name="token" value="<?php echo TokenHelper::generate(); ?>">

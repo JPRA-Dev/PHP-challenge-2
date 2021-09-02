@@ -9,9 +9,7 @@ use App\Controllers\ErrorController;
 use App\Controllers\InvoiceController;
 use App\Controllers\RootController;
 use App\Controllers\TestController;
-use App\Database\Database;
 use App\Helpers\ConfigHelper;
-use App\Helpers\CookieHelper;
 use App\Helpers\SessionHelper;
 use App\Models\UserModel;
 
@@ -21,12 +19,8 @@ $GLOBALS['config']= array(
     'mysql' => array(
         'host'=>'127.0.0.1',
         'username'=>'root',
-        'pwd'=>'',
+        'pwd'=>'root',
         'dbName'=>'cogip'
-    ),
-    'remember'=> array(
-        'cookie_name'=>'hash',
-        'cookie_expiry'=> 604800
     ),
     'session'=> array(
         'session_name'=> 'user',
