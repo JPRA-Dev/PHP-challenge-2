@@ -32,8 +32,7 @@ class AuthController extends Controller
                 ));
                 if($validation->_passed){
                     $user=new UserModel();
-                    $remember=(InputHelper::get('remember')==='on') ?true:false;
-                    $login=$user->login(InputHelper::get('username'),InputHelper::get('password',$remember));
+                    $login=$user->login(InputHelper::get('username'),InputHelper::get('password'));
         
                     if($login){
                         RedirectHelper::to('/');
