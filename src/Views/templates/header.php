@@ -57,6 +57,7 @@ $login = $user->isLoggedIn();
                                 <a href="/admin/addcontact" class="hvr-shrinkHeader">New Contact</a>
                                 <a href="/admin/addinvoice" class="hvr-shrinkHeader">New Invoice</a>
                                 <a href="/admin/addcompany" class="hvr-shrinkHeader">New Company</a>
+                                <a href="/logout" class="hvr-shrinkHeader">Logout</a>
                             </div>
                         </div>
                     </li>
