@@ -19,7 +19,7 @@ $GLOBALS['config']= array(
     'mysql' => array(
         'host'=>'127.0.0.1',
         'username'=>'root',
-        'pwd'=>'root',
+        'pwd'=>'',
         'dbName'=>'cogip'
     ),
     'session'=> array(
@@ -65,6 +65,8 @@ $router->get('/contact/show/:id', fn($id) => $contactController->show($id), 'con
 $router->get('/invoice', fn() => $invoiceController->list(), 'invoice.list');
 $router->get('/invoice/show/:id', fn($id) => $invoiceController->show($id), 'invoice.show');
 $router->get('/company', fn() => $companyController->list(), 'company.list');
+$router->get('/company/clients', fn() => $companyController->listclients(), 'company.listclients');
+$router->get('/company/suppliers', fn() => $companyController->listsuppliers(), 'company.listsuppliers');
 $router->get('/company/show/:id', fn($id) => $companyController->show($id), 'company.show');
 $router->get('/admin', fn() => $adminController->index(), 'admin.index');
 $router->get('/admin/users/', fn() => $adminController->users(), 'admin.users');

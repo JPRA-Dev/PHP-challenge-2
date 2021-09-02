@@ -30,9 +30,9 @@
                    <th>Telephone</th>
                 </tr>
                 <tr>
-                  <td><a href="/contact/show/<?=$contact->contact_person_id;?>"><?php echo $contact->firstname . ' ' . $contact->lastname; ?></a></td>
-                  <td><?php echo $contact->email; ?></td>
-                  <td><?php echo $contact->telephone; ?></td>
+                  <td><a href="/contact/show/<?=$contact?->contact_person_id;?>"><?php echo $contact?->firstname . ' ' . $contact?->lastname; ?></a></td>
+                  <td><?php echo $contact?->email; ?></td>
+                  <td><?php echo $contact?->telephone; ?></td>
                 </tr>
              </table>
        </div>
