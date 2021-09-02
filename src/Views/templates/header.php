@@ -36,8 +36,16 @@ $login = $user->isLoggedIn();
                     <li class="listItemHeader" >
                         <a href="/invoice" class="hvr-growHeader">Invoices</a>
                     </li>
-                    <li class="listItemHeader">
-                        <a href="/company" class="hvr-growHeader">Companies</a>
+                    <li class="listItemHeader dropbtnHeader" id="adminHeader">
+                        <div class="dropdownHeader">
+                            <div class="hvr-growHeader">
+                            <a href="/company" >Companies</a> 
+                                <i class="fa fa-caret-down"></i> </div>                   
+                            <div class="dropdown-contentHeader" ID="submenuIDHeader">
+                                <a href="/company/clients" class="hvr-shrinkHeader">Clients</a>
+                                <a href="/company/suppliers" class="hvr-shrinkHeader">Suppliers</a>
+                            </div>
+                        </div>
                     </li>
                     <li class="listItemHeader">
                         <a href="/contact" class="hvr-growHeader">Contacts</a>

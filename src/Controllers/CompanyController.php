@@ -15,6 +15,20 @@ class CompanyController extends Controller
         $this->render("company/list", ["companies" => $companyModel->data()]);
     }
 
+    public function listclients()
+    {
+        $companyModel = new CompanyModel();
+        $companyModel->find();
+        $this->render("company/listclients", ["companies" => $companyModel->data()]);
+    }
+
+    public function listsuppliers()
+    {
+        $companyModel = new CompanyModel();
+        $companyModel->find();
+        $this->render("company/listsuppliers", ["companies" => $companyModel->data()]);
+    }
+
     public function show($id)
     {
         $companyModel = new CompanyModel();
