@@ -74,12 +74,15 @@ https://www.figma.com/file/wgyPPEJv7mvqFdMgkdkytd/COGIP-App-(Copy)?node-id=0%3A1
     * Assistant manager:
         - Creation of the mokup
         - Creation of the HTML and SCSS code for all pages
-        - creation responsive web
+        - Creation responsive web
         - Readme
        
 - _Joao Andrade_: [GitHub](https://github.com/JPRA-Dev)
     * Assistant manager:
-        - Creation of the header and footer
+        - Creation of the HTML, SCSS, PHP and JS of the Header and the Footer
+        - Help in passing the CSS of the website to SCSS
+        - Creation of the responsive web of the Header and the Footer
+        - PHP validation of the "addcontact"
         
 - (_Emerson Vandeputte_: [GitHub](https://github.com/hallomoto-beta))
    * Public relations:
