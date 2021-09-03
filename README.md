@@ -2,7 +2,7 @@
 
 ### Description:
 
-the COGIP project is a request from a client to create a web application for the administrative management of the company. This software will provide access to the company's database according to the status of the person connected. 
+The COGIP project is a request from a client to create a web application for the administrative management of the company. This software will provide access to the company's database according to the status of the person connected. 
 
 ### Page Heroku:
 
@@ -13,33 +13,37 @@ http://185.157.246.108:7300/
 They will therefore be able to view pages:
 
  * Welcome page: 
-      * With list of the last 5 invoices, ordered by date.
+      * With the list of the last 5 invoices, ordered by date.
       * With the list of the last 5 people encoded in the database.
       * With the list of the last 5 companies encoded in the database.
+      
  * Companies page:
-      * With list of all companies in alphabetical order. The name of company will be a link to a new page detailing the company.
+      * With the list of all companies in alphabetical order. The name of companywill be a link to a new page containing its details.
+      
  * Invoices page:
-      * With the list of all the invoices from the most recent to the oldest. Each invoice number will be a link to a new page detailing the invoice.
+      * With the list of all the invoices from the most recent to the oldest. Each invoice number will be a link to a new page containing its details.
 
  * Contacts page:
-      * With the list of all the contacts in alphabetical order. Each contact name will be a link to a new page detailing the contact.
+      * With the list of all the contacts in alphabetical order. Each contact name will be a link to a new page containing its details.
+      
  * Providers page: 
-      * With the list of alla providers in alphabetical order. The name of the provider will be a link to a new page detailing the provider.
+      * With the list of all providers in alphabetical order. The name of the provider will be a link to a new page containing its details.
 
  * Clients page:
-      * With the list of all the clients in alphabetical order. Each client name will be a link to a new page detailing the contact.
+      * With the list of all the clients in alphabetical order. Each client name will be a link to a new page containing its details.
 
  * Company details page:
-      * With Name of the company, VAT number of the company, list of invoices linked to the company and list of contacts working for the company.
+      * With the Name and VAT number of the company, list of invoices linked to the company and list of contacts working for it.
+      
  * Invoice details page:
-      * With number, date, company linked to the invoice, type of company linked the invoice and contact linked to the invoice.
+      * With number, date, company, type of company and the contact linked to the invoice.
 
  * Contact details page:
       * With first and last name, email, name of the company where the person works and the list of all invoices linked to that person.
 
 There must also be a custom message on the welcome page depending who is connected.
-If the user as god mode acces he will also have access to a button to manage the users.
-If the user as moderator access he will access to the admin dashboard, he can add invoices, companies and people but can't either modify or delete elements from the database.
+If the user as god mode access he will also have access to a button to manage the users.
+If the user as moderator access he will access to the admin dashboard. There he can add invoices, companies and people but can't either modify or delete elements from the database.
 
 
 ### Mokup / Sources:
@@ -76,6 +80,7 @@ https://www.figma.com/file/wgyPPEJv7mvqFdMgkdkytd/COGIP-App-(Copy)?node-id=0%3A1
 - _Joao Andrade_: [GitHub](https://github.com/JPRA-Dev)
     * Assistant manager:
         - Creation of the header and footer
+        
 - (_Emerson Vandeputte_: [GitHub](https://github.com/hallomoto-beta))
    * Public relations:
         - links to connect the pages
