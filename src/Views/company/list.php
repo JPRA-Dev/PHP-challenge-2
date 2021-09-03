@@ -1,17 +1,17 @@
 <?php
 ?>
 <main>
-   <h1 class="companylist">Companies Directory</h1>
+    <h1 class="companylist">Companies Directory</h1>
         <div class="containercompanylist">
-                  <table class="container1companylist">
-                      <tr>
-                        <th class="titlecompanylist" colspan="3">Clients</th>
-                      </tr>
-                    <tr>
-                       <th>Name</th>
-                       <th>TVA</th>
-                       <th>Country</th>
-                    </tr>
+            <table class="container1companylist">
+                 <tr>
+                   <th class="titlecompanylist" colspan="3">Clients</th>
+                 </tr>
+                 <tr>
+                    <th>Name</th>
+                    <th>TVA</th>
+                    <th>Country</th>
+                 </tr>
 
                 <?php
                 $i = 0;
@@ -28,16 +28,16 @@
                     
                </table>
         </div>
-       <div class="containercompanylist">
-               <table class="container1companylist">
-                   <tr>
-                   <th class="titlecompanylist" colspan="3">Suppliers</th>
-                   </tr>
-                    <tr>
-                        <th>Name</th>
-                        <th>TVA</th>
-                        <th>Country</th>
-                    </tr>
+        <div class="containercompanylist">
+            <table class="container1companylist">
+                <tr>
+                    <th class="titlecompanylist" colspan="3">Suppliers</th>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>TVA</th>
+                    <th>Country</th>
+                </tr>
 
                    <?php
                    $i = 0;
@@ -51,7 +51,6 @@
                            <?php $i++;
                        }
                    } ?>
-
-              </table>
+            </table>
         </div>  
 </main>

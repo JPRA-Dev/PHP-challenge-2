@@ -1,4 +1,3 @@
-
 .containerinvoice{
     display: flex;
     flex-direction: column;
@@ -38,24 +37,32 @@
    
 }
 .invoicenumber{
-height: 50px;
-font-weight: bold;
-margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    font-weight: bold;
+    margin-bottom: 15px;
 
 }
 .date{
+    display: flex;
+    flex-direction: column;
     height: 50px;
     font-weight: bold;
     margin-bottom: 15px;
 
 }
 .company{
+    display: flex;
+    flex-direction: column;
     height: 50px;
     font-weight: bold;
     margin-bottom: 15px;
 
 }
 .contactinvoice{
+    display: flex;
+    flex-direction: column;
     height: 50px;
     font-weight: bold;
     margin-bottom: 15px;
@@ -63,6 +70,8 @@ margin-bottom: 15px;
 }
 
 .inputinvoice{
+    display: flex;
+    flex-direction: column;
     width: 350px;
     height: 20px;
     border-radius: 5px;

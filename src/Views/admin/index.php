@@ -6,19 +6,19 @@ global $user;
 
         <h1 class="indextitle">Hello, <?= $user->data()[0]->firstname . ' ' . $user->data()[0]->lastname ?>!<br> What would you like to do today?</h1>
 
-        <div class="add">
-            <div class="buttonindex">
-                <button class="submit1" type="submit" name="addinvoice"><a href="/admin/addinvoice">Add New Invoice</a></button>
+            <div class="add">
+                <div class="buttonindex">
+                    <button class="submit1" type="submit" name="addinvoice"><a href="/admin/addinvoice">Add New Invoice</a></button>
+                </div>
+       
+                <div class="buttonindex">
+                    <button class="submit2" type="submit" name="addcompany"><a href="/admin/addcompany">Add New Company</a></button>
+                </div>
+       
+                <div class="buttonindex">
+                    <button class="submit3" type="submit" name="addcontact"><a href="/admin/addcontact">Add New Contact</a></button>
+                </div>
             </div>
-
-            <div class="buttonindex">
-                <button class="submit2" type="submit" name="addcompany"><a href="/admin/addcompany">Add New Company</a></button>
-            </div>
-
-            <div class="buttonindex">
-                <button class="submit3" type="submit" name="addcontact"><a href="/admin/addcontact">Add New Contact</a></button>
-            </div>
-        </div>
     </div>
 
     <div class="containerindex">
@@ -115,8 +115,7 @@ global $user;
                         </td>
                     <?php } ?>
                 </tr>
-                <?php $i++; } ?>
-
+            <?php $i++; } ?>
             </tbody>
         </table>
     </div>
