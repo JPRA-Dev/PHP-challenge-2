@@ -14,7 +14,7 @@ They will therefore be able to view pages:
 
  * Welcome page: 
       * With list of the last 5 invoices, ordered by date.
-      * With the list of the last 5 peoples encoded in the database.
+      * With the list of the last 5 people encoded in the database.
       * With the list of the last 5 companies encoded in the database.
  * Companies page:
       * With list of all companies in alphabetical order. The name of company will be a link to a new page detailing the company.
