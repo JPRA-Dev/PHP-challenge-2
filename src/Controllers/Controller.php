@@ -34,6 +34,6 @@ abstract class Controller
     public function redirect($location)
     {
         RedirectHelper::to($location);
-        exit();
+       
     }
 }

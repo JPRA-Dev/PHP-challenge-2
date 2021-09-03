@@ -5,8 +5,8 @@
             <div class="footerClass">  © 2021 COGIP, Inc.     "Vive la COGIP!"</div>        
         </div>
     </footer>
-    <script>
- var toggleButton = document.getElementById("toggleButtonHeader");
+<script>
+    var toggleButton = document.getElementById("toggleButtonHeader");
     var navList = document.getElementById("navListIdHeader");
     var admin = document.getElementById("adminHeader");
     var subMenuID = document.getElementById("submenuIDHeader");

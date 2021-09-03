@@ -15,20 +15,20 @@ main{
     margin:0;
     min-height: 100vh;
 }
-    .companytitle{
+.companytitle{
   
-        display: flex;
-        justify-content: center;
-        color: $colorcompany;
-        font-weight: bold;
-        font-size:40px;
-        margin-top: 30px;
-        margin-bottom: 20px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border: 2px solid $colorcompany;
-        border-radius: 10px;
-        box-shadow: #111 5px 5px 5px;
+     display: flex;
+     justify-content: center;
+     color: $colorcompany;
+     font-weight: bold;
+     font-size:40px;
+     margin-top: 30px;
+     margin-bottom: 20px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     border: 2px solid $colorcompany;
+     border-radius: 10px;
+     box-shadow: #111 5px 5px 5px;
         
     }
 
@@ -56,22 +56,30 @@ main{
    
 }
 .companyname{
-height: 50px;
-font-weight: bold;
-margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    font-weight: bold;
+    margin-bottom: 15px;
 
 }
 .tva{
+    display: flex;
+    flex-direction: column;
     height: 50px;
     font-weight: bold;
     margin-bottom: 15px;
 }
 .country{
+    display: flex;
+    flex-direction: column;
     height: 50px;
     font-weight: bold;
     margin-bottom: 15px;
 }
 .companytype{
+    display: flex;
+    flex-direction: column;
     height: 50px;
     font-weight: bold;
 }
