@@ -15,61 +15,62 @@ $login = $user->isLoggedIn();
     <link rel=stylesheet href="/../assets/css/style.css">
     <link rel=stylesheet href="/../css/reset.css">
     <title>COGIP</title>
+    <meta name="description" content="The COGIP project is a request from a client to create a web application for the administrative management of the company. ">
 </head>
 <body>
-    <header>
-    <nav class ="navbarHeader">
-                <div class="containerLogoHeader">
-                    <a href="/">
-                        <img class="logoHeader" src="/../assets/images/logo.png">
-                    </a>
-                </div>
-                    <div class="menuHeader" id="toggleButtonHeader">
-                        <div class="menuLineHeader"></div>
-                        <div class="menuLineHeader"></div>
-                        <div class="menuLineHeader"></div>
+<header>
+    <nav class="navbarHeader">
+        <div class="containerLogoHeader">
+            <a href="/">
+                <img class="logoHeader" src="/../assets/images/logo.png">
+            </a>
+        </div>
+        <div class="menuHeader" id="toggleButtonHeader">
+            <div class="menuLineHeader"></div>
+            <div class="menuLineHeader"></div>
+        </div>
+        <ul class="navListHeader" id="navListIdHeader">
+            <li class="listItemHeader">
+                <a href="/" class="hvr-growHeader">Home</a>
+            </li>
+            <li class="listItemHeader" >
+                <a href="/invoice" class="hvr-growHeader">Invoices</a>
+            </li>
+            <li class="listItemHeader dropbtnHeader" id="adminHeader">
+                <div class="dropdownHeader">
+                    <div class="hvr-growHeader">
+                        <a href="/company" >Companies</a>
+                        <i class="fa fa-caret-down"></i> </div>
+                    <div class="dropdown-contentHeader" ID="submenuIDHeader">
+                        <a href="/company/clients" class="hvr-shrinkHeader">Clients</a>
+                        <a href="/company/suppliers" class="hvr-shrinkHeader">Suppliers</a>
                     </div>
-                <ul class="navListHeader" id="navListIdHeader">
-                    <li class="listItemHeader">
-                        <a href="/" class="hvr-growHeader">Home</a>
-                    </li>
-                    <li class="listItemHeader" >
-                        <a href="/invoice" class="hvr-growHeader">Invoices</a>
-                    </li>
-                    <li class="listItemHeader dropbtnHeader" id="adminHeader">
-                        <div class="dropdownHeader">
-                            <div class="hvr-growHeader">
-                            <a href="/company" >Companies</a> 
-                                <i class="fa fa-caret-down"></i> </div>                   
-                            <div class="dropdown-contentHeader" ID="submenuIDHeader">
-                                <a href="/company/clients" class="hvr-shrinkHeader">Clients</a>
-                                <a href="/company/suppliers" class="hvr-shrinkHeader">Suppliers</a>
-                            </div>
+                </div>
+            </li>
+            <li class="listItemHeader">
+                <a href="/contact" class="hvr-growHeader">Contacts</a>
+            </li>
+            <?php if (!$login){ ?>
+                <li class="listItemHeader" id="connectionHeader">
+                    <a class="connect" href="/login">Login</a>
+                </li>
+            <?php } else { ?>
+                <li class="listItemHeader dropbtnHeader" id="adminHeader">
+                    <div class="dropdownHeader">
+                        <div class="hvr-growHeader">
+                            <a href="#" >Admin</a>
+                            <i class="fa fa-caret-down"></i> </div>
+                        <div class="dropdown-contentHeader" ID="submenuIDHeader">
+                            <a href="/admin" class="hvr-shrinkHeader">Dashboard</a>
+                            <a href="/admin/users" class="hvr-shrinkHeader">Users</a>
+                            <a href="/admin/addcontact" class="hvr-shrinkHeader">New Contact</a>
+                            <a href="/admin/addinvoice" class="hvr-shrinkHeader">New Invoice</a>
+                            <a href="/admin/addcompany" class="hvr-shrinkHeader">New Company</a>
+                            <a href="/logout" class="hvr-shrinkHeader">Logout</a>
                         </div>
-                    </li>
-                    <li class="listItemHeader">
-                        <a href="/contact" class="hvr-growHeader">Contacts</a>
-                    </li>
-                    <?php if (!$login){ ?>
-                    <li class="listItemHeader" id="connectionHeader">
-                        <a class="connect" href="/login">Login</a>
-                    </li>
-                    <?php } else { ?>
-                        <li class="listItemHeader dropbtnHeader" id="adminHeader">
-                        <div class="dropdownHeader">
-                            <div class="hvr-growHeader">
-                            <a href="#" >Admin</a> 
-                                <i class="fa fa-caret-down"></i> </div>                   
-                            <div class="dropdown-contentHeader" ID="submenuIDHeader">
-                                <a href="/admin" class="hvr-shrinkHeader">Dashboard</a>
-                                <a href="/admin/addcontact" class="hvr-shrinkHeader">New Contact</a>
-                                <a href="/admin/addinvoice" class="hvr-shrinkHeader">New Invoice</a>
-                                <a href="/admin/addcompany" class="hvr-shrinkHeader">New Company</a>
-                                <a href="/logout" class="hvr-shrinkHeader">Logout</a>
-                            </div>
-                        </div>
-                    </li>
-                    <?php } ?>
-                </ul>
-            </nav>
-    </header>
+                    </div>
+                </li>
+            <?php } ?>
+        </ul>
+    </nav>
+</header>
