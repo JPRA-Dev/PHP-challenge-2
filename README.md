@@ -6,7 +6,7 @@ The COGIP project is a request from a client to create a web application for the
 
 ### Page Heroku:
 
-http://185.157.246.108:7300/
+https://becode-cogip.adrienlenoir.be/
 
 ### Feature:
 
