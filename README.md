@@ -82,7 +82,8 @@ https://www.figma.com/file/wgyPPEJv7mvqFdMgkdkytd/COGIP-App-(Copy)?node-id=0%3A1
         - Creation of the HTML, SCSS, PHP and JS of the Header and the Footer
         - Help in passing the CSS of the website to SCSS
         - Creation of the responsive web of the Header and the Footer
-        - PHP validation of the "addcontact"
+        - Creation of the PHP code with collaboration of project manager
+        - PHP validation and sanitize
         
 - (_Emerson Vandeputte_: [GitHub](https://github.com/hallomoto-beta))
    * Public relations:
